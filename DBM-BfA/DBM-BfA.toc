@@ -22,6 +22,7 @@
 ## X-DBM-Mod-LoadCID: 132701,132253,136385,140163,140252,138794,138122,137374,148295,144946,152697,152671,152736,152729,155702,137702,154638,160970
 ## X-DBM-Mod-MinCoreRevision: 17286
 ## X-DBM-Mod-MinExpansion: 7
+## X-Curse-Project-ID: 420275
 localization.en.lua
 localization.de.lua
 localization.kr.lua
