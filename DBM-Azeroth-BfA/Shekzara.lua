@@ -1,4 +1,4 @@
-local mod	= DBM:NewMod(2378, "DBM-BfA", 6, 1028)
+local mod	= DBM:NewMod(2378, "DBM-Azeroth-BfA", 6, 1028)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
