@@ -26,6 +26,7 @@
 ## X-DBM-Mod-MinExpansion: 7
 ## X-Curse-Project-ID: 420275
 ## X-WoWI-ID: 25779
+## X-Wago-ID: lQNlbaKe
 ## Version: @project-version@
 localization.en.lua
 localization.de.lua
