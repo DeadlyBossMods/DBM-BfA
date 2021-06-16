@@ -73,7 +73,6 @@ local berserkTimer							= mod:NewBerserkTimer(360)
 mod:AddInfoFrameOption(307358, true)
 mod:AddSetIconOption("SetIconOnDebilitating", 306953, true, false, {1, 2, 3, 4})
 
-mod.vb.phase = 0
 mod.vb.umbralMantleCount = 0
 mod.vb.eruptionCount = 0
 mod.vb.bubblingCount = 0
@@ -162,7 +161,7 @@ function mod:SpitTarget(targetname, uId)
 end
 
 function mod:OnCombatStart(delay)
-	self.vb.phase = 1
+	self:SetStage(1)
 	self.vb.umbralMantleCount = 0
 	self.vb.fixateCount = 0
 	self.vb.bossPowerUpdateRate = 4
@@ -306,7 +305,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 		updateBreathTimer(self)
 	elseif spellId == 306931 then
-		self.vb.phase = self.vb.phase + 1
+		self:SetStage(0)
 		warnNoxiousMantle:Show()
 		if not self:IsLFR() then
 			--Unschedule P1 loop
@@ -319,7 +318,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 		updateBreathTimer(self)
 	elseif spellId == 306933 then
-		self.vb.phase = self.vb.phase + 1
+		self:SetStage(0)
 		warnEntropicMantle:Show()
 		if not self:IsLFR() then
 			--Unschedule P1 loop (future proofing)

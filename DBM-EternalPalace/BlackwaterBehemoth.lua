@@ -51,7 +51,6 @@ local berserkTimer						= mod:NewBerserkTimer(720)
 mod:AddRangeFrameOption(5, 292247)
 mod:AddInfoFrameOption(292133, true)
 
-mod.vb.phase = 1
 mod.vb.cloudCount = 0
 mod.vb.shockPulse = 0
 local playerBio, playerBioTwo, playerBioThree = false, false, false
@@ -95,7 +94,7 @@ do
 end
 
 function mod:OnCombatStart(delay)
-	self.vb.phase = 1
+	self:SetStage(1)
 	self.vb.cloudCount = 0
 	self.vb.shockPulse = 0
 	playerBio, playerBioTwo, playerBioThree = false, false, false
@@ -231,7 +230,7 @@ end
 
 function mod:SPELL_INTERRUPT(args)
 	if type(args.extraSpellId) == "number" and args.extraSpellId == 292083 then
-		self.vb.phase = self.vb.phase + 1
+		self:SetStage(0)
 		timerCavitation:Stop()
 		if self:IsMythic() then
 			timerToxicSpineCD:Start(11)

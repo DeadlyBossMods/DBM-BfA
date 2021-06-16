@@ -99,7 +99,6 @@ mod:AddRangeFrameOption(6, 283524)
 mod:AddInfoFrameOption(282741, true)
 mod:AddNamePlateOption("NPAuraOnEcho", 282517)
 
---mod.vb.phase = 1
 mod.vb.shieldCount = 0
 mod.vb.assaultCount = 0
 mod.vb.heraldCount = 0

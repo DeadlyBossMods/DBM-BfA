@@ -122,7 +122,6 @@ mod:AddSetIconOption("SetIconOnAdds", "ej19118", true, true, {1, 2, 4})
 mod:AddSetIconOption("SetIconOnRelics", "ej18970", true, false, {1, 3, 5, 6, 7})--only up to 3 are used, but it depends on what user sets UnstableBehavior2 to. 1 and 7 are not included in the default used by DBM/BW (SetTwo)
 mod:AddDropdownOption("UnstableBehavior2", {"SetOne", "SetTwo", "SetThree", "SetFour", "SetFive", "SetSix"}, "SetTwo", "misc")--SetTwo is BW default (BW default used to be SetOne)
 
-mod.vb.phase = 1
 mod.vb.touchCount = 0
 mod.vb.resonCount = 0
 mod.vb.tearCount = 0
@@ -233,7 +232,7 @@ local function updateResonanceYell(self, icon)
 end
 
 function mod:OnCombatStart(delay)
-	self.vb.phase = 1
+	self:SetStage(1)
 	self.vb.touchCount = 0
 	self.vb.resonCount = 0
 	self.vb.tearCount = 0
@@ -721,7 +720,7 @@ function mod:SPELL_AURA_REMOVED(args)
 			DBM.Nameplate:Hide(true, args.destGUID, spellId)
 		end
 	elseif spellId == 286310 and self:IsInCombat() then--Void Shield
-		self.vb.phase = self.vb.phase + 1
+		self:SetStage(0)
 		warnPhase:Show(DBM_CORE_L.AUTO_ANNOUNCE_TEXTS.stage:format(self.vb.phase))
 		warnPhase:Play("phasechange")
 		self.vb.tearCount = 0--Maybe not reset?

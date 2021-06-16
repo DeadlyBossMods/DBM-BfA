@@ -74,7 +74,6 @@ local berserkTimer							= mod:NewBerserkTimer(600)
 mod:AddNamePlateOption("NPAuraOnAquaLance", 282209)
 mod:AddNamePlateOption("NPAuraOnChaoticGrowth", 296914)
 
-mod.vb.phase = 1
 mod.vb.addCount = 0
 mod.vb.arcingCurrentCount = 0
 mod.vb.tenderCount = 0
@@ -83,7 +82,7 @@ local playerHasIncubation = false
 local castsPerGUID = {}
 
 function mod:OnCombatStart(delay)
-	self.vb.phase = 1
+	self:SetStage(1)
 	self.vb.addCount = 0
 	self.vb.arcingCurrentCount = 0
 	self.vb.tenderCount = 0
@@ -290,7 +289,7 @@ end
 --"<236.77 17:04:22> [UNIT_SPELLCAST_START] Orgozoa(??) - Massive Incubator - 45s [[boss1:Cast-3-3198-2164-287-298548-005955E755:298548]]", -- [7466]
 function mod:UNIT_SPELLCAST_SUCCEEDED(_, _, spellId)
 	if spellId == 298689 then--Absorb Fluids
-		self.vb.phase = 2
+		self:SetStage(2)
 		self.vb.addCount = 0
 		self.vb.arcingCurrentCount = 0
 		self.vb.tenderCount = 0

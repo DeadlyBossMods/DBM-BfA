@@ -82,7 +82,6 @@ mod:AddBoolOption("EarlyTankSwap", false)
 mod:AddSetIconOption("SetIconOnAdds", 267192, true, true, {1, 2, 3})
 mod:AddSetIconOption("SetIconOnEyeBeam", 264382, true, false, {6, 7, 8})
 
-mod.vb.phase = 1
 mod.vb.orbCount = 0
 mod.vb.addIcon = 1
 mod.vb.eyeCount = 0
@@ -117,7 +116,7 @@ function mod:RollingTarget(targetname)
 end
 
 function mod:OnCombatStart(delay)
-	self.vb.phase = 1
+	self:SetStage(1)
 	self.vb.orbCount = 0
 	self.vb.addIcon = 1
 	self.vb.eyeCount = 0
@@ -202,7 +201,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 		specWarnAdds:Play("killmob")
 		timerAddsCD:Start()
 	elseif spellId == 181089 then
-		self.vb.phase = self.vb.phase + 1
+		self:SetStage(0)
 		timerMightofVoidCD:Stop()
 		timerMightofVoidCD:Start(30)
 		timerSurgingDarknessCD:Stop()

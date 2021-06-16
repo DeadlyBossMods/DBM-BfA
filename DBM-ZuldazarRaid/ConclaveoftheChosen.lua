@@ -125,7 +125,6 @@ mod:AddSetIconOption("SetIconHex", 282135, false, false, {1, 2, 3, 4})
 --mod:AddRangeFrameOption("8/10")
 mod:AddInfoFrameOption(282079, true)--Not real spellID, just filler for now
 
---mod.vb.phase = 1
 mod.vb.hexIcon = 1
 mod.vb.ignoredActivate = true
 mod.vb.pakuWrathCount = 0
