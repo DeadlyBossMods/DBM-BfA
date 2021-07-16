@@ -44,7 +44,7 @@ local yellSpreadingEpidemic				= mod:NewYell(279663)
 local timerSanitizingStrikeCD			= mod:NewNextTimer(23.1, 267787, 191540, "Tank", nil, 5, nil, DBM_CORE_L.TANK_ICON, nil, 2, 3)--Short name "Strike"
 local timerPurifyingFlameCD				= mod:NewNextTimer(20.1, 267795, nil, nil, nil, 3, nil, DBM_CORE_L.DEADLY_ICON, nil, 1, 3)
 local timerWindTunnelCD					= mod:NewNextTimer(39.5, 267945, nil, nil, nil, 2)
-local timerSurgicalBeamCD				= mod:NewCDSourceTimer(30, 269827, 143444, nil, nil, 3, nil, DBM_CORE_L.DEADLY_ICON, nil, 3, 3)--Shortname "Laser"
+local timerSurgicalBeamCD				= mod:NewCDSourceTimer(30, 269827, 182908, nil, nil, 3, nil, DBM_CORE_L.DEADLY_ICON, nil, 3, 3)--Shortname "Laser"
 local timerCleansingFlameCD				= mod:NewCastSourceTimer(180, 268095, nil, nil, nil, 6)
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
