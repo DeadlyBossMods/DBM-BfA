@@ -12,8 +12,8 @@ local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
 mod:SetCreatureID(creatureID)
+mod:EnableWBEngageSync()--Enable syncing engage in outdoors
 --mod:SetEncounterID(2263)
---mod:DisableESCombatDetection()
 --mod:SetHotfixNoticeRev(17775)
 --mod:SetMinSyncRevision(16950)
 
