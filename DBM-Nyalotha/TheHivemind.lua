@@ -283,7 +283,7 @@ function mod:SPELL_CAST_START(args)
 			DBM.Nameplate:Show(true, args.sourceGUID, spellId, nil, 20)
 		end
 		if self.Options.SetIconOnAdds then
-			self:ScanForMobs(args.sourceGUID, 2, self.vb.addIcon, 1, 0.2, 12)
+			self:ScanForMobs(args.sourceGUID, 2, self.vb.addIcon, 1, nil, 12)
 		end
 		self.vb.addIcon = self.vb.addIcon + 1
 		if self.vb.addIcon == 7 then
@@ -348,7 +348,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		--	self.vb.addIcon = 1
 		--end
 		if self.Options.SetIconOnAdds then
-			self:ScanForMobs(args.destGUID, 2, self.vb.addIcon, 1, 0.2, 12)
+			self:ScanForMobs(args.destGUID, 2, self.vb.addIcon, 1, nil, 12)
 		end
 		self.vb.addIcon = self.vb.addIcon + 1
 		if self.vb.addIcon == 7 then

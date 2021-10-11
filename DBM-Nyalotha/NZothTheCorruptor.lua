@@ -974,7 +974,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			end
 		elseif cid == 158375 then--Corruptor
 			if self.Options.SetIconOnCorruptor then
-				self:ScanForMobs(args.destGUID, 2, self.vb.addIcon, 1, 0.2, 12)
+				self:ScanForMobs(args.destGUID, 2, self.vb.addIcon, 1, nil, 12)
 			end
 			self.vb.addIcon = self.vb.addIcon + 1
 			if self.vb.addIcon > 4 then--Cycle through 4 icons as they spawn. On mythic 2 spawn at a time so every other set it should cycle icons back to 1

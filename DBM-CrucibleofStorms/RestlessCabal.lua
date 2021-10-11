@@ -244,7 +244,7 @@ function mod:SPELL_CAST_START(args)
 		if not castsPerGUID[args.sourceGUID] then
 			castsPerGUID[args.sourceGUID] = 0
 			if self.Options.SetIconOnAdds then
-				self:ScanForMobs(args.sourceGUID, 2, self.vb.addIcon, 1, 0.2, 12)
+				self:ScanForMobs(args.sourceGUID, 2, self.vb.addIcon, 1, nil, 12)
 			end
 			self.vb.addIcon = self.vb.addIcon + 1
 			if self.vb.addIcon == 6 then--3-5 (to match markers bw uses)
