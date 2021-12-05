@@ -204,9 +204,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 			specWarnThrow:Show(args.destName)
 			specWarnThrow:Play("tauntboss")
 		end
-	elseif spellId == 282083 then--Beastial Smash
-		self.vb.comboCount = self.vb.comboCount + 1
-	elseif spellId == 285875 then--Rending Bite
+	elseif spellId == 282083 or spellId == 285875 then--Beastial Smash/Rending Bite
 		self.vb.comboCount = self.vb.comboCount + 1
 	elseif spellId == 289307 then
 		if args:IsPlayer() then
