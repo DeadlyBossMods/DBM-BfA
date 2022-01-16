@@ -649,7 +649,7 @@ function mod:SPELL_AURA_APPLIED(args)
 				specWarnChargedSpear:Show(shieldName)
 				specWarnChargedSpear:Play("behindmob")
 			else
-				specWarnChargedSpear:Show(DBM_COMMON_L.ROOM_EDGE)
+				specWarnChargedSpear:Show(DBM_COMMON_L.EDGE)
 				specWarnChargedSpear:Play("runtoedge")
 			end
 			yellChargedSpear:Yell()

@@ -106,7 +106,7 @@ end
 function mod:RollingTarget(targetname)
 	if not targetname then return end
 	if targetname == UnitName("player") and self:AntiSpam(5, 6) then
-		specWarnRoilingDeceit:Show(DBM_COMMON_L.ROOM_EDGE)
+		specWarnRoilingDeceit:Show(DBM_COMMON_L.EDGE)
 		specWarnRoilingDeceit:Play("runtoedge")
 		yellRoilingDeceit:Yell(self.vb.roilingCount)
 		yellRoilingDeceitFades:Countdown(12)
@@ -248,7 +248,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 	elseif spellId == 265360 then
 		if args:IsPlayer() and self:AntiSpam(5, 6) then
-			specWarnRoilingDeceit:Show(DBM_COMMON_L.ROOM_EDGE)
+			specWarnRoilingDeceit:Show(DBM_COMMON_L.EDGE)
 			specWarnRoilingDeceit:Play("runtoedge")
 			yellRoilingDeceit:Yell(self.vb.roilingCount)
 			yellRoilingDeceitFades:Countdown(spellId)

@@ -376,7 +376,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			yellRupturingBloodFades:Cancel()
 			yellRupturingBloodFades:Countdown(spellId)
 			specWarnRupturingBloodEdge:Cancel()
-			specWarnRupturingBloodEdge:Schedule(15, DBM_COMMON_L.ROOM_EDGE)
+			specWarnRupturingBloodEdge:Schedule(15, DBM_COMMON_L.EDGE)
 			specWarnRupturingBloodEdge:ScheduleVoice(15, "runtoedge")
 		end
 	elseif spellId == 273365 or spellId == 271640 then--Two versions of debuff, one that spawns an add and one that does not (so probably LFR/normal version vs heroic/mythic version)
