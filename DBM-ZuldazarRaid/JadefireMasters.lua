@@ -72,12 +72,12 @@ local specWarnFlashofPhoenixes			= mod:NewSpecialWarningSpell(284388, nil, nil, 
 
 --mod:AddTimerLine(DBM:EJ_GetSectionInfo(18527))
 --local timerDarkRevolationCD			= mod:NewCDCountTimer(55, 273365, nil, nil, nil, 3)
-local timerMultiSidedStrikeCD			= mod:NewCDTimer(55.5, 282030, nil, nil, 2, 5, nil, DBM_CORE_L.TANK_ICON)--35-60, cause variation is awesome
-local timerSpiritsofXuenCD				= mod:NewCDTimer(61.7, 285645, nil, nil, nil, 1, nil, DBM_CORE_L.HEROIC_ICON)
-local timerRollCD						= mod:NewCDTimer(40.1, 286427, nil, "Tank", nil, 5, nil, DBM_CORE_L.TANK_ICON)
+local timerMultiSidedStrikeCD			= mod:NewCDTimer(55.5, 282030, nil, nil, 2, 5, nil, DBM_COMMON_L.TANK_ICON)--35-60, cause variation is awesome
+local timerSpiritsofXuenCD				= mod:NewCDTimer(61.7, 285645, nil, nil, nil, 1, nil, DBM_COMMON_L.HEROIC_ICON)
+local timerRollCD						= mod:NewCDTimer(40.1, 286427, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 --Mage
-local timerShieldCD						= mod:NewCDTimer(50.6, 286425, nil, nil, nil, 4, nil, DBM_CORE_L.DAMAGE_ICON..DBM_CORE_L.INTERRUPT_ICON)
-local timerSearingEmbersCD				= mod:NewCDTimer(51.0, 286988, nil, nil, nil, 3, nil, DBM_CORE_L.MAGIC_ICON..DBM_CORE_L.HEALER_ICON)--15.8-29.2?
+local timerShieldCD						= mod:NewCDTimer(50.6, 286425, nil, nil, nil, 4, nil, DBM_COMMON_L.DAMAGE_ICON..DBM_COMMON_L.INTERRUPT_ICON)
+local timerSearingEmbersCD				= mod:NewCDTimer(51.0, 286988, nil, nil, nil, 3, nil, DBM_COMMON_L.MAGIC_ICON..DBM_COMMON_L.HEALER_ICON)--15.8-29.2?
 --Combos
 local timerFirefromMistCD				= mod:NewCDTimer(51, 285428, nil, nil, nil, 6)
 local timerFlashofPhoenixesCD			= mod:NewCDTimer(133, 284388, nil, nil, nil, 6)

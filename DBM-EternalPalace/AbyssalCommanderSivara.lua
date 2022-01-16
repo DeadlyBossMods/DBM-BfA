@@ -64,12 +64,12 @@ local yellToxicJav						= mod:NewPosYell(295607, DBM_CORE_L.AUTO_YELL_CUSTOM_POS
 local specWarnGTFO						= mod:NewSpecialWarningGTFO(300961, nil, nil, nil, 1, 8)
 
 --mod:AddTimerLine(BOSS)
-local timerCrushingReverbCD				= mod:NewCDTimer(22.3, 295332, nil, nil, nil, 5, nil, DBM_CORE_L.TANK_ICON, nil, mod:IsMelee() and 2, 4)
-local timerOverwhelmingBarrageCD		= mod:NewCDTimer(40, 296551, nil, nil, nil, 2, nil, DBM_CORE_L.DEADLY_ICON, nil, 1, 4)
+local timerCrushingReverbCD				= mod:NewCDTimer(22.3, 295332, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, mod:IsMelee() and 2, 4)
+local timerOverwhelmingBarrageCD		= mod:NewCDTimer(40, 296551, nil, nil, nil, 2, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 4)
 local timerOverflowCD					= mod:NewCDTimer(40.1, 295346, nil, nil, nil, 3)--31.6 previously, but 40 as of mythic testing
-local timerInversionCD					= mod:NewCDTimer(72.9, 295791, nil, nil, nil, 2, nil, DBM_CORE_L.HEROIC_ICON, nil, 3, 4)
+local timerInversionCD					= mod:NewCDTimer(72.9, 295791, nil, nil, nil, 2, nil, DBM_COMMON_L.HEROIC_ICON, nil, 3, 4)
 local timerfrostshockboltsCD			= mod:NewCDTimer(60.8, 295601, nil, nil, nil, 3)
-local timerChimericMarksCD				= mod:NewCDTimer(22.8, 294726, nil, nil, nil, 2, nil, DBM_CORE_L.MYTHIC_ICON)--Mythic
+local timerChimericMarksCD				= mod:NewCDTimer(22.8, 294726, nil, nil, nil, 2, nil, DBM_COMMON_L.MYTHIC_ICON)--Mythic
 
 local berserkTimer						= mod:NewBerserkTimer(600)
 
