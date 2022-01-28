@@ -500,7 +500,7 @@ do
 					self.vb.activeDecay = nil
 					local icon = GetRaidTargetIndex(uId)
 					if not icon then
-						SetRaidTarget(uId.."target", 8)
+						self:SetIcon(uId.."target", 8)
 					end
 				end
 				if not (self.vb.activeDecay) then

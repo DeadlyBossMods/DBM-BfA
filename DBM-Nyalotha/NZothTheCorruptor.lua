@@ -1139,7 +1139,7 @@ function mod:INSTANCE_ENCOUNTER_ENGAGE_UNIT()
 				timerHarvestThoughtsCD:Start(self:IsMythic() and 6.4 or 8.2, GUID)
 				timerMindwrackCD:Start(self:IsMythic() and 12 or 5, GUID)--Cast immediately on heroic but on mythic they cast harvest thoughts first
 				if self.Options.SetIconOnHarvester then
-					SetRaidTarget(unitID, self.vb.addIcon)
+					self:SetIcon(unitID, self.vb.addIcon)
 				end
 				self.vb.addIcon = self.vb.addIcon + 1
 				if self.vb.addIcon > 4 then--Cycle through 4 icons as they spawn. On mythic 2 spawn at a time so every other set it should cycle icons back to 1

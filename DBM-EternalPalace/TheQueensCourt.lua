@@ -343,7 +343,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	if spellId == 297851 then--Potent Spark have boss unit Ids and they cast this right after IEEU as well
 		if not GetRaidTargetIndex(uId) then--Not already marked
 			if self.Options.SetIconSparks then
-				SetRaidTarget(uId, self.vb.sparkIcon)
+				self:SetIcon(uId, self.vb.sparkIcon)
 			end
 			self.vb.sparkIcon = self.vb.sparkIcon + 1
 		end

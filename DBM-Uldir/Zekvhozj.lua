@@ -333,7 +333,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	elseif spellId == 267191 then--Anub'ar Caster Summon Cosmetic Beam
 		if not GetRaidTargetIndex(uId) then--Not already marked
 			if self.Options.SetIconOnAdds then
-				SetRaidTarget(uId, self.vb.addIcon)
+				self:SetIcon(uId, self.vb.addIcon)
 			end
 			self.vb.addIcon = self.vb.addIcon + 1
 			if self.vb.addIcon == 4 then
