@@ -29,6 +29,7 @@
 ## X-Wago-ID: RXKqxj6y
 ## Version: @project-version@
 localization.en.lua
+localization.ru.lua
 localization.de.lua
 localization.kr.lua
 localization.cn.lua
