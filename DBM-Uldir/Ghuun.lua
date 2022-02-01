@@ -572,7 +572,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			specWarnBloodFeastTarget:Show(self.vb.bloodFeastCount, args.destName)
 			specWarnBloodFeastTarget:Play("bloodfeast")
 			local count = self.vb.bloodFeastCount
-			specWarnBloodFeastTarget:ScheduleVoice(1, nil, "Interface\\AddOns\\DBM-VP"..DBM.Options.ChosenVoicePack.."\\count\\"..count..".ogg")
+			specWarnBloodFeastTarget:ScheduleVoice(1, nil, "Interface\\AddOns\\DBM-VP"..DBM.Options.ChosenVoicePack2.."\\count\\"..count..".ogg")
 		end
 		self.vb.bloodFeastTarget = args.destName
 	elseif spellId == 270443 then--Bite
