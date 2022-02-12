@@ -86,7 +86,7 @@ local specWarnDreadInferno					= mod:NewSpecialWarningYou(315252, nil, nil, nil,
 local yellDreadInferno						= mod:NewYell(315252)
 --Stage 2: Unleashed Wrath
 local specWarnDecayingStrike				= mod:NewSpecialWarningDefensive(313213, nil, nil, nil, 1, 2)
-local specWarnChargedBonds					= mod:NewSpecialWarningMoveAwayCount(310019, nil, DBM_COMMON_L.AUTO_SPEC_WARN_OPTIONS.moveaway:format(310019), nil, 3, 2)
+local specWarnChargedBonds					= mod:NewSpecialWarningMoveAwayCount(310019, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.moveaway:format(310019), nil, 3, 2)
 local yellChargedBonds						= mod:NewYell(310019)
 local specWarnDecayingWoundTaunt			= mod:NewSpecialWarningTaunt(313227, nil, nil, nil, 1, 2)
 local specWarnCorruptedExistence			= mod:NewSpecialWarningYou(316065, nil, nil, nil, 3, 2, 4)--Mythic Only
