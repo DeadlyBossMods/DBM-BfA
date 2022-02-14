@@ -547,7 +547,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 			timerAzsharasDevotedCD:Start(95)
 		elseif cid == 154565 then--Loyal Myrmidon
 			self.vb.myrmidonCount = self.vb.myrmidonCount + 1
-			specWarnLoyalMyrmidon:Show()
+			specWarnLoyalMyrmidon:Show(self.vb.myrmidonCount)
 			specWarnLoyalMyrmidon:Play("bigmob")
 			if self.vb.myrmidonCount == 1 then
 				timerLoyalMyrmidonCD:Start(self:IsMythic() and 59.9 or self:IsHeroic() and 94.7 or 90, 2)
