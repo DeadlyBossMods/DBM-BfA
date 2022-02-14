@@ -360,7 +360,7 @@ function mod:OnCombatStart(delay)
 		--Cyranus
 		timerChargedSpearCD:Start(27.5-delay)--27-29
 		--Azshara
-		timerHulkSpawnCD:Start(41-delay, 1)
+		timerHulkSpawnCD:Start(40.3-delay, 1)
 		timerBeckonCD:Start(54.6-delay, 1)--START
 		timerArcaneOrbsCD:Start(69.8-delay, 1)
 	end
