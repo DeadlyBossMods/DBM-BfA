@@ -67,6 +67,9 @@ mod:AddNamePlateOption("NPAuraOnVolatileCorruption", 312595)
 --mod:AddTimerLine(DBM:EJ_GetSectionInfo(20885))
 local specWarnErrantBlast					= mod:NewSpecialWarningDodge(308953, false, nil, 2, 2, 2, 4)--For mythic
 local specWarnMindFlay						= mod:NewSpecialWarningInterrupt(310552, "HasInterrupt", nil, nil, 1, 2)
+--Maw of Dresta'gath
+ local specWarnSpineEruption					= mod:NewSpecialWarningDodge(310078, false, nil, 2, 2, 2, 4)--For mythic
+ local specWarnMutteringsofBetrayal			= mod:NewSpecialWarningStack(310563, nil, 3, nil, nil, 1, 6)
 --Tentacle of Drest'agath
 --mod:AddTimerLine(DBM:EJ_GetSectionInfo(20886))
 local warnObscuringCloud					= mod:NewSpellAnnounce(310478, 2)
