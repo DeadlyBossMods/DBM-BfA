@@ -60,7 +60,7 @@ local specWarnMadnessBomb					= mod:NewSpecialWarningMoveAway(306973, nil, nil, 
 local yellMadnessBomb						= mod:NewYell(306973)
 local yellMadnessBombFades					= mod:NewShortFadesYell(306973)
 local specWarnGrowthCoveredTentacle			= mod:NewSpecialWarningDodgeCount(307131, nil, nil, nil, 3, 2)
-local specWarnAdaptiveMembrane				= mod:NewSpecialWarningYou(316848, nil, nil, nil, 1, 2, 4)--Mythic
+local specWarnAdaptiveMembrane				= mod:NewSpecialWarningYou(306990, nil, nil, nil, 1, 2, 4)--Mythic
 
 local timerMadnessBombCD					= mod:NewCDCountTimer(22.2, 306973, nil, nil, nil, 3)--22-24
 local timerAdaptiveMembraneCD				= mod:NewCDCountTimer(27.7, 306990, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 3, 3)
@@ -78,7 +78,7 @@ local timerGazeofMadnessCD					= mod:NewCDCountTimer(58, "ej20565", nil, nil, ni
 --Stage 2: Subcutaneous Tunnel
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20566))
 local warnSynthesRemaining					= mod:NewCountAnnounce(307079, 2)
-local warnSynthesisOver						= mod:NewEndAnnounce(307071, 1)
+local warnSynthesisOver						= mod:NewEndAnnounce(307079, 1)
 
 local specWarnEternalDarkness				= mod:NewSpecialWarningCount(307048, nil, nil, nil, 2, 2)
 local specWarnOccipitalBlast				= mod:NewSpecialWarningDodge(307092, nil, nil, nil, 2, 2)

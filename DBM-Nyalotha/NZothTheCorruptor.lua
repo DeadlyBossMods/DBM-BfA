@@ -141,7 +141,7 @@ local yellEvokeAnguish						= mod:NewYell(317112, nil, false, 2)
 local yellEvokeAnguishFades					= mod:NewShortFadesYell(317112, nil, true, 3)
 local specWarnStupefyingGlare				= mod:NewSpecialWarningDodgeCount(317874, nil, 239918, nil, 2, 2)--warning will be shortened to "Glare"
 
-local timerEvokeAnguishCD					= mod:NewNextCountTimer(30.5, 317102, nil, nil, nil, 3)--30.5-44.9, delayed by boss doing other stuff?
+local timerEvokeAnguishCD					= mod:NewNextCountTimer(30.5, 317112, nil, nil, nil, 3)--30.5-44.9, delayed by boss doing other stuff?
 local timerStupefyingGlareCD				= mod:NewNextCountTimer(22.9, 317874, 239918, nil, 2, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)
 
 mod:AddRangeFrameOption(4, 317112)
@@ -176,7 +176,7 @@ local yellAnnihilateFades					= mod:NewShortFadesYell(318459)
 local timerSummongateway					= mod:NewNextTimer(153.9, 318091, nil, nil, nil, 6)
 local timerEventHorizonCD					= mod:NewNextCountTimer(22.9, 318196, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON)--, nil, 2, 4
 local timerDarkMatterCD						= mod:NewNextCountTimer(16, 318971, nil, nil, nil, 3)
-local timerAnnihilateCD						= mod:NewNextCountTimer(22.9, 318460, nil, nil, nil, 3)
+local timerAnnihilateCD						= mod:NewNextCountTimer(22.9, 318459, nil, nil, nil, 3)
 local timerCleansingProtocolCD				= mod:NewNextCountTimer(16, 316970, nil, nil, nil, 5)
 local timerCleansingProtocol				= mod:NewCastTimer(8, 316970, nil, nil, nil, 2)
 

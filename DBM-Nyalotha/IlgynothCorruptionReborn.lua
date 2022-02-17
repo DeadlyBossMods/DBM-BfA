@@ -46,7 +46,7 @@ local specWarnGTFO							= mod:NewSpecialWarningGTFO(310322, nil, nil, nil, 1, 8
 local specWarnFixate						= mod:NewSpecialWarningYou(315094, nil, nil, nil, 1, 2)
 
 local timerEyeofNZothCD						= mod:NewCDTimer(17, 309961, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--16.6-17.4 (0ld), new seems more stable 17
-local timerTouchoftheCorruptorCD			= mod:NewCDCountTimer(64.4, 311401, nil, nil, nil, 3, nil, DBM_COMMON_L.HEROIC_ICON, nil, 1, 4)--64.4-68
+local timerTouchoftheCorruptorCD			= mod:NewCDCountTimer(64.4, 311367, nil, nil, nil, 3, nil, DBM_COMMON_L.HEROIC_ICON, nil, 1, 4)--64.4-68
 local timerCorruptorsGazeCD					= mod:NewCDCountTimer(32.2, 310319, 202046, nil, nil, 3)--32.8-34 Shorttext "Beam"
 
 mod:AddInfoFrameOption(315094, true)

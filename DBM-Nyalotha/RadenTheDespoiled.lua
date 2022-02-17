@@ -73,7 +73,6 @@ mod:AddTimerLine(DBM:EJ_GetSectionInfo(20529))
 local warnVoidPhase							= mod:NewSpellAnnounce(306733, 2)
 local warnUnstableVoid						= mod:NewStackAnnounce(306634, 2)
 local warnNullifyingStrike					= mod:NewStackAnnounce(306819, 2, nil, "Tank")
-local warnVoidCollapse						= mod:NewTargetNoFilterAnnounce(306881, 4)
 local warnCallVoidHunter					= mod:NewSpellAnnounce("ej20549", 2)
 
 local specWarnCallVoidHunter				= mod:NewSpecialWarningSwitch("ej20549", "-Healer", nil, nil, 1, 2)
@@ -82,6 +81,8 @@ local timerCallVoidHunterCD					= mod:NewNextTimer(30.1, "ej20549", nil, nil, ni
 local timerUnstableVoidCD					= mod:NewNextCountTimer(5.9, 306634, nil, nil, nil, 5)
 ------Void Hunter
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20549))
+local warnVoidCollapse						= mod:NewTargetNoFilterAnnounce(306881, 4)
+
 local specWarnVoidCollapse					= mod:NewSpecialWarningMoveTo(306881, nil, nil, nil, 3, 2)
 local yellVoidCollapse						= mod:NewYell(306881, nil, nil, nil, "YELL")
 local yellVoidCollapseFades					= mod:NewShortFadesYell(306881, nil, nil, nil, "YELL")
@@ -104,7 +105,7 @@ local timerCallNightTerrorCD				= mod:NewNextTimer(30.1, "ej21176", nil, nil, ni
 
 mod:AddSetIconOption("SetIconOnUnstableNightmare", 313077, true, false, {4, 5})
 ------Night Terror
-mod:AddTimerLine(DBM:EJ_GetSectionInfo(20549))
+mod:AddTimerLine(DBM:EJ_GetSectionInfo(21176))
 local warnDreadInferno						= mod:NewTargetNoFilterAnnounce(315252, 4)
 
 local specWarnDreadInferno					= mod:NewSpecialWarningYou(315252, nil, nil, nil, 1, 2)
@@ -129,7 +130,7 @@ local timerDecayingStrikeCD					= mod:NewCDTimer(16.9, 313213, nil, "Tank", nil,
 local timerVoidEruptionCD					= mod:NewCDCountTimer(19.4, 310003, nil, nil, nil, 2)--20.6-23
 local timerChargedBondsCD					= mod:NewCDCountTimer(10.2, 310019, nil, nil, nil, 3)--10.8-18.2
 local timerGorgeEssenceCD					= mod:NewCDCountTimer(29.1, 309985, nil, nil, nil, 6)
-local timerCorruptedExistenceCD				= mod:NewCDCountTimer(12.2, 317276, nil, nil, nil, 3, nil, DBM_COMMON_L.MYTHIC_ICON..DBM_COMMON_L.DEADLY_ICON)
+local timerCorruptedExistenceCD				= mod:NewCDCountTimer(12.2, 316065, nil, nil, nil, 3, nil, DBM_COMMON_L.MYTHIC_ICON..DBM_COMMON_L.DEADLY_ICON)
 --local berserkTimer						= mod:NewBerserkTimer(600)
 
 mod:AddSetIconOption("SetIconOnChargedBonds", 310019, true, false, {1})
