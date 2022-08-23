@@ -45,7 +45,6 @@ local yellArcingAzerite					= mod:NewPosYell(296944, DBM_CORE_L.AUTO_YELL_CUSTOM
 local yellArcingAzeriteFades			= mod:NewIconFadesYell(296944)
 local specWarnGTFO						= mod:NewSpecialWarningGTFO(296752, nil, nil, nil, 1, 8)
 
---mod:AddTimerLine(BOSS)
 --local timerCoralGrowthCD				= mod:NewCDCountTimer(30, 296555, nil, nil, nil, 3, nil, nil, nil, 1, 4)
 local timerRipplingwaveCD				= mod:NewCDCountTimer(35, 296688, nil, nil, nil, 3, nil, nil, nil, 3, 4)
 local timerBarnacleBashCD				= mod:NewCDCountTimer(15, 296725, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, mod:IsTank() and 2, 4)
