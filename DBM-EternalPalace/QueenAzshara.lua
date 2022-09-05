@@ -38,7 +38,7 @@ mod:RegisterEventsInCombat(
  or (ability.id = 303657) and type = "applydebuff"
 --]]
 --General/Ancient Wards (20)
-local warnPhase							= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
+local warnPhase							= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, nil, 2)
 local warnPressureSurge					= mod:NewSpellAnnounce(302208, 2)
 
 local specWarnDrainedSoul				= mod:NewSpecialWarningStack(298569, nil, 5, nil, nil, 1, 6)

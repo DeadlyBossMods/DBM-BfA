@@ -38,7 +38,7 @@ mod:RegisterEventsInCombat(
 --TODO, 286772 now returns invalid spellID on live?
 --TODO, remove countdown object when countdown code updated to auto disable on .fade events
 --General
-local warnPhase							= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
+local warnPhase							= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, nil, 2)
 --Stage One: Zandalari Honor Guard
 ----Prelate Za'lan
 local warnSealofPurification			= mod:NewTargetAnnounce(284662, 2)

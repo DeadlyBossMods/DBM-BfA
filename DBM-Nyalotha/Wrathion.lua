@@ -31,7 +31,7 @@ mod:RegisterEventsInCombat(
  or (ability.id = 306111) and type = "cast"
  or ability.id = 306995
  --]]
-local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
+local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, nil, 2)
 --Stage One: The Black Emperor
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20627))
 local warnSearingArmor						= mod:NewStackAnnounce(306015, 2, nil, "Tank")

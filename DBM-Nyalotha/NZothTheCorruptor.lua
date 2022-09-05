@@ -43,7 +43,7 @@ mod:RegisterEventsInCombat(
  or (ability.id = 309296 or ability.id = 309307) and type = "cast"
 --]]
 --General
-local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
+local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, nil, 2)
 local warnGiftofNzoth						= mod:NewTargetNoFilterAnnounce(313334, 2)
 local warnSanity							= mod:NewCountAnnounce(307831, 3)
 

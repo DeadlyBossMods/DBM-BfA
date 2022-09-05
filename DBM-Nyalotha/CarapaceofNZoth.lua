@@ -33,7 +33,7 @@ mod:RegisterEventsInCombat(
  or ability.id = 318108 and type = "applybuff"
 --]]
 --General
-local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
+local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, nil, 2)
 local warnGiftofNzoth						= mod:NewTargetNoFilterAnnounce(313334, 2)
 local warnWillPower							= mod:NewCountAnnounce(307831, 3)
 
