@@ -293,7 +293,7 @@ end
 function mod:SPELL_AURA_APPLIED(args)
 	local spellId = args.spellId
 	if spellId == 282741 then
-		self.vb.umbrelTarget = DBM:GetEnemyUnitIdByGUID(args.destGUID)
+		self.vb.umbrelTarget = self:GetUnitIdFromGUID(args.destGUID)
 		local cid = self:GetCIDFromGUID(args.destGUID)
 		--146497 Zaxasj, 146495 Fa'thuul
 		if cid == 146497 then
