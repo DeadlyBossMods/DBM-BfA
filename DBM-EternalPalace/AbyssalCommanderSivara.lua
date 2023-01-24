@@ -147,8 +147,8 @@ function mod:SPELL_CAST_SUCCESS(args)
 end
 
 --Prevent warning/yell spam if player rapidly changes between frost and toxic
-local function debuffSwapAggregation(self, spellId)
-	if spellId == 294711 then--Frost
+local function debuffSwapAggregation(self, abilityId)
+	if abilityId == 294711 then--Frost
 		specWarnFrostMark:Show(self:IconNumToTexture(6))
 		specWarnFrostMark:Play("frost")
 		playerMark = 2--1 Toxic, 2 Frost
@@ -159,8 +159,8 @@ local function debuffSwapAggregation(self, spellId)
 	end
 end
 
-local function debuffSwapAggregationTwo(_, spellId)
-	if spellId == 294711 then--Frost
+local function debuffSwapAggregationTwo(_, abilityId)
+	if abilityId == 294711 then--Frost
 		yellMark:Yell(6, "")--Square
 	else--Toxic
 		yellMark:Yell(4, "")--Triangle
