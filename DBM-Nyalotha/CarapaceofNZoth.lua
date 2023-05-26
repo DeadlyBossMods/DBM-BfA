@@ -22,7 +22,7 @@ mod:RegisterEventsInCombat(
 --	"SPELL_PERIODIC_MISSED",
 	"CHAT_MSG_RAID_BOSS_EMOTE",
 	"UNIT_SPELLCAST_SUCCEEDED boss1",
-	"UNIT_POWER_FREQUENT player"
+	"UNIT_POWER_UPDATE player"
 )
 
 --TODO, escalated tank warning for adaptive membrane on Fury, if you're tanking it
@@ -651,7 +651,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	end
 end
 
-function mod:UNIT_POWER_FREQUENT(uId)
+function mod:UNIT_POWER_UPDATE(uId)
 	local currentSanity = UnitPower(uId, ALTERNATE_POWER_INDEX)
 	if currentSanity > lastSanity then
 		lastSanity = currentSanity

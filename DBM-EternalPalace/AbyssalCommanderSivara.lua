@@ -93,7 +93,7 @@ function mod:OnCombatStart(delay)
 				timerChimericMarksCD:Start(23-delay)
 			end
 			self:RegisterShortTermEvents(
-				"UNIT_POWER_FREQUENT player"
+				"UNIT_POWER_UPDATE player"
 			)
 		end
 	end
@@ -294,7 +294,7 @@ do
 	end
 end
 
-function mod:UNIT_POWER_FREQUENT(uId, type)
+function mod:UNIT_POWER_UPDATE(uId, type)
 	if type == "ALTERNATE" then
 		local altPower = UnitPower(uId, 10)
 		if self:AntiSpam(3, 2) and altPower >= 70 then

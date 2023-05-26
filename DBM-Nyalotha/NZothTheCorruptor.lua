@@ -23,7 +23,7 @@ mod:RegisterEventsInCombat(
 	"UNIT_DIED",
 	"INSTANCE_ENCOUNTER_ENGAGE_UNIT",
 	"UNIT_SPELLCAST_SUCCEEDED boss1 boss2 boss3 boss4 boss5",
-	"UNIT_POWER_FREQUENT player"
+	"UNIT_POWER_UPDATE player"
 )
 
 --TODO, find out power gains of Psychus and add timer for Manifest Madness that's more reliable? (his energy soft enrage)
@@ -1158,7 +1158,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	end
 end
 
-function mod:UNIT_POWER_FREQUENT(uId)
+function mod:UNIT_POWER_UPDATE(uId)
 	local currentSanity = UnitPower(uId, ALTERNATE_POWER_INDEX)
 	if currentSanity > lastSanity then
 		lastSanity = currentSanity

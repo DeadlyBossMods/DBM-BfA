@@ -255,7 +255,7 @@ function mod:OnCombatStart(delay)
 			DBM.RangeCheck:Show(10, nil, nil, 1, true, nil, self.Options.ShowOnlySummary2)--Reverse checker, threshold 1 at start
 		end
 		self:RegisterShortTermEvents(
-			"UNIT_POWER_FREQUENT player"
+			"UNIT_POWER_UPDATE player"
 		)
 	else
 		timerAvalancheCD:Start(8.1-delay)
@@ -747,7 +747,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	end
 end
 
-function mod:UNIT_POWER_FREQUENT(uId, type)
+function mod:UNIT_POWER_UPDATE(uId, type)
 	if type == "ALTERNATE" then
 		local altPower = UnitPower(uId, 10)
 		if rangeThreshold < 3 and altPower >= 75 then
