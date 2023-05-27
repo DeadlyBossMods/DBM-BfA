@@ -28,6 +28,7 @@ localization.kr.lua
 localization.cn.lua
 localization.tw.lua
 localization.es.lua
+localization.ru.lua
 Wrathion.lua
 Maut.lua
 TheProphetSkitra.lua

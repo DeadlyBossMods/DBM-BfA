@@ -7,7 +7,7 @@ local L
 L= DBM:GetModLocalization(2168)
 
 L:SetMiscLocalization({
-	Aggro	 =	"Has Aggro"
+	Aggro	 =	"Имеет Аггро"
 })
 
 ---------------------------
@@ -79,9 +79,9 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2195)
 
 L:SetTimerLocalization({
-	timerCallofCrawgCD		= "Next Crawg Pool (%s)",
-	timerCallofHexerCD 		= "Next Hexer Pool (%s)",
-	timerCallofCrusherCD	= "Next Crusher Pool (%s)",
+	timerCallofCrawgCD		= "Следующий пулл Крогов (%s)",
+	timerCallofHexerCD 		= "Следующий пулл Ведьмаков (%s)",
+	timerCallofCrusherCD	= "Следующий пулл Крошителей (%s)",
 	timerAddIncoming		= DBM_COMMON_L.INCOMMING
 })
 
@@ -89,17 +89,17 @@ L:SetOptionLocalization({
 	timerCallofCrawgCD		= "Show timer for when Crawg pools begin to form",
 	timerCallofHexerCD 		= "Show timer for when Hexer pools begin to form",
 	timerCallofCrusherCD	= "Show timer for when Crusher pools begin to form",
-	timerAddIncoming		= "Show timer for when incoming add is attackable",
-	TauntBehavior			= "Set taunt behavior for tank swaps",
-	TwoHardThreeEasy		= "Swap at 2 stacks on heroic/mythic, 3 stacks on other difficulties",--Default
-	TwoAlways				= "Always swap at 2 stacks regardless of difficulty",
-	ThreeAlways				= "Always swap at 3 stacks regardless of difficulty"
+	timerAddIncoming		= "Показать таймер, когда входящий адд может быть атакован",
+	TauntBehavior			= "Установить поведение таунта для смены танков",
+	TwoHardThreeEasy		= "Меняться местами по 2 стака на героическом/эпохальном уровне сложности, по 3 стака на других сложностях",--По умолчанию
+	TwoAlways				= "Всегда меняться на 2 стаках независимо от сложности",
+	ThreeAlways				= "Всегда меняться на 3 стаках независимо от сложности"
 })
 
 L:SetMiscLocalization({
-	Crusher			=	"Crusher",
-	Bloodhexer		=	"Hexer",
-	Crawg			=	"Crawg"
+	Crusher			=	"Крошитель",
+	Bloodhexer		=	"Ведьмак",
+	Crawg			=	"Крог"
 })
 
 ------------------
@@ -108,18 +108,18 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2147)
 
 L:SetWarningLocalization({
-	warnMatrixFail		= "Power Matrix dropped"
+	warnMatrixFail		= "Силовая матрица упала"
 })
 
 L:SetOptionLocalization({
-	warnMatrixFail		= "Show warning when Power Matrix is dropped."
+	warnMatrixFail		= "Показывать предупреждение при сбросе Силовой матрицы."
 })
 
 L:SetMiscLocalization({
-	CurrentMatrix		=	"Current Matrix:",--Mythic
-	NextMatrix			=	"Next Matrix:",--Mythic
-	CurrentMatrixLong	=	"Current Matrix (%s):",--Non Mythic
-	NextMatrixLong		=	"Next Matrix (%s):"--Non Mythic
+	CurrentMatrix		=	"Текущая матрица:",--Мифический
+	NextMatrix			=	"Следующая матрица:",--Мифический
+	CurrentMatrixLong	=	"Текущая матрица (%s):",--НЕ мифический
+	NextMatrixLong		=	"Следующая матрица (%s):"--НЕ мифический
 })
 
 -------------
