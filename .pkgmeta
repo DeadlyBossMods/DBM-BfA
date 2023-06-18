@@ -2,8 +2,4 @@ package-as: DBM-BfA
 
 move-folders:
   DBM-BfA/DBM-BfA: DBM-BfA
-  DBM-BfA/DBM-Uldir: DBM-Uldir
-  DBM-BfA/DBM-CrucibleofStorms: DBM-CrucibleofStorms
-  DBM-BfA/DBM-ZuldazarRaid: DBM-ZuldazarRaid
-  DBM-BfA/DBM-EternalPalace: DBM-EternalPalace
-  DBM-BfA/DBM-Nyalotha: DBM-Nyalotha
+  DBM-BfA/DBM-Raids-BfA: DBM-Raids-BfA
