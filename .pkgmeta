@@ -1,5 +1,5 @@
-package-as: DBM-BfA
+package-as: DBM-Raids-BfA
 
 move-folders:
-  DBM-BfA/DBM-BfA: DBM-BfA
-  DBM-BfA/DBM-Raids-BfA: DBM-Raids-BfA
+  DBM-Raids-BfA/DBM-BfA: DBM-BfA
+  DBM-Raids-BfA/DBM-Raids-BfA: DBM-Raids-BfA
