@@ -21,16 +21,16 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2146)
 
 L:SetWarningLocalization({
-	addsSoon		= "Chute has opened - Adds Soon"--Translate
+	addsSoon		= "Желоб открылся - cкоро адды"
 })
 
 L:SetTimerLocalization({
-	chuteTimer		= "Next Chute (%s)"--Translate
+	chuteTimer		= "Следующий желоб (%s)"
 })
 
 L:SetOptionLocalization({
-	addsSoon		= "Show pre warning for when chutes open and start spawning adds",--Translate
-	chuteTimer		= "Show timer for when Chutes open"--Translate
+	addsSoon		= "Показывать предварительное предупреждение, когда желоба открываются и начинают появляться адды",
+	chuteTimer		= "Показывать таймер открытия желобов"
 })
 
 ---------------------------
@@ -39,7 +39,7 @@ L:SetOptionLocalization({
 L= DBM:GetModLocalization(2169)
 
 L:SetTimerLocalization({
-	timerOrbLands	= "Orb (%s) Lands"
+	timerOrbLands	= "Сфера (%s) Земли"
 })
 
 L:SetOptionLocalization({

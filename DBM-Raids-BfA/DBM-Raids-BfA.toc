@@ -1,6 +1,7 @@
 ## Interface: 100100
 ## X-Min-Interface: 90005
 ## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Raids (BfA)|r
+## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Рейды (Битва за Азерот)|r
 ## Author: MysticalOS
 ## LoadOnDemand: 1
 ## RequiredDeps: DBM-Core
@@ -13,6 +14,7 @@
 ## X-DBM-StatTypes: lfr,normal,heroic,mythic
 ## X-DBM-Mod-SubCategoriesID: 2217, 2164, 2096, 2070, 1861
 ## X-DBM-Mod-Name: Raids (BfA)
+## X-DBM-Mod-Name-ruRU: Рейды (Битва за Азерот)
 ## X-DBM-Mod-Sort: 401
 ## X-DBM-Mod-MapID: 2217, 2164, 2096, 2070, 1861
 ## X-DBM-Mod-MinCoreRevision: 20230617000000
