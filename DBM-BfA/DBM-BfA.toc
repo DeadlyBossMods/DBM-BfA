@@ -1,9 +1,9 @@
 ## Interface: 100105
-## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff10ff10World Bosses (BfA)|r
-## Title-deDE:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff10ff10World Bosses (BfA)|r
-## Title-koKR:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff10ff10아제로스 (격아)|r
-## Title-zhTW:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff10ff10艾澤拉斯 (決戰艾澤拉斯)|r
-## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff10ff10Мировые боссы (Битва за Азерот)|r
+## Title:|cffffe00a<|r|cffff7d0aDBM Module|r|cffffe00a>|r |cff10ff10World Bosses (BfA)|r
+## Title-deDE:|cffffe00a<|r|cffff7d0aDBM Module|r|cffffe00a>|r |cff10ff10World Bosses (BfA)|r
+## Title-koKR:|cffffe00a<|r|cffff7d0aDBM Module|r|cffffe00a>|r |cff10ff10아제로스 (격아)|r
+## Title-zhTW:|cffffe00a<|r|cffff7d0aDBM Module|r|cffffe00a>|r |cff10ff10艾澤拉斯 (決戰艾澤拉斯)|r
+## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM Module|r|cffffe00a>|r |cff10ff10Мировые боссы (Битва за Азерот)|r
 ## Author: MysticalOS
 ## LoadOnDemand: 1
 ## RequiredDeps: DBM-Core
