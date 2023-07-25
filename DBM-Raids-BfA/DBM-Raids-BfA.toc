@@ -1,7 +1,7 @@
 ## Interface: 100105
 ## X-Min-Interface: 90005
-## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Raids (BfA)|r
-## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Рейды (Битва за Азерот)|r
+## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cffff6010 (BfA)|r
+## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cffff6010Рейды (Битва за Азерот)|r
 ## Author: MysticalOS
 ## LoadOnDemand: 1
 ## RequiredDeps: DBM-Core
