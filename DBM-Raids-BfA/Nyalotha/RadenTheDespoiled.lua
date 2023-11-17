@@ -386,7 +386,6 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 		self.vb.lastLowest = "^^ No DBM"
 		if args:IsPlayer() then
-			playerHasNightmare = true
 			specWarnUnstableNightmare:Show()
 			specWarnUnstableNightmare:Play("targetyou")
 			yellUnstableNightmare:Yell()
