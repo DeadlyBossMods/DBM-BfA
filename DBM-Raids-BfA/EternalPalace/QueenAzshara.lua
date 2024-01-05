@@ -57,7 +57,7 @@ local specWarnLonging					= mod:NewSpecialWarningMoveTo(297934, false, nil, 2, 3
 local specWarnGTFO						= mod:NewSpecialWarningGTFO(297898, nil, nil, nil, 1, 8)
 local specWarnHulk						= mod:NewSpecialWarningSwitchCount("ej20480", "Dps", nil, nil, 1, 2)
 
-local timerCombatStart					= mod:NewCombatTimer(4)
+local timerCombatStart					= mod:NewRPTimer(4)
 local timerPainfulMemoriesCD			= mod:NewNextTimer(60, 297937, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 local timerLongingCD					= mod:NewNextTimer(60, 297934, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 
