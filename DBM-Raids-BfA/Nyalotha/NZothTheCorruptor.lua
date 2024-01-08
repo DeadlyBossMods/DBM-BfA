@@ -180,8 +180,7 @@ local timerAnnihilateCD						= mod:NewNextCountTimer(22.9, 318459, nil, nil, nil
 local timerCleansingProtocolCD				= mod:NewNextCountTimer(16, 316970, nil, nil, nil, 5)
 local timerCleansingProtocol				= mod:NewCastTimer(8, 316970, nil, nil, nil, 2)
 
-mod:AddMiscLine(DBM_CORE_L.OPTION_CATEGORY_DROPDOWNS)
-mod:AddDropdownOption("InterruptBehavior", {"Four", "Five", "Six", "NoReset"}, "Five", "misc")
+mod:AddDropdownOption("InterruptBehavior", {"Four", "Five", "Six", "NoReset"}, "Five", "misc", nil, 316711)
 
 mod.vb.BasherCount = 0
 mod.vb.egoCount = 0

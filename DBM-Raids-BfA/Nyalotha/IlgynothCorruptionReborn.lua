@@ -71,8 +71,7 @@ local berserkTimer							= mod:NewBerserkTimer(600)
 mod:AddRangeFrameOption(11, 311159)
 mod:AddSetIconOption("SetIconOnCusedBlood", 313759, false, false, {1, 2, 3, 4, 5, 6, 7, 8})
 mod:AddBoolOption("SetIconOnlyOnce", true)--If disabled, as long as living oozes are up, the skull will bounce around to lowest health mob continually, which is likely not desired by most, thus this defaulted on
-mod:AddMiscLine(DBM_CORE_L.OPTION_CATEGORY_DROPDOWNS)
-mod:AddDropdownOption("InterruptBehavior", {"Two", "Three", "Four", "Five"}, "Two", "misc")
+mod:AddDropdownOption("InterruptBehavior", {"Two", "Three", "Four", "Five"}, "Two", "misc", nil, 310788)
 
 mod.vb.TouchofCorruptorIcon = 1
 mod.vb.IchorCount = 0
