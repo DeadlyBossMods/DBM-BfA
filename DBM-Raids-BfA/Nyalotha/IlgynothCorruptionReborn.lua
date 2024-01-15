@@ -6,7 +6,7 @@ mod:SetCreatureID(158328)
 mod:SetEncounterID(2345)
 mod:SetUsedIcons(1, 2, 3, 4, 5, 6, 7, 8)
 mod:SetBossHPInfoToHighest()
-mod.noBossDeathKill = true--Instructs mod to ignore 158328 deaths, since it might die 4x on this fight
+mod:DisableBossDeathKill()
 mod:SetHotfixNoticeRev(20200130000000)--2020, 1, 30
 --mod:SetMinSyncRevision(20190716000000)
 mod.respawnTime = 29

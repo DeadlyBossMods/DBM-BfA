@@ -6,7 +6,7 @@ mod:SetCreatureID(157620)
 mod:SetEncounterID(2334)
 mod:SetUsedIcons(1, 2, 3)
 mod:SetBossHPInfoToHighest()--Must set boss HP to highest, since boss health will get screwed up during images phase
-mod.noBossDeathKill = true--Killing an image in image phase fires unit Died for boss creature ID, so must filter this
+mod:DisableBossDeathKill()--Killing an image in image phase fires unit Died for boss creature ID, so must filter this
 mod:SetHotfixNoticeRev(20191109000000)--2019, 11, 09
 mod:SetMinSyncRevision(20190918000000)--2019, 9, 18
 --mod.respawnTime = 29
