@@ -47,7 +47,7 @@ local specWarnGTFO						= mod:NewSpecialWarningGTFO(296752, nil, nil, nil, 1, 8)
 
 --local timerCoralGrowthCD				= mod:NewCDCountTimer(30, 296555, nil, nil, nil, 3, nil, nil, nil, 1, 4)
 local timerRipplingwaveCD				= mod:NewCDCountTimer(35, 296688, nil, nil, nil, 3, nil, nil, nil, 3, 4)
-local timerBarnacleBashCD				= mod:NewCDCountTimer(15, 296725, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, mod:IsTank() and 2, 4)
+local timerBarnacleBashCD				= mod:NewCDCountTimer(15, 296725, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, mod:IsTank() and 2 or nil, 4)
 local timerBrinyBubbleCD				= mod:NewCDCountTimer(15, 297324, nil, nil, nil, 3, nil, DBM_COMMON_L.TANK_ICON..DBM_COMMON_L.DAMAGE_ICON, nil, 2, 4)
 local timerUpsurgeCD					= mod:NewCDCountTimer(15.3, 298055, nil, nil, nil, 3)
 --Stage 2
@@ -293,7 +293,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			end
 		end
 	elseif spellId == 297397 or spellId == 302989 then--Briny targetting spell
-		warnBrinyBubble:CombinedShow(0.3, args.destname)
+		warnBrinyBubble:CombinedShow(0.3, args.destName)
 		if args:IsPlayer() then
 			specWarnBrinyBubbleNear:Cancel()
 			specWarnBrinyBubbleNear:CancelVoice()

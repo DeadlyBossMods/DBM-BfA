@@ -444,9 +444,11 @@ do
 			if select(4, UnitPosition(uId)) == currentMapId then
 				if (difficultyName == "mythic" or not mod.Options.HideDead or not UnitIsDeadOrGhost(uId)) then
 					local unitName = DBM:GetUnitFullName(uId)
-					local count = UnitPower(uId, ALTERNATE_POWER_INDEX)
-					tempLines[unitName] = count
-					tempLinesSorted[#tempLinesSorted + 1] = unitName
+					if unitName then
+						local count = UnitPower(uId, ALTERNATE_POWER_INDEX)
+						tempLines[unitName] = count
+						tempLinesSorted[#tempLinesSorted + 1] = unitName
+					end
 				end
 			end
 		end
@@ -513,7 +515,9 @@ function mod:OnCombatStart(delay)
 	end
 	for uId in DBM:GetGroupMembers() do
 		local name = DBM:GetUnitFullName(uId)
-		neckAvailable[name] = true
+		if name then
+			neckAvailable[name] = true
+		end
 	end
 	currentMapId = select(4, UnitPosition("player"))
 	if self.Options.InfoFrame then
@@ -554,7 +558,9 @@ function mod:OnTimerRecovery()
 	--On recovery no way to know neck status, so set all to false
 	for uId in DBM:GetGroupMembers() do
 		local name = DBM:GetUnitFullName(uId)
-		neckAvailable[name] = false
+		if name then
+			neckAvailable[name] = false
+		end
 	end
 end
 

@@ -71,7 +71,7 @@ local yellFreneticCharge				= mod:NewYell(299914, nil, nil, nil, "YELL")
 local yellFreneticChargeFades			= mod:NewShortFadesYell(299914, nil, nil, nil, "YELL")
 local specWarnZealousEruption			= mod:NewSpecialWarningMoveTo(301807, nil, nil, nil, 3, 2)
 
-local timerFreneticChargeCD				= mod:NewNextTimer(40, 299914, nil, nil, nil, 3, nil, nil, nil, not mod:IsTank() and 2, 4)
+local timerFreneticChargeCD				= mod:NewNextTimer(40, 299914, nil, nil, nil, 3, nil, nil, nil, not mod:IsTank() and 2 or nil, 4)
 local timerZealousEruptionCD			= mod:NewNextTimer(104.4, 301807, nil, nil, nil, 2)
 
 mod:AddSetIconOption("SetIconFreneticCharge", 299914, true, false, {4})

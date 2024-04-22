@@ -247,26 +247,30 @@ do
 		if mod.Options.ShowTimeNotStacks then
 			--Higher Performance check that scans all debuff remaining times
 			for uId in DBM:GetGroupMembers() do
-				if not (UnitGroupRolesAssigned(uId) == "TANK" or GetPartyAssignment("MAINTANK", uId, 1) or UnitIsDeadOrGhost(uId)) then--Exclude tanks and dead
+				if not (UnitGroupRolesAssigned(uId) == "TANK" or GetPartyAssignment("MAINTANK", uId, true) or UnitIsDeadOrGhost(uId)) then--Exclude tanks and dead
 					local unitName = DBM:GetUnitFullName(uId)
+					if unitName then
 					local spellName2, _, _, _, _, expireTime2 = DBM:UnitDebuff(uId, 298569)
-					if spellName2 and expireTime2 then
-						local remaining2 = expireTime2-GetTime()
-						tempLines[unitName] = math.floor(remaining2)
-						tempLinesSorted[#tempLinesSorted + 1] = unitName
-					else
-						tempLines[unitName] = 0
-						tempLinesSorted[#tempLinesSorted + 1] = unitName
+						if spellName2 and expireTime2 then
+							local remaining2 = expireTime2-GetTime()
+							tempLines[unitName] = math.floor(remaining2)
+							tempLinesSorted[#tempLinesSorted + 1] = unitName
+						else
+							tempLines[unitName] = 0
+							tempLinesSorted[#tempLinesSorted + 1] = unitName
+						end
 					end
 				end
 			end
 		else
 			--More performance friendly check that just returns all player stacks (the default option)
 			for uId in DBM:GetGroupMembers() do
-				if not (UnitGroupRolesAssigned(uId) == "TANK" or GetPartyAssignment("MAINTANK", uId, 1) or UnitIsDeadOrGhost(uId)) then--Exclude tanks and dead
+				if not (UnitGroupRolesAssigned(uId) == "TANK" or GetPartyAssignment("MAINTANK", uId, true) or UnitIsDeadOrGhost(uId)) then--Exclude tanks and dead
 					local unitName = DBM:GetUnitFullName(uId)
-					tempLines[unitName] = drainedSoulStacks[unitName] or 0
-					tempLinesSorted[#tempLinesSorted + 1] = unitName
+					if unitName then
+						tempLines[unitName] = drainedSoulStacks[unitName] or 0
+						tempLinesSorted[#tempLinesSorted + 1] = unitName
+					end
 				end
 			end
 		end
@@ -366,7 +370,9 @@ function mod:OnCombatStart(delay)
 	end
 	for uId in DBM:GetGroupMembers() do
 		local unitName = DBM:GetUnitFullName(uId)
-		drainedSoulStacks[unitName] = 0
+		if unitName then
+			drainedSoulStacks[unitName] = 0
+		end
 	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:SetHeader(OVERVIEW)
@@ -391,7 +397,9 @@ function mod:OnTimerRecovery()
 	for uId in DBM:GetGroupMembers() do
 		local _, _, currentStack = DBM:UnitDebuff(uId, 298569)
 		local unitName = DBM:GetUnitFullName(uId)
-		drainedSoulStacks[unitName] = currentStack or 0
+		if unitName then
+			drainedSoulStacks[unitName] = currentStack or 0
+		end
 		if UnitIsUnit(uId, "player") and currentStack then
 			playerSoulDrained = true
 		end

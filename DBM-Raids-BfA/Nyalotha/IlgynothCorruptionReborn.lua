@@ -310,7 +310,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 		if spellId == 313759 then--Mythic Only Option
 			if self.Options.SetIconOnCusedBlood then
-				self.SetIcon(args.destName, self.vb.bloodIcon)
+				self:SetIcon(args.destName, self.vb.bloodIcon)
 			end
 			self.vb.bloodIcon = self.vb.bloodIcon + 1
 		end
@@ -342,7 +342,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		end
 		if spellId == 313759 then--Mythic Only Option
 			if self.Options.SetIconOnCusedBlood then
-				self.SetIcon(args.destName, 0)
+				self:SetIcon(args.destName, 0)
 			end
 		end
 	end

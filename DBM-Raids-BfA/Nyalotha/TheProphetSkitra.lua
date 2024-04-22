@@ -18,8 +18,8 @@ mod:RegisterEventsInCombat(
 	"SPELL_CAST_SUCCESS 313239 307937 313276",
 	"SPELL_AURA_APPLIED 307784 307785 313208 308065 307950",
 	"SPELL_AURA_APPLIED_DOSE 308059",
-	"SPELL_AURA_REMOVED 313208 308065 307950",--307784 307785
-	"UNIT_SPELLCAST_SUCCEEDED boss1"
+	"SPELL_AURA_REMOVED 313208 308065 307950"--307784 307785
+--	"UNIT_SPELLCAST_SUCCEEDED boss1"
 )
 
 --[[
@@ -40,7 +40,7 @@ local specWarnImagesofAbsolutionSwitch		= mod:NewSpecialWarningSwitch(313239, "d
 local specWarnShadowShock					= mod:NewSpecialWarningStack(308059, nil, 7, nil, nil, 1, 6)
 local specWarnShadowShockTaunt				= mod:NewSpecialWarningTaunt(308059, nil, nil, nil, 1, 2)
 local specWarnShredPsyche					= mod:NewSpecialWarningMoveAway(307937, nil, nil, nil, 1, 2)
-local yellShredPsyche						= mod:NewPosYell(307937, DBM_CORE_L.AUTO_YELL_CUSTOM_POSITION2)
+local yellShredPsyche						= mod:NewShortPosYell(307937)
 local yellShredPsycheFades					= mod:NewIconFadesYell(307937)
 local specWarnShredPsycheSwitch				= mod:NewSpecialWarningSwitch(307937, "dps", nil, nil, 1, 2)
 

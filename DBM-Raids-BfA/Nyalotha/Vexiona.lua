@@ -133,7 +133,7 @@ function mod:OnCombatStart(delay)
 				local UnitID = "nameplate"..i
 				local GUID = UnitGUID(UnitID)
 				local cid = self:GetCIDFromGUID(GUID)
-				if cid == 157447 then
+				if GUID and cid == 157447 then
 					local unitPower = UnitPower(UnitID)
 					if not unitTracked[GUID] then unitTracked[GUID] = "None" end
 					if (unitPower < 30) then

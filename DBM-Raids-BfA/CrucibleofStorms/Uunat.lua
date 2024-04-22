@@ -1,3 +1,4 @@
+---@diagnostic disable: dbm-sync-checker
 local mod	= DBM:NewMod(2332, "DBM-Raids-BfA", 3, 1177)
 local L		= mod:GetLocalizedStrings()
 
@@ -65,7 +66,7 @@ local specWarnUnstableResonanceVoid		= mod:NewSpecialWarningYouPos(293663, nil, 
 local specWarnUnstableResonanceOcean	= mod:NewSpecialWarningYouPos(293662, nil, nil, nil, 1, 6)
 local specWarnUnstableResonanceStorm	= mod:NewSpecialWarningYouPos(293661, nil, nil, nil, 1, 6)
 local yellUnstableResonanceSign			= mod:NewPosYell(293653, DBM_CORE_L.AUTO_YELL_CUSTOM_POSITION)
-local yellUnstableResonanceRelic		= mod:NewPosYell("ej18970", DBM_CORE_L.AUTO_YELL_CUSTOM_POSITION2, nil, nil, "YELL")
+local yellUnstableResonanceRelic		= mod:NewShortPosYell("ej18970", nil, nil, nil, "YELL")
 --Stage One: His All-Seeing Eyes
 local specWarnTouchoftheEnd				= mod:NewSpecialWarningYou(284851, nil, nil, nil, 1, 2)
 local specWarnTouchoftheEndTaunt		= mod:NewSpecialWarningTaunt(284851, nil, nil, nil, 1, 6)
@@ -495,7 +496,7 @@ function mod:SPELL_SUMMON(args)
 					local UnitID = "nameplate"..i
 					local GUID = UnitGUID(UnitID)
 					local cid = self:GetCIDFromGUID(GUID)
-					if cid == 139059 then
+					if GUID and cid == 139059 then
 						local unitPower = UnitPower(UnitID)
 						if not unitTracked[GUID] then unitTracked[GUID] = "None" end
 						if (unitPower < 30) then

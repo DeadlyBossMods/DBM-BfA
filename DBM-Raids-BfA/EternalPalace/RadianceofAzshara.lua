@@ -40,7 +40,7 @@ local yellArcaneBomb					= mod:NewPosYell(296737)
 local yellArcaneBombFades				= mod:NewIconFadesYell(296737)
 local specWarnUnshackledPower			= mod:NewSpecialWarningCount(296894, nil, nil, nil, 2, 2)
 
-local timerTideFistCD					= mod:NewNextCountTimer(58.2, 296546, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, mod:IsTank() and 2, 4)
+local timerTideFistCD					= mod:NewNextCountTimer(58.2, 296546, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, mod:IsTank() and 2 or nil, 4)
 local timerArcanadoBurstCD				= mod:NewNextCountTimer(58.2, 296430, nil, nil, nil, 3)
 local timerArcaneBombCD					= mod:NewNextCountTimer(58.2, 296737, nil, "-Tank", nil, 3, nil, nil, nil, 3, 4)
 local timerUnshacklingPowerCD			= mod:NewNextCountTimer(58.2, 296894, nil, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON, nil, 1, 4)
@@ -160,7 +160,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			yellArcaneBombFades:Countdown(spellId, nil, icon)
 		end
 		if self.Options.SetIconOnArcaneBomb then
-			self:SetIcon(args.destname, self.vb.arcaneBombicon)
+			self:SetIcon(args.destName, self.vb.arcaneBombicon)
 		end
 		self.vb.arcaneBombicon = self.vb.arcaneBombicon + 1
 	end
@@ -173,7 +173,7 @@ function mod:SPELL_AURA_REMOVED(args)
 			yellArcaneBombFades:Cancel()
 		end
 		if self.Options.SetIconOnArcaneBomb then
-			self:SetIcon(args.destname, 0)
+			self:SetIcon(args.destName, 0)
 		end
 	end
 end

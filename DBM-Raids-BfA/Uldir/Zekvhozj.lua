@@ -67,7 +67,7 @@ local timerTitanSparkCD					= mod:NewCDTimer(37.6, 264954, nil, "Healer", nil, 2
 local timerAddsCD						= mod:NewAddsTimer(120, 31700, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)--Generic Timer only used on Mythic
 mod:AddTimerLine(SCENARIO_STAGE:format(1))
 local timerQirajiWarriorCD				= mod:NewCDTimer(60, "ej18071", nil, nil, nil, 1, 31700)--UNKNOWN, TODO
-local timerEyeBeamCD					= mod:NewCDTimer(40, 264382, nil, nil, nil, 3, nil, nil, nil, not mod:IsTank() and 3, 5)
+local timerEyeBeamCD					= mod:NewCDTimer(40, 264382, nil, nil, nil, 3, nil, nil, nil, not mod:IsTank() and 3 or nil, 5)
 mod:AddTimerLine(SCENARIO_STAGE:format(2))
 local timerAnubarCasterCD				= mod:NewCDTimer(80, "ej18397", nil, nil, nil, 1, 31700)--82
 local timerRoilingDeceitCD				= mod:NewCDTimer(45, 265360, nil, nil, nil, 3)--61
@@ -312,7 +312,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	elseif spellId == 264746 then--Eye beam
 		self.vb.eyeCount = 0
 		specWarnEyeBeamSoon:Show()
-		specWarnEyeBeamSoon:Play("Scattersoon")
+		specWarnEyeBeamSoon:Play("scattersoon")
 		--here because this spell ID fires at beginning of each set ONCE
 		if self:IsMythic() then
 			timerEyeBeamCD:Schedule(6, 60)
