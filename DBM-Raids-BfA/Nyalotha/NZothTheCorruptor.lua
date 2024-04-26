@@ -886,7 +886,7 @@ function mod:SPELL_AURA_APPLIED(args)
 				yellParanoiaRepeater:Yell(icon)
 			end
 		end
-	elseif spellId == 313400 and args:IsDestTypePlayer() and self:CheckDispelFilter() and self:AntiSpam(3, 3) then
+	elseif spellId == 313400 and args:IsDestTypePlayer() and self:CheckDispelFilter("magic") and self:AntiSpam(3, 3) then
 		specWarnCorruptedMindDispel:Show(args.destName)
 		specWarnCorruptedMindDispel:Play("helpdispel")
 	elseif spellId == 313793 then

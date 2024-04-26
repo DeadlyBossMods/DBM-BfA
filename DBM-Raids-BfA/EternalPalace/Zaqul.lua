@@ -283,7 +283,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			yellManifedNightmaresFades:Countdown(spellId)
 		end
 	elseif spellId == 295327 then
-		if self:CheckDispelFilter() then
+		if self:CheckDispelFilter("magic") then
 			specWarShatteredPsyche:CombinedShow(1, args.destName)
 			specWarShatteredPsyche:ScheduleVoice(1, "helpdispel")
 		end
