@@ -65,7 +65,7 @@ local castsPerGUID = {}
 
 local updateInfoFrame
 do
-	local voidWoken = DBM:GetSpellInfo(312406)
+	local voidWoken = DBM:GetSpellName(312406)
 	local floor = math.floor
 	local lines = {}
 	local sortedLines = {}

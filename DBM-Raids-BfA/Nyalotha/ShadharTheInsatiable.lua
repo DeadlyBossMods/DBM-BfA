@@ -278,7 +278,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 		if self.Options.InfoFrame then
 			if #SpitStacks == 1 then
-				DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(307358))
+				DBM.InfoFrame:SetHeader(DBM:GetSpellName(307358))
 				DBM.InfoFrame:Show(10, "table", SpitStacks, 1)
 			else
 				DBM.InfoFrame:UpdateTable(SpitStacks)

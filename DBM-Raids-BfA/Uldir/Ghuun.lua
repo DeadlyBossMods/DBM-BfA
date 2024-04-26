@@ -142,7 +142,7 @@ end
 
 local updateInfoFrame
 do
-	local matrixSpellName, bloodFeastName = DBM:GetSpellInfo(263372), DBM:GetSpellInfo(263235)
+	local matrixSpellName, bloodFeastName = DBM:GetSpellName(263372), DBM:GetSpellName(263235)
 	local lines = {}
 	local sortedLines = {}
 	local function addLine(key, value)

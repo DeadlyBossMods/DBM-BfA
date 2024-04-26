@@ -113,7 +113,7 @@ local playerPromise = false
 
 local updateInfoFrame
 do
-	local heraldName, UmbrelShield = DBM:GetSpellInfo(282561), DBM:GetSpellInfo(282741)
+	local heraldName, UmbrelShield = DBM:GetSpellName(282561), DBM:GetSpellName(282741)
 	local lines = {}
 	local sortedLines = {}
 	local function addLine(key, value)

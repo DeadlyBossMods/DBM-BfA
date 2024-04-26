@@ -111,7 +111,7 @@ local trackedGemBuff
 
 local updateInfoFrame
 do
-	local Incan, grosslyIncan = DBM:GetSpellInfo(284664), DBM:GetSpellInfo(284798)
+	local Incan, grosslyIncan = DBM:GetSpellName(284664), DBM:GetSpellName(284798)
 	local lines = {}
 	local sortedLines = {}
 	local function addLine(key, value)

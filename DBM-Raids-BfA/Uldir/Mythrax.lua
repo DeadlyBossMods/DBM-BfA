@@ -127,7 +127,7 @@ function mod:OnCombatStart(delay)
 		DBM.RangeCheck:Show(5)
 	end
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(272146))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(272146))
 		DBM.InfoFrame:Show(5, "table", infoframeTable, 1)
 	end
 end

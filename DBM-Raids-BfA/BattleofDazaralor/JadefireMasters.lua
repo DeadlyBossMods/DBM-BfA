@@ -97,7 +97,7 @@ mod.vb.shieldsActive = false
 mod.vb.embersIcon = 0
 mod.vb.magmaTrapCount = 0
 mod.vb.trapTimer = 50
-local pyroBlast = DBM:GetSpellInfo(286379)
+local pyroBlast = DBM:GetSpellName(286379)
 
 function mod:OnCombatStart(delay)
 	self.vb.shieldsActive = false

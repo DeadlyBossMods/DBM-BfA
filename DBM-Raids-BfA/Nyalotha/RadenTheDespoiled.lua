@@ -149,7 +149,7 @@ mod.vb.bondsCount = 0
 mod.vb.bondsTarget = nil
 mod.vb.gorgedCount = 0
 local ExposureTargets = {}
-local consumingVoid = DBM:GetSpellInfo(306645)
+local consumingVoid = DBM:GetSpellName(306645)
 local ChargedBondsTargets = {}
 local corruptedExistence = {11.2, 13.3, 12.1, 12.1, 14.6, 12.1, 15.7, 12.1, 12.1}
 local mythicBondstimers = {15, 15.8, 13.3, 10.9, 11.0, 12.1, 13.3, 10.2, 10.4, 10.9}
@@ -157,7 +157,7 @@ local mythicBondstimers = {15, 15.8, 13.3, 10.9, 11.0, 12.1, 13.3, 10.2, 10.4, 1
 
 local updateInfoFrame
 do
-	local unstableVita, unstableNightmare, Exposure = DBM:GetSpellInfo(306257), DBM:GetSpellInfo(313077), DBM:GetSpellInfo(306279)
+	local Exposure = DBM:GetSpellName(306279)
 	local floor = math.floor
 	local lines = {}
 	local sortedLines = {}

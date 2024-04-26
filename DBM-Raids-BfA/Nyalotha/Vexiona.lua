@@ -165,7 +165,7 @@ function mod:OnCombatStart(delay)
 		end, 1)
 	end
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(307019))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(307019))
 		DBM.InfoFrame:Show(10, "table", voidCorruptionStacks, 1)
 	end
 end

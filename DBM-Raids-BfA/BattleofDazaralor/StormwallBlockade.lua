@@ -113,7 +113,7 @@ mod.vb.joltingCast = 0
 mod.vb.stormsActive = 0
 mod.vb.stormsWailIcon = 1
 mod.vb.voltaicFlashCount = 0
-local freezingTidePod = DBM:GetSpellInfo(285075)
+local freezingTidePod = DBM:GetSpellName(285075)
 local stormTargets = {}
 
 local updateInfoFrame

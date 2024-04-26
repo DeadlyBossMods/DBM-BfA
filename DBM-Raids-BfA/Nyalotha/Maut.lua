@@ -82,7 +82,7 @@ mod.vb.bigAoeActive = false
 mod.vb.darkManifestationCount = 0
 mod.vb.ritualCount = 0
 --mod.vb.ancientCurseIcon = 1
-local DevouredAbyss = DBM:GetSpellInfo(307839)
+local DevouredAbyss = DBM:GetSpellName(307839)
 local castsPerGUID = {}
 
 function mod:OnCombatStart(delay)

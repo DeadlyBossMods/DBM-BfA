@@ -432,7 +432,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			DBM.RangeCheck:Show(8)
 		end
 		if self.Options.InfoFrame then
-			DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(285195))
+			DBM.InfoFrame:SetHeader(DBM:GetSpellName(285195))
 			DBM.InfoFrame:Show(5, "table", infoframeTable, 1)
 		end
 	elseif spellId == 284446 and self.vb.phase < 3 then--Bwonsamdi's Boon (shouldn't be needed but good to have)

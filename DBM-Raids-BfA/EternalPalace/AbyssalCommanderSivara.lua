@@ -98,7 +98,7 @@ function mod:OnCombatStart(delay)
 		end
 	end
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(294726))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(294726))
 		DBM.InfoFrame:Show(10, "table", MarksStacks, 1)
 	end
 end
@@ -272,7 +272,7 @@ function mod:SPELL_AURA_REMOVED(args)
 end
 
 do
-	local frostJav, toxicJav = DBM:GetSpellInfo(295606), DBM:GetSpellInfo(295607)
+	local frostJav, toxicJav = DBM:GetSpellName(295606), DBM:GetSpellName(295607)
 	function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg, _, _, _, targetname)
 		if msg:find("spell:295607") then--Toxic Jav
 			if targetname and self:AntiSpam(5, targetname) then

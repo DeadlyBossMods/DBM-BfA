@@ -87,7 +87,7 @@ local mythicincinerateTimers = {28.6, 71.6}
 
 local updateInfoFrame
 do
-	local burningMadness = DBM:GetSpellInfo(307013)
+	local burningMadness = DBM:GetSpellName(307013)
 	local floor = math.floor
 	local lines = {}
 	local sortedLines = {}
@@ -149,7 +149,7 @@ function mod:OnCombatStart(delay)
 		DBM:FireEvent("BossMod_EnableHostileNameplates")
 	end
 	if self.Options.InfoFrame and self:IsMythic() then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(313255))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(313255))
 		DBM.InfoFrame:Show(6, "playerdebuffstacks", 313255)--Sorted lowest first (highest first is default of arg not given)
 	end
 end
@@ -312,7 +312,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		timerSmokeandMirrorsCD:Start(155)
 		if self.Options.InfoFrame then
 			if self:IsMythic() then
-				DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(313255))
+				DBM.InfoFrame:SetHeader(DBM:GetSpellName(313255))
 				DBM.InfoFrame:Show(6, "playerdebuffstacks", 313255)
 			else
 				DBM.InfoFrame:Hide()

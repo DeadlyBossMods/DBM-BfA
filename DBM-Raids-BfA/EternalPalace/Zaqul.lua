@@ -125,7 +125,7 @@ function mod:OnCombatStart(delay)
 	end
 	berserkTimer:Start(600-delay)
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(292971))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(292971))
 		DBM.InfoFrame:Show(10, "table", HysteriaStacks, 1)
 	end
 end

@@ -24,7 +24,7 @@ local timerSongoftheEmpressCD			= mod:NewCDTimer(82.0, 314304, nil, nil, nil, 3)
 local timerForceandVerveCD				= mod:NewCDTimer(82.0, 314333, nil, nil, 2, 2, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)
 local timerSummonSwarmguardCD			= mod:NewCDTimer(30.5, 314307, nil, nil, nil, 1, nil, DBM_COMMON_L.TANK_ICON..DBM_COMMON_L.DAMAGE_ICON)
 
-local BarrierName = DBM:GetSpellInfo(314323)
+local BarrierName = DBM:GetSpellName(314323)
 
 --[[
 function mod:OnCombatStart(delay, yellTriggered)

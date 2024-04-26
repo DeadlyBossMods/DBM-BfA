@@ -95,7 +95,7 @@ do
 		lines[key] = value
 		sortedLines[#sortedLines + 1] = key
 	end
-	local OozeName, fixateName = DBM:EJ_GetSectionInfo(20988), DBM:GetSpellInfo(315094)
+	local OozeName, fixateName = DBM:EJ_GetSectionInfo(20988), DBM:GetSpellName(315094)
 	updateInfoFrame = function()
 		table.wipe(lines)
 		table.wipe(sortedLines)

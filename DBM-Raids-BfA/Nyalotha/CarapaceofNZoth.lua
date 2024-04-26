@@ -179,7 +179,7 @@ function mod:OnCombatStart(delay)
 	end
 	berserkTimer:Start(self:IsEasy() and 840 or 780)
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(307831))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(307831))
 		DBM.InfoFrame:Show(8, "playerpower", 1, ALTERNATE_POWER_INDEX, nil, nil, 2)--Sorting lowest to highest
 	end
 	if self.Options.NPAuraOnMembrane2 then
@@ -475,7 +475,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		if args:GetDestCreatureID() == 157439 then
 			timerAdaptiveMembrane:Stop()
 			if self.Options.InfoFrame then
-				DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(307831))
+				DBM.InfoFrame:SetHeader(DBM:GetSpellName(307831))
 				DBM.InfoFrame:Show(8, "playerpower", 1, ALTERNATE_POWER_INDEX, nil, nil, 2)--Sorting lowest to highest
 			end
 		elseif args:IsDestTypePlayer() then

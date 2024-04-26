@@ -521,7 +521,7 @@ function mod:OnCombatStart(delay)
 	end
 	currentMapId = select(4, UnitPosition("player"))
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(307831))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(307831))
 		DBM.InfoFrame:Show(self:IsLFR() and 10 or 30, "function", updateInfoFrame, false)
 	end
 end

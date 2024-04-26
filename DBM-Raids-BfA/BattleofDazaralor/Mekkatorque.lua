@@ -245,7 +245,7 @@ end
 
 local updateInfoFrame
 do
-	local shrunkName = DBM:GetSpellInfo(284168)
+	local shrunkName = DBM:GetSpellName(284168)
 	local floor = math.floor
 	local lines = {}
 	local sortedLines = {}
@@ -363,7 +363,7 @@ function mod:OnCombatStart(delay)
 		end
 	end
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(286105))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(286105))
 		DBM.InfoFrame:Show(8, "function", updateInfoFrame, false)
 	end
 end

@@ -100,7 +100,7 @@ function mod:OnCombatStart(delay)
 		DBM.RangeCheck:Show(4)--For Acid Splash
 	end
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(308377))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(308377))
 		DBM.InfoFrame:Show(10, "playerdebuffremaining", 308377)
 	end
 	berserkTimer:Start(self:IsMythic() and 600 or 900-delay)--Confirmed normal and heroic

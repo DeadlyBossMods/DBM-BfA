@@ -147,7 +147,7 @@ local castsPerGUID = {}
 
 local updateInfoFrame
 do
-	local UnstableResonance, UmbrelShield = DBM:GetSpellInfo(293653), DBM:GetSpellInfo(284722)
+	local UnstableResonance, UmbrelShield = DBM:GetSpellName(293653), DBM:GetSpellName(284722)
 	local lines = {}
 	local sortedLines = {}
 	local function addLine(key, value)

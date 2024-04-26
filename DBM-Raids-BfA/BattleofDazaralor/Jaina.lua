@@ -264,7 +264,7 @@ function mod:OnCombatStart(delay)
 		berserkTimer:Start(900)
 	end
 	if self.Options.InfoFrame then
-		DBM.InfoFrame:SetHeader(DBM:GetSpellInfo(287993))
+		DBM.InfoFrame:SetHeader(DBM:GetSpellName(287993))
 		DBM.InfoFrame:Show(10, "table", ChillingTouchStacks, 1)
 	end
 	if self.Options.NPAuraOnMarkedTarget2 or self.Options.NPAuraOnTimeWarp or self.Options.NPAuraOnRefractiveIce or self.Options.NPAuraOnHowlingWinds2 then
