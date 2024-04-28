@@ -69,7 +69,7 @@ local timerMentalDecayCD					= mod:NewCDTimer(21, 313364, nil, nil, nil, 3)
 local timerGrowthCoveredTentacleCD			= mod:NewNextCountTimer(60, 307131, nil, nil, nil, 1, nil, nil, nil, 1, 3)
 local timerMandibleSlamCD					= mod:NewCDTimer(12.7, 315947, nil, "Tank", 2, 5, nil, DBM_COMMON_L.TANK_ICON)--12.7
 
-mod:AddSetIconOption("SetIconAdaptiveMembrane", 316848, true, false, {1, 2, 3})
+mod:AddSetIconOption("SetIconAdaptiveMembrane", 316848, true, 0, {1, 2, 3})
 mod:AddNamePlateOption("NPAuraOnMembrane2", 306990, false)
 ----Gaze of Madness
 local specWarnGazeOfMadness					= mod:NewSpecialWarningSwitch("ej20565", "Dps", nil, nil, 1, 2)

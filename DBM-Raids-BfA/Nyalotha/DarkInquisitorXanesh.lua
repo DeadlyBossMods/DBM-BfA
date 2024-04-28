@@ -50,8 +50,8 @@ local timerTormentCD						= mod:NewNextCountTimer(46.5, 306208, nil, nil, nil, 3
 local berserkTimer							= mod:NewBerserkTimer(600)
 
 mod:AddInfoFrameOption(312406, true)
-mod:AddSetIconOption("SetIconOnVoidWoken2", 312406, false, false, {1, 2, 3})
-mod:AddSetIconOption("SetIconOnAdds", "ej21227", true, true, {4, 5, 6, 7, 8})
+mod:AddSetIconOption("SetIconOnVoidWoken2", 312406, false, 0, {1, 2, 3})
+mod:AddSetIconOption("SetIconOnAdds", "ej21227", true, 5, {4, 5, 6, 7, 8})
 mod:AddDropdownOption("InterruptBehavior", {"Four", "Five", "Six", "NoReset"}, "Four", "misc", nil, 316211)
 
 mod.vb.ritualCount = 0

@@ -132,7 +132,7 @@ local timerArcaneBurstCD				= mod:NewCDCountTimer(58.2, 303657, nil, nil, nil, 3
 local timerAzsharasDevotedCD			= mod:NewCDTimer(95, "ej20353", nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
 local timerAzsharasIndomitableCD		= mod:NewCDTimer(100, "ej20410", nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
 
-mod:AddSetIconOption("SetIconOnArcaneBurst", 303657, true, false, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconOnArcaneBurst", 303657, true, 0, {1, 2, 3, 4})
 --Stage Three: Song of the Tides
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20340))
 local warnStaticShock					= mod:NewTargetAnnounce(300492, 2)

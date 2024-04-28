@@ -58,7 +58,7 @@ local timerCrushingGraspCD				= mod:NewCDTimer(31.4, 292565, nil, nil, nil, 3)
 local timerDreadCD						= mod:NewCDTimer(75.4, 292963, nil, "Healer", nil, 5, nil, DBM_COMMON_L.MAGIC_ICON)--One dread timer used for all versions (cast by boss)
 local timerMindTetherCD					= mod:NewCDTimer(47.8, 295444, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)--52.3
 
-mod:AddSetIconOption("SetIconDread", 292963, true, false, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconDread", 292963, true, 0, {1, 2, 3, 4})
 --Stage Two: Grip of Fear
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19979))
 local warnPunctureDarkness				= mod:NewTargetNoFilterAnnounce(295099, 1)
@@ -100,8 +100,8 @@ local timerPsychoticSplit				= mod:NewCastTimer(25, 301068, nil, nil, nil, 5, ni
 local timerDreadScreamCD				= mod:NewCDTimer(8.5, 303543, nil, "Healer", nil, 5, nil, DBM_COMMON_L.MYTHIC_ICON..DBM_COMMON_L.MAGIC_ICON)--Mythic
 local timerVoidSlam						= mod:NewCastTimer(4.1, 302593, nil, nil, nil, 3)--Mythic
 
-mod:AddSetIconOption("SetIconDreadScream", 303543, true, false, {1, 2, 3, 4})
-mod:AddSetIconOption("SetIconManicDreadScream", 296018, true, false, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconDreadScream", 303543, true, 0, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconManicDreadScream", 296018, true, 0, {1, 2, 3, 4})
 
 mod.vb.dreadIcon = 1
 mod.vb.DeliriumsDescentCount = 0

@@ -67,7 +67,7 @@ local timerEchoingVoidCD					= mod:NewNextCountTimer(84, 307232, nil, nil, nil, 
 local timerDronesCD							= mod:NewNextCountTimer(120, 312868, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)
 
 mod:AddRangeFrameOption(6, 307232)--While 4 yards is supported, we want wiggle room
-mod:AddSetIconOption("SetIconOnAdds", 307637, true, true, {1, 2, 3, 4, 5, 6})
+mod:AddSetIconOption("SetIconOnAdds", 307637, true, 5, {1, 2, 3, 4, 5, 6})
 mod:AddNamePlateOption("NPAuraOnAcceleratedEvolution", 307637)
 
 mod.vb.interruptCount = 0

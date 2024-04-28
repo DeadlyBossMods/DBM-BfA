@@ -83,8 +83,8 @@ local timerExplodingSheepCD				= mod:NewNextCountTimer(55, 287929, 222529, nil, 
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
 
-mod:AddSetIconOption("SetIconGigaVolt", 286646, true, false, {1, 2, 3})
-mod:AddSetIconOption("SetIconBot", 288410, true, true, {4, 5, 6, 7, 8})
+mod:AddSetIconOption("SetIconGigaVolt", 286646, true, 0, {1, 2, 3})
+mod:AddSetIconOption("SetIconBot", 288410, true, 5, {4, 5, 6, 7, 8})
 mod:AddInfoFrameOption(286105, true)
 
 --Count variables for every timer, because stupid sequence mod

@@ -87,7 +87,7 @@ local timerMagmaTrapCD					= mod:NewCDCountTimer(55, 284374, nil, nil, nil, 5)--
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
 
-mod:AddSetIconOption("SetIconEmbers", 286988, true, false, {1, 2, 3})
+mod:AddSetIconOption("SetIconEmbers", 286988, true, 0, {1, 2, 3})
 --mod:AddRangeFrameOption("8/10")
 mod:AddInfoFrameOption(281959, true)
 mod:AddNamePlateOption("NPAuraOnFixate", 268074)

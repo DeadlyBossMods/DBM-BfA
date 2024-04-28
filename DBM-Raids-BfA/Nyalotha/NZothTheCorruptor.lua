@@ -117,7 +117,7 @@ local specWarnCorruptedMind					= mod:NewSpecialWarningInterruptCount(313400, "H
 local specWarnCorruptedMindDispel			= mod:NewSpecialWarningDispel(313400, "RemoveMagic", nil, nil, 1, 2)
 local specWarnMindFlay						= mod:NewSpecialWarningInterrupt(308885, false, nil, nil, 1, 2)
 
-mod:AddSetIconOption("SetIconOnCorruptor", "ej21441", true, true, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconOnCorruptor", "ej21441", true, 5, {1, 2, 3, 4})
 ----Through the Mindgate
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20971))
 ------Corruption of Deathwing
@@ -156,7 +156,7 @@ local specWarnHarvestThoughts				= mod:NewSpecialWarningCount(317066, nil, nil, 
 local timerThoughtHarvesterCD				= mod:NewCDCountTimer(30.1, "ej21308", nil, nil, nil, 1, 231298)
 local timerHarvestThoughtsCD				= mod:NewCDTimer(35.2, 317066, nil, nil, nil, 3)
 
-mod:AddSetIconOption("SetIconOnHarvester", "ej21308", true, true, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconOnHarvester", "ej21308", true, 5, {1, 2, 3, 4})
 --Stage 3 Mythic
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21435))
 local warnEventHorizon						= mod:NewTargetNoFilterAnnounce(318196, 3)

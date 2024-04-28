@@ -69,7 +69,7 @@ local timerImmunoSuppCD						= mod:NewCDCountTimer("d25.5", 265206, nil, nil, ni
 
 --local berserkTimer						= mod:NewBerserkTimer(600)
 
-mod:AddSetIconOption("SetIconVector", 265129, true, false, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconVector", 265129, true, 0, {1, 2, 3, 4})
 mod:AddRangeFrameOption("5/8")
 mod:AddInfoFrameOption(265127, true)
 mod:AddBoolOption("ShowHighestFirst3", true)--Show highest stacks first by default, since it alines with 3rd generation infoframe

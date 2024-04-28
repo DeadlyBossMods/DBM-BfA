@@ -49,7 +49,7 @@ local timerShredPsycheCD					= mod:NewCDTimer(37.7, 307937, nil, nil, nil, 3, ni
 
 local berserkTimer							= mod:NewBerserkTimer(600)--He only gains a 300% damage increase on his berserk, and that's surviable since he doesn't melee and his adds don't gain it
 
-mod:AddSetIconOption("SetIconOnAdds", 307937, true, false, {1, 2})
+mod:AddSetIconOption("SetIconOnAdds", 307937, true, 0, {1, 2})
 mod:AddNamePlateOption("NPAuraOnIntangibleIllusion", 313208)
 
 mod.vb.ImagesOfAbsolutionCast = 0

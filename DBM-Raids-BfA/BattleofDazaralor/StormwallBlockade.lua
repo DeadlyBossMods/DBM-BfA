@@ -102,7 +102,7 @@ local timerJoltingVolleyCD				= mod:NewCDCountTimer(43.6, 287169, nil, nil, nil,
 --local berserkTimer					= mod:NewBerserkTimer(600)
 
 mod:AddNamePlateOption("NPAuraOnKepWrapping", 285382)
-mod:AddSetIconOption("SetIconWail", 285350, true, false, {1, 2, 3})
+mod:AddSetIconOption("SetIconWail", 285350, true, 0, {1, 2, 3})
 mod:AddRangeFrameOption(5, 285118)
 mod:AddInfoFrameOption(284760, true)
 

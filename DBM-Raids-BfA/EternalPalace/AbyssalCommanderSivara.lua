@@ -72,7 +72,7 @@ local timerChimericMarksCD				= mod:NewCDTimer(22.8, 294726, nil, nil, nil, 2, n
 
 local berserkTimer						= mod:NewBerserkTimer(600)
 
-mod:AddSetIconOption("SetIconOnMarks", 294726, true, false, {4, 6})
+mod:AddSetIconOption("SetIconOnMarks", 294726, true, 0, {4, 6})
 mod:AddInfoFrameOption(294726, true)
 
 local MarksStacks = {}

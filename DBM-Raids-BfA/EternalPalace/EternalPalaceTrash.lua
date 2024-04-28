@@ -28,7 +28,7 @@ local yellDreadFades						= mod:NewIconFadesYell(303619)
 local specWarnCoalescedNightmares			= mod:NewSpecialWarningMoveAway(303942, nil, nil, nil, 1, 2)
 local yellCoalescedNightmares				= mod:NewYell(303942)
 
-mod:AddSetIconOption("SetIconDread", 303619, true, false, {1, 2, 3, 4, 5})
+mod:AddSetIconOption("SetIconDread", 303619, true, 0, {1, 2, 3, 4, 5})
 
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId

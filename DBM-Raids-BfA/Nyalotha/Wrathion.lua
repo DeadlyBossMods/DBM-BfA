@@ -64,7 +64,7 @@ local warnSap								= mod:NewTargetNoFilterAnnounce(314347, 3, nil, false)--off
 local timerSmokeandMirrorsCD				= mod:NewNextTimer(155, 306995, nil, nil, nil, 6)
 
 mod:AddInfoFrameOption(307013, true)
-mod:AddSetIconOption("SetIconBurningMadness", 307013, true, false, {1, 2, 3})
+mod:AddSetIconOption("SetIconBurningMadness", 307013, true, 0, {1, 2, 3})
 mod:AddNamePlateOption("NPAuraOnHardenedCore", 313175)
 
 mod.vb.cataCast = 0

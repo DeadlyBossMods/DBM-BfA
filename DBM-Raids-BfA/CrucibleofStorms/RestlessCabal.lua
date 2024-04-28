@@ -92,9 +92,9 @@ local timerCrushingDoubtCD				= mod:NewCDCountTimer(40.1, 282432, nil, nil, nil,
 
 local berserkTimer						= mod:NewBerserkTimer(780)
 
-mod:AddSetIconOption("SetIconCrushingDoubt", 282432, true, false, {1, 2})
-mod:AddSetIconOption("SetIconDarkherald", 282561, true, false, {6})
-mod:AddSetIconOption("SetIconOnAdds", 282617, true, true, {3, 4, 5})
+mod:AddSetIconOption("SetIconCrushingDoubt", 282432, true, 0, {1, 2})
+mod:AddSetIconOption("SetIconDarkherald", 282561, true, 0, {6})
+mod:AddSetIconOption("SetIconOnAdds", 282617, true, 5, {3, 4, 5})
 mod:AddRangeFrameOption(6, 283524)
 mod:AddInfoFrameOption(282741, true)
 mod:AddNamePlateOption("NPAuraOnEcho", 282517)

@@ -47,7 +47,7 @@ local timerUnshacklingPowerCD			= mod:NewNextCountTimer(58.2, 296894, nil, nil, 
 local timerAncientTempestCD				= mod:NewNextTimer(95.9, 295916, nil, nil, nil, 6)
 local berserkTimer						= mod:NewBerserkTimer(600)
 
-mod:AddSetIconOption("SetIconOnArcaneBomb", 296737, true, false, {1, 2})
+mod:AddSetIconOption("SetIconOnArcaneBomb", 296737, true, 0, {1, 2})
 --Raging Storm (Intermission Add)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20078))
 local specWarnAncientTempest			= mod:NewSpecialWarningSpell(295916, nil, nil, nil, 2, 2)

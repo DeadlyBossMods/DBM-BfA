@@ -70,7 +70,7 @@ local timerVisionsoMadnessCD			= mod:NewNextCountTimer(20, 273949, nil, nil, nil
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
 
-mod:AddSetIconOption("SetIconRuin", 272536, true, false, {1, 2})
+mod:AddSetIconOption("SetIconRuin", 272536, true, 0, {1, 2})
 mod:AddRangeFrameOption(5, 272407)
 mod:AddInfoFrameOption(272146, true)
 

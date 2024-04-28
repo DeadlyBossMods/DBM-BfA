@@ -71,7 +71,7 @@ local berserkTimer							= mod:NewBerserkTimer(360)
 
 --mod:AddRangeFrameOption(6, 264382)
 mod:AddInfoFrameOption(307358, true)
-mod:AddSetIconOption("SetIconOnDebilitating", 306953, true, false, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconOnDebilitating", 306953, true, 0, {1, 2, 3, 4})
 
 mod.vb.umbralMantleCount = 0
 mod.vb.eruptionCount = 0

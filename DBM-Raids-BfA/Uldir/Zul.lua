@@ -87,8 +87,8 @@ mod:AddNamePlateOption("NPAuraOnThrumming", 273288)
 mod:AddNamePlateOption("NPAuraOnBoundbyShadow", 273432)
 mod:AddNamePlateOption("NPAuraOnEngorgedBurst2", 276299, false)
 mod:AddNamePlateOption("NPAuraOnDecayingFlesh", 276434)
-mod:AddSetIconOption("SetIconOnDecay", 276434, true, true, {8})
-mod:AddSetIconOption("SetIconDarkRev", 273365, true, false, {1, 2})
+mod:AddSetIconOption("SetIconOnDecay", 276434, true, 5, {8})
+mod:AddSetIconOption("SetIconDarkRev", 273365, true, 0, {1, 2})
 mod:AddDropdownOption("TauntBehavior", {"TwoHardThreeEasy", "TwoAlways", "ThreeAlways"}, "TwoHardThreeEasy", "misc", nil, 274358)
 
 mod.vb.darkRevCount = 0

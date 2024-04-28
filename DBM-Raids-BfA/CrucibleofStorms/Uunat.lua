@@ -119,8 +119,8 @@ mod:AddInfoFrameOption(293653, true)
 mod:AddNamePlateOption("NPAuraOnBond", 287693)
 mod:AddNamePlateOption("NPAuraOnFeed", 285307)
 mod:AddNamePlateOption("NPAuraOnRegen", 285333)
-mod:AddSetIconOption("SetIconOnAdds", "ej19118", true, true, {1, 2, 4})
-mod:AddSetIconOption("SetIconOnRelics", "ej18970", true, false, {1, 3, 5, 6, 7})--only up to 3 are used, but it depends on what user sets UnstableBehavior2 to. 1 and 7 are not included in the default used by DBM/BW (SetTwo)
+mod:AddSetIconOption("SetIconOnAdds", "ej19118", true, 5, {1, 2, 4})
+mod:AddSetIconOption("SetIconOnRelics", "ej18970", true, 0, {1, 3, 5, 6, 7})--only up to 3 are used, but it depends on what user sets UnstableBehavior2 to. 1 and 7 are not included in the default used by DBM/BW (SetTwo)
 mod:AddDropdownOption("UnstableBehavior2", {"SetOne", "SetTwo", "SetThree", "SetFour", "SetFive", "SetSix"}, "SetTwo", "misc", nil, 293653)--SetTwo is BW default (BW default used to be SetOne)
 
 mod.vb.touchCount = 0

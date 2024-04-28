@@ -79,8 +79,8 @@ local timerOrbLands						= mod:NewTimer(45, "timerOrbLands", 267239, nil, nil, 5
 
 mod:AddRangeFrameOption(6, 264382)
 mod:AddBoolOption("EarlyTankSwap", false)
-mod:AddSetIconOption("SetIconOnAdds", 267192, true, true, {1, 2, 3})
-mod:AddSetIconOption("SetIconOnEyeBeam", 264382, true, false, {6, 7, 8})
+mod:AddSetIconOption("SetIconOnAdds", 267192, true, 5, {1, 2, 3})
+mod:AddSetIconOption("SetIconOnEyeBeam", 264382, true, 0, {6, 7, 8})
 
 mod.vb.orbCount = 0
 mod.vb.addIcon = 1

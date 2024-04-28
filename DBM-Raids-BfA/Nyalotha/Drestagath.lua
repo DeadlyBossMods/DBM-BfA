@@ -60,8 +60,8 @@ local berserkTimer							= mod:NewBerserkTimer(600)
 
 mod:AddRangeFrameOption("18/4")--Sadly, choices are 13 or 18, 13 too small so have to round 15 up to 18
 mod:AddInfoFrameOption(308377, false)
-mod:AddSetIconOption("SetIconOnVolatileSeed", 310277, true, false, {1})
-mod:AddSetIconOption("SetIconOnMuttering", 310358, false, false, {2, 3, 4, 5, 6, 7, 8})--Depends on number of maws up. Shouldn't need to use all 7 but CAN use up to 7
+mod:AddSetIconOption("SetIconOnVolatileSeed", 310277, true, 0, {1})
+mod:AddSetIconOption("SetIconOnMuttering", 310358, false, 0, {2, 3, 4, 5, 6, 7, 8})--Depends on number of maws up. Shouldn't need to use all 7 but CAN use up to 7
 mod:AddNamePlateOption("NPAuraOnVolatileCorruption", 312595)
 --Eye of Drest'agath
 --mod:AddTimerLine(DBM:EJ_GetSectionInfo(20885))

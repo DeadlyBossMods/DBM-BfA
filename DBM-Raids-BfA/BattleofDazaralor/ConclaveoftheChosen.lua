@@ -121,7 +121,7 @@ local timerBwonsamdisWrathCD			= mod:NewCDCountTimer(50, 284666, nil, nil, nil, 
 mod:AddNamePlateOption("NPAuraOnPact", 282079)
 mod:AddNamePlateOption("NPAuraOnPackHunter", 286007)
 mod:AddNamePlateOption("NPAuraOnFixate", 282209)
-mod:AddSetIconOption("SetIconHex", 282135, false, false, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconHex", 282135, false, 0, {1, 2, 3, 4})
 --mod:AddRangeFrameOption("8/10")
 mod:AddInfoFrameOption(282079, true)--Not real spellID, just filler for now
 

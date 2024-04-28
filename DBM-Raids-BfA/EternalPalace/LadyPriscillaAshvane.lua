@@ -58,7 +58,7 @@ local berserkTimer						= mod:NewBerserkTimer(600)
 
 mod:AddRangeFrameOption("4/12")
 mod:AddInfoFrameOption(296650, true)
-mod:AddSetIconOption("SetIconOnArcingAzerite", 296944, false, false, {1, 2, 3, 4, 6, 7})
+mod:AddSetIconOption("SetIconOnArcingAzerite", 296944, false, 0, {1, 2, 3, 4, 6, 7})
 
 mod.vb.coralGrowth = 0
 mod.vb.ripplingWave = 0
