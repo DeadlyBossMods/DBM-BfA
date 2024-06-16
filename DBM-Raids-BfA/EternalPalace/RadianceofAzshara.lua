@@ -29,7 +29,7 @@ mod:RegisterEventsInCombat(
 --]]
 --Rising Fury (Boss)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20076))
-local warnArcanadoBurst					= mod:NewSpellAnnounce(296430, 2)
+local warnArcanadoBurst					= mod:NewCountAnnounce(296430, 2)
 local warnSquallTrap					= mod:NewSpellAnnounce(296459, 4)
 local warnArcaneBomb					= mod:NewTargetNoFilterAnnounce(296737, 4)
 

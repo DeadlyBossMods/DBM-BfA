@@ -33,7 +33,7 @@ mod:RegisterEventsInCombat(
 --local warnXorothPortal					= mod:NewSpellAnnounce(244318, 2, nil, nil, nil, nil, nil, 7)
 local warnEvolvingAffliction				= mod:NewStackAnnounce(265178, 2, nil, "Tank")
 local warnGestate							= mod:NewTargetAnnounce(265212, 3)
-local warnplagueBomb						= mod:NewSpellAnnounce(266926, 3)
+local warnplagueBomb						= mod:NewCountAnnounce(266926, 3)
 local warnContagion							= mod:NewCountAnnounce(267242, 3)
 local warnImmunoSupp						= mod:NewCountAnnounce(265206, 3)
 

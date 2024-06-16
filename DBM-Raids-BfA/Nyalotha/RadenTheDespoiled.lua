@@ -12,7 +12,7 @@ mod.respawnTime = 29
 mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
-	"SPELL_CAST_START 306865 306866 313213 310003 309985 317276 306874 306881 314484",
+	"SPELL_CAST_START 306865 306866 313213 310003 309985 317276 306874 314484",
 	"SPELL_CAST_SUCCESS 310019 313213 306603 316913 306819",
 	"SPELL_SUMMON 306866 314484",
 	"SPELL_AURA_APPLIED 312750 306090 306168 306732 306733 312996 306257 306279 306819 313227 309852 306207 306273 313077 315252 316065 310019 310022",
@@ -279,8 +279,6 @@ function mod:SPELL_CAST_START(args)
 		else
 			warnCallVoidHunter:Show()
 		end
-	elseif spellId == 306881 then
-		warnVoidCollapse:Show()
 	elseif spellId == 313213 then
 		if UnitDetailedThreatSituation("player", "boss1") then--We are highest threat target
 			specWarnDecayingStrike:Show()

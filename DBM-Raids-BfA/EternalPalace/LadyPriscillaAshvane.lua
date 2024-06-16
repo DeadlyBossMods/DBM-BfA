@@ -31,7 +31,7 @@ local warnShield						= mod:NewTargetNoFilterAnnounce(296650, 2, nil, nil, nil, 
 local warnShieldOver					= mod:NewEndAnnounce(296650, 2, nil, nil, nil, nil, nil, 2)
 --local warnCoral						= mod:NewCountAnnounce(296555, 2)
 local warnBrinyBubble					= mod:NewTargetNoFilterAnnounce(297324, 4)
-local warnUpsurge						= mod:NewSpellAnnounce(298055, 3)
+local warnUpsurge						= mod:NewCountAnnounce(298055, 3)
 
 local specWarnRipplingWave				= mod:NewSpecialWarningCount(296688, false, nil, 2, 2, 2)
 local specWarnBarnacleBash				= mod:NewSpecialWarningTaunt(296725, nil, nil, nil, 1, 2)

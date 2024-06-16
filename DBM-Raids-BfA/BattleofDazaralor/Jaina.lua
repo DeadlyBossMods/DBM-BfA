@@ -48,7 +48,7 @@ local warnSetCharge						= mod:NewSpellAnnounce(285725, 2)
 local warnIceShard						= mod:NewStackAnnounce(285253, 2, nil, "Tank")
 local warnTimeWarp						= mod:NewSpellAnnounce(287925, 3)
 local warnFreezingBlast					= mod:NewSpellAnnounce(285177, 3)
-local warnFrozenSiege					= mod:NewSpellAnnounce(289488, 2)
+local warnFrozenSiege					= mod:NewCountAnnounce(289488, 2)
 --Intermission 1
 local warnHowlingWindsLeft				= mod:NewCountAnnounce(290053, 2)
 --Stage Two: Frozen Wrath

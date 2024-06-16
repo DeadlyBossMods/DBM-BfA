@@ -92,7 +92,7 @@ local timerHulkSpawnCD					= mod:NewCDCountTimer(30.4, "ej20480", nil, nil, nil,
 mod:AddNamePlateOption("NPAuraOnInfuriated", 300428)
 ----Azshara
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20258))
-local warnDrainAncientWard				= mod:NewSpellAnnounce(300334, 2)
+local warnDrainAncientWard				= mod:NewCountAnnounce(300334, 2)
 local warnBeckon						= mod:NewTargetNoFilterAnnounce(299094, 3)
 local warnCrushingDepths				= mod:NewTargetNoFilterAnnounce(303825, 4, nil, false, 2)
 

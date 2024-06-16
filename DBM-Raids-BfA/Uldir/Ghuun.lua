@@ -710,6 +710,7 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg, npc, _, _, target)
 			else
 				self.vb.matrixSide = DBM_COMMON_L.LEFT
 			end
+			---@diagnostic disable-next-line: param-type-mismatch
 			warnMatrixSpawn:Show(self.vb.matrixCount.."-"..self.vb.matrixSide)
 		else
 			warnMatrixSpawn:Show(self.vb.matrixCount)
