@@ -43,7 +43,7 @@ local timerBioluminescentCloud			= mod:NewCastCountTimer(30.4, 292205, nil, nil,
 local timerToxicSpineCD					= mod:NewNextTimer(20, 292167, nil, "Healer", nil, 5, nil, DBM_COMMON_L.HEALER_ICON)
 local timerShockPulseCD					= mod:NewNextCountTimer(30, 292270, nil, nil, nil, 2, nil, nil, nil, 1, 4)
 local timerPiercingBarbCD				= mod:NewNextTimer(29.9, 301494, nil, nil, nil, 3, nil, DBM_COMMON_L.MYTHIC_ICON, nil, 3, 4)--Mythic
-local timerNextPhase					= mod:NewPhaseTimer(100)
+local timerNextPhase					= mod:NewStageTimer(100)
 local timerCavitation					= mod:NewCastTimer(32, 292083, nil, nil, nil, 4, nil, DBM_COMMON_L.INTERRUPT_ICON, nil, 1, 4)
 
 local berserkTimer						= mod:NewBerserkTimer(720)

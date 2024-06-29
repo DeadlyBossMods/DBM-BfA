@@ -112,7 +112,7 @@ local warnQueensDecree					= mod:NewCastAnnounce(299250, 3)
 local specWarnQueensDecree				= mod:NewSpecialWarningYouCount(299250, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.you:format(299250), nil, 3, 2)
 local yellQueensDecree					= mod:NewYell(299250, "%s", false, nil, "YELL")
 
-local timerNextPhase					= mod:NewPhaseTimer(30.4)
+local timerNextPhase					= mod:NewStageTimer(30.4)
 --Stage Two: Hearts Unleashed
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20323))
 local warnArcaneBurst					= mod:NewTargetNoFilterAnnounce(303657, 3, nil, "Healer", 2)

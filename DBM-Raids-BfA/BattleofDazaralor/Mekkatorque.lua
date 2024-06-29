@@ -78,7 +78,7 @@ local timerWormholeGeneratorCD			= mod:NewNextCountTimer(55, 287952, 67833, nil,
 local timerDeploySparkBotCD				= mod:NewNextCountTimer(55, 288410, nil, nil, nil, 1)
 local timerWorldEnlargerCD				= mod:NewNextCountTimer(90, 288049, nil, nil, nil, 3, nil, nil, nil, 1, 4)
 --Intermission: Evasive Maneuvers!
-local timerIntermission					= mod:NewPhaseTimer(64.8)
+local timerIntermission					= mod:NewStageTimer(64.8)
 local timerExplodingSheepCD				= mod:NewNextCountTimer(55, 287929, 222529, nil, nil, 3)--Shorttext "Exploding Sheep"
 
 --local berserkTimer					= mod:NewBerserkTimer(600)

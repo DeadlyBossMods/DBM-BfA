@@ -101,7 +101,7 @@ local specWarnOrbofFrost				= mod:NewSpecialWarningCount(288619, nil, nil, nil, 
 local specWarnPrismaticImage			= mod:NewSpecialWarningSwitchCount(288747, nil, nil, 2, 1, 2)
 
 --General
-local timerPhaseTransition				= mod:NewPhaseTimer(55)
+local timerPhaseTransition				= mod:NewStageTimer(55)
 local timerHowlingWindsCD				= mod:NewCDCountTimer(80, 288169, nil, nil, nil, 6, nil, DBM_COMMON_L.MYTHIC_ICON)--Mythic
 local berserkTimer						= mod:NewBerserkTimer(900)
 local timerIceBlockCD					= mod:NewTargetTimer(20, 287322, nil, nil, nil, 6)
