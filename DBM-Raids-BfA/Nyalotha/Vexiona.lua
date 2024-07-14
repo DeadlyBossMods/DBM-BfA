@@ -88,7 +88,7 @@ local specWarnBrutalSmash					= mod:NewSpecialWarningDodge(315932, false, nil, 2
 
 local timerNoEscapeCD						= mod:NewCDCountTimer(11, 316437, nil, nil, nil, 3, nil, DBM_COMMON_L.MYTHIC_ICON)
 ----Void Ascendant
-local specWarnAnnihilation					= mod:NewSpecialWarningDodgeCount(307403, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.dodge:format(307403), nil, 2, 2)
+local specWarnAnnihilation					= mod:NewSpecialWarningDodgeLoc(307403, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.dodge:format(307403), nil, 2, 2)
 local specWarnAnnihilationDefensive			= mod:NewSpecialWarningDefensive(307403, nil, nil, nil, 1, 2)
 
 local timerAnnihilationCD					= mod:NewCDTimer(14.6, 307403, nil, nil, nil, 3)

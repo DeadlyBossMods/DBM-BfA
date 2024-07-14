@@ -55,7 +55,7 @@ local warnAkundasWrath					= mod:NewTargetAnnounce(286811, 2)
 local warnBwonsamdisWrath				= mod:NewTargetNoFilterAnnounce(284663, 4, nil, false, 2)--Spammy latter fight, opt in, not opt out
 
 --General
-local specWarnActivated					= mod:NewSpecialWarningSwitchCount(118212, "Tank", DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.switch:format(118212), nil, 3, 2)
+local specWarnActivated					= mod:NewSpecialWarningSwitchCustom(118212, "Tank", nil, nil, 3, 2)
 --local specWarnGTFO					= mod:NewSpecialWarningGTFO(238028, nil, nil, nil, 1, 8)
 --Pa'ku's Aspect
 local specWarnHasteningWinds			= mod:NewSpecialWarningCount(285945, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.stack:format(12, 270447), nil, 1, 2)

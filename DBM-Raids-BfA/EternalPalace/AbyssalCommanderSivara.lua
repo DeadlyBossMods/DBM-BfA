@@ -206,7 +206,7 @@ function mod:SPELL_AURA_APPLIED(args)
 	elseif spellId == 295348 then
 		warnOverflowingChill:CombinedShow(0.3, args.destName)
 		if args:IsPlayer() then
-			specWarnOverflowingChill:Show(6, args.spellName, 6)
+			specWarnOverflowingChill:Show()
 			specWarnOverflowingChill:Play("runout")
 			yellOverflowingChill:Yell(6, args.spellName, 6)
 			yellOverflowingChillFades:Countdown(spellId, nil, 6)

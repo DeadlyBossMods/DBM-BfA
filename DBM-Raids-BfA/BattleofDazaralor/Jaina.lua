@@ -77,7 +77,7 @@ local yellAvalanche						= mod:NewPosYell(285254)
 local specWarnAvalancheTaunt			= mod:NewSpecialWarningTaunt(287565, nil, nil, nil, 1, 2)
 local specWarGraspofFrost				= mod:NewSpecialWarningDispel(287626, "Healer", nil, 3, 1, 2)
 local specWarnFreezingBlast				= mod:NewSpecialWarningDodge(285177, "Tank", nil, nil, 2, 2)
-local specWarnRingofIce					= mod:NewSpecialWarningRun(285459, nil, nil, nil, 4, 2)
+local specWarnRingofIce					= mod:NewSpecialWarningRunCount(285459, nil, nil, nil, 4, 2)
 --Stage Two: Frozen Wrath
 local specWarnIceBlockTaunt				= mod:NewSpecialWarningTaunt(287490, nil, nil, nil, 3, 2)
 local specWarnGTFO						= mod:NewSpecialWarningGTFO(288297, nil, nil, nil, 1, 8)

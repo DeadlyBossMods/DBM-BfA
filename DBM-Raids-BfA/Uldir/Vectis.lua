@@ -114,7 +114,7 @@ local function delayedIconCheck(self)
 			yellOmegaVectorFades:Countdown(remaining-0.3, 3, currentIcon)
 		end
 	else--Didn't find an icon
-		specWarnOmegaVectorAlt:Show(DBM_COMMON_L.UNKNOWN)
+		specWarnOmegaVectorAlt:Show()
 		specWarnOmegaVectorAlt:Play("targetyou")
 		yellOmegaVectorNoIcon:Yell()
 		if expireTime then
