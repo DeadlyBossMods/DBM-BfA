@@ -181,7 +181,7 @@ function mod:HeartofFrostTarget(targetname, uId)
 	end
 end
 
----@param self DBMMod529
+---@param self DBMMod
 local function graspCollection(self, finish)
 	if finish then
 		graspActive = false
