@@ -185,7 +185,7 @@ end
 local function graspCollection(self, finish)
 	if finish then
 		graspActive = false
-		if self:CheckDispelFilter() then
+		if self:CheckDispelFilter("magic") then
 			specWarGraspofFrost:Show(table.concat(chillingCollector, "<, >"))
 			specWarGraspofFrost:Play("helpdispel")
 		end
