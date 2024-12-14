@@ -278,7 +278,7 @@ local allTimers = {
 	["mythic"] = {
 		[1] = {--Unique to Mythic
 			--Basher tentacles
-			[318714] = {0, 35, 35, 50, 35},
+			[318714] = {0.000001, 35, 35, 50, 35},
 			--Paranoia
 			[315927] = {15, 85.1},
 			--Eternal Torment

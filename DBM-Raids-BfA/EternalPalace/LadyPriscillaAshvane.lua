@@ -70,7 +70,7 @@ mod.vb.shieldDown = false
 mod.vb.blueone, mod.vb.bluetwo = nil, nil
 mod.vb.redone, mod.vb.redtwo = nil, nil
 mod.vb.greenone, mod.vb.greentwo = nil, nil
-local easyUpSurgeTimers = {0, 16, 37.9, 16.5, 16, 24}
+local easyUpSurgeTimers = {0.000001, 16, 37.9, 16.5, 16, 24}
 
 local updateInfoFrame
 do
