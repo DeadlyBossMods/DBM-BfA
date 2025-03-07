@@ -431,7 +431,7 @@ function mod:SPELL_SUMMON(args)
 	local spellId = args.spellId
 	if spellId == 282515 then
 		local timer = self:IsMythic() and 120 or self:IsHeroic() and 90
-		if timer then
+		if timer and timer > 0 then
 			timerVisageActive:Start(timer, args.destGUID)
 		end
 	end

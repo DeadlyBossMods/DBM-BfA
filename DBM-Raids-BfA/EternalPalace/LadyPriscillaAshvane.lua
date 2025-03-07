@@ -168,7 +168,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 			else
 				--Easy: n, 16, 37.9, 16.5, 16, 24
 				local timer = easyUpSurgeTimers[self.vb.upsurgeCast+1]
-				if timer then
+				if timer and timer > 0 then
 					timerUpsurgeCD:Start(timer, self.vb.upsurgeCast+1)
 				end
 			end

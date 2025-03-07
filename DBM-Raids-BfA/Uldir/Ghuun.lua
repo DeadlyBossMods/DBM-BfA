@@ -311,7 +311,7 @@ function mod:SPELL_CAST_START(args)
 			warnThousandMaws:Show(self.vb.mawCastCount)
 		end
 		local timer = self:IsLFR() and thousandMawsTimersLFR[self.vb.mawCastCount+1] or thousandMawsTimers[self.vb.mawCastCount+1]
-		if timer then
+		if timer and timer > 0 then
 			timerThousandMawsCD:Start(timer, self.vb.mawCastCount+1)
 		end
 	elseif spellId == 267427 and self:CheckInterruptFilter(args.sourceGUID, false, true) then
