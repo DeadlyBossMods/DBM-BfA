@@ -12,6 +12,7 @@ mod:SetCreatureID(creatureID)
 mod:SetEncounterID(2265)
 --mod:SetHotfixNoticeRev(17775)
 mod.respawnTime = 17--Ish, from stream watching.
+mod:SetZone(2070)
 
 mod:RegisterCombat("combat")
 

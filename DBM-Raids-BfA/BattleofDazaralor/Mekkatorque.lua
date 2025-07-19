@@ -8,6 +8,7 @@ mod:SetUsedIcons(8, 7, 6, 5, 4, 3, 2, 1)
 mod:SetHotfixNoticeRev(18349)
 --mod:SetMinSyncRevision(16950)
 mod.respawnTime = 29
+mod:SetZone(2070)
 
 mod:RegisterCombat("combat")
 

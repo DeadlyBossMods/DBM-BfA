@@ -16,6 +16,7 @@ mod:SetEncounterID(2263, 2284)--2263 Alliance, 2284 Horde
 mod:SetHotfixNoticeRev(18176)
 --mod:SetMinSyncRevision(16950)
 --mod.respawnTime = 35
+mod:SetZone(2070)
 
 mod:RegisterCombat("combat")
 

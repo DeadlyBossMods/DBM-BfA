@@ -210,7 +210,8 @@ L:SetOptionLocalization({
 L:SetMiscLocalization({
 	Port			=	"port side",
 	Starboard		=	"starboard side",
-	Freezing		=	"Freezing in %s"
+	Freezing		=	"Freezing in %s",
+	PrePull			=	"All hands on deck! Time to make de daughter of de sea pay for trespassing in our waters!",
 })
 
 -------------
