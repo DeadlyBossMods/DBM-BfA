@@ -656,7 +656,6 @@ mod.SPELL_PERIODIC_MISSED = mod.SPELL_PERIODIC_DAMAGE
 --"<130.27 18:42:02> [CHAT_MSG_MONSTER_SAY] The High Tinker fought bravely. But in the end... it wasn't enough. Thank the tides he had one last trick up his sleeve to carry him to safety!#Ensign Roberts###Alphal##0#0##0#1159#nil#0#false#false#false#false",
 --"<143.66 18:42:16> [CHAT_MSG_MONSTER_YELL] What the...? Okay, I wanna know two things... First, how could you let that pipsqueak get away? And second.... WHY DON'T I HAVE AN ESCAPE POD?#Trade Prince Gallywix###Alphal##0#0##0#1161#nil#0#false#false#false#false",
 --"<160.32 18:42:32> [CHAT_MSG_MONSTER_YELL] Enough! That's one Alliance hero down. But I want your blades soaked in Proudmoore blood. Move!#Nathanos Blightcaller###Alphal##0#0##0#1163#nil#0#false#false#false#false",
---"<174.14 18:42:46> [UNIT_SPELLCAST_SUCCEEDED] PLAYER_SPELL{Alphal} -Stampwhistle- [[player:Cast-3-4226-2070-8693-261602-0002FD70E6:261602]]",
 --"<174.14 18:42:46> [CLEU] SPELL_CAST_SUCCESS#Player-5-0E5983C7#Alphal(100.0%-34.0%)##nil#261602#Stampwhistle#nil#nil#nil#nil#nil#nil",
 function mod:CHAT_MSG_MONSTER_YELL(msg)
 	if (msg == L.WallRP or msg:find(L.WallRP)) and self:LatencyCheck() then
