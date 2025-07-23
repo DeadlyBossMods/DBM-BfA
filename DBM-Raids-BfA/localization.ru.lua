@@ -187,7 +187,7 @@ L:SetOptionLocalization({
 ---------------------------
 -- High Tinker Mekkatorgue (Horde) --
 ---------------------------
-L= DBM:GetModLocalization(2332)
+L= DBM:GetModLocalization(2334)
 
 L:SetMiscLocalization({
 	WallRP	= "Главный механик сражался, как лев. Но этого... не хватило. Хвала волнам, у него нашелся последний трюк в рукаве, который унес его с поля боя!"
