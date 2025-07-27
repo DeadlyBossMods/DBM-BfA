@@ -59,9 +59,9 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2166)
 
 L:SetOptionLocalization({
-	ShowHighestFirst3	 =	"Сортировать инфофрейм $spell:265127 по самому высокому стаку дебаффов (вместо самого низкого). Применяется только в том случае, если не установлено значение 'Только для группы'.",
-	ShowOnlyParty		 =	"Показывать $spell:265127 только для Вашей группы. Эта опция всегда сортирует фрейм по порядку группы.",
-	SetIconsRegardless	 =	"Устанавливать метки независимо от того, есть ли у пользователя BW помощник (Улучшенный)"
+	ShowHighestFirst3	 =	"Сортировать инфофрейм $spell:265127 по самому высокому стаку дебаффов (вместо самого низкого). Применяется только в том случае, если не установлено значение 'Только для группы'",
+	ShowOnlyParty		 =	"Показывать $spell:265127 только для Вашей группы. Эта опция всегда сортирует фрейм по порядку группы",
+	SetIconsRegardless	 =	"Устанавливать метки независимо от того, есть ли у пользователя BW помощник (улучшенный)"
 })
 
 L:SetMiscLocalization({
@@ -89,11 +89,11 @@ L:SetOptionLocalization({
 	timerCallofCrawgCD		= "Показывать таймер начала формирования Крогов",
 	timerCallofHexerCD 		= "Показывать таймер начала формирования Ведьмаков",
 	timerCallofCrusherCD	= "Показывать таймер начала формирования Крошителей",
-	timerAddIncoming		= "Показать таймер, когда входящий адд может быть атакован",
+	timerAddIncoming		= "Показывать таймер, когда входящий адд может быть атакован",
 	TauntBehavior			= "Установить режим таунта для смены танков",
 	TwoHardThreeEasy		= "Меняться местами по 2 стака на героическом/эпохальном уровне сложности, по 3 стака на других сложностях",--По умолчанию
-	TwoAlways				= "Всегда меняться на 2 стаках независимо от сложности",
-	ThreeAlways				= "Всегда меняться на 3 стаках независимо от сложности"
+	TwoAlways				= "Всегда меняться на 2-х стаках независимо от сложности",
+	ThreeAlways				= "Всегда меняться на 3-х стаках независимо от сложности"
 })
 
 L:SetMiscLocalization({
@@ -112,14 +112,14 @@ L:SetWarningLocalization({
 })
 
 L:SetOptionLocalization({
-	warnMatrixFail		= "Показывать предупреждение при сбросе Силовой матрицы."
+	warnMatrixFail		= "Показывать предупреждение при падении $spell:263372"
 })
 
 L:SetMiscLocalization({
-	CurrentMatrix		=	"Текущая матрица:",--Мифический
-	NextMatrix			=	"Следующая матрица:",--Мифический
-	CurrentMatrixLong	=	"Текущая матрица (%s):",--НЕ мифический
-	NextMatrixLong		=	"Следующая матрица (%s):"--НЕ мифический
+	CurrentMatrix		=	"Текущая матрица:",--Эпохальный
+	NextMatrix			=	"Следующая матрица:",--Эпохальный
+	CurrentMatrixLong	=	"Текущая матрица (%s):",--НЕэпохальный
+	NextMatrixLong		=	"Следующая матрица (%s):"--НЕэпохальный
 })
 
 -------------
@@ -205,7 +205,7 @@ L= DBM:GetModLocalization(2343)
 
 L:SetOptionLocalization({
 	ShowOnlySummary2	= "Скрывать имена игроков при проверке дистанции и показывать только сводную информацию (количество игроков, находящихся рядом)",
-	InterruptBehavior	= "Настройка ротации сбития каста элементалю (переопределит настройки у всех, если Вы рейд лидер)",
+	InterruptBehavior	= "Настройка ротации сбития каста элементалю (перезапишет настройки у всех, если Вы лидер рейда)",
 	Three				= "Ротация из 3 человек ",--По умолчанию
 	Four				= "Ротация из 4 человек ",
 	Five				= "Ротация из 5 человек ",
@@ -244,7 +244,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2332)
 
 L:SetOptionLocalization({
-	UnstableBehavior2	= "Установить режим крика при резонансе для рейда (если лидер рейда, переопределяет для рейда)",
+	UnstableBehavior2	= "Установить режим крика при резонансе для рейда (перезапишет настройки у всех, если Вы лидер рейда)",
 	SetOne				= "Камень Бездны (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:32:48:0:16|t), Трезубец/Океан (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:16:32:16:32|t), Буря/Гроза (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:16:32|t)",--Default
 	SetTwo				= "Камень Бездны (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:32:48:0:16|t), Трезубец/Океан (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:16:32|t), Буря/Гроза (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:16:32:16:32|t)",
 	SetThree			= "Камень Бездны (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:32:48:0:16|t), Трезубец/Океан (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:16:32|t), Буря/Гроза (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:0:16|t)",
@@ -324,8 +324,8 @@ L:SetTimerLocalization{
 }
 
 L:SetOptionLocalization({
-	SortDesc 				= "Сортировать $spell:298569 на инфофрейме по наибольшему стаку дебаффов (вместо наименьшего).",
-	ShowTimeNotStacks		= "Показывать оставшееся время $spell:298569 на инфофрейме вместо количества стаков.",
+	SortDesc 				= "Сортировать $spell:298569 на инфофрейме по наибольшему стаку дебаффов (вместо наименьшего)",
+	ShowTimeNotStacks		= "Показывать оставшееся время $spell:298569 на инфофрейме вместо количества стаков",
 	timerStageThreeBerserk	= "Показывать таймер, когда адды на 3-й фазе впадут в ярость"
 })
 
