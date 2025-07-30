@@ -29,7 +29,7 @@ L:SetTimerLocalization({
 })
 
 L:SetOptionLocalization({
-	addsSoon		= "Показывать предварительное предупреждение, когда желоба открываются и начинают появляться адды",
+	addsSoon		= "Заранее предупреждать о том, когда желоба открываются и начинают появляться адды",
 	chuteTimer		= "Отсчет времени до открытия желобов"
 })
 
@@ -43,8 +43,8 @@ L:SetTimerLocalization({
 })
 
 L:SetOptionLocalization({
-	timerOrbLands	 =	"Отсчет времени до приземления $spell:267239",
-	EarlyTankSwap	 =	"Показывать предупреждение о замене танка сразу после $spell:12982, вместо ожидания 2-го $spell:265264"
+	timerOrbLands	 =	"Отсчет времени до приземления $spell:267334",
+	EarlyTankSwap	 =	"Показывать предупреждение о замене танка сразу после $spell:265248, вместо ожидания 2-го $spell:265264"
 })
 
 L:SetMiscLocalization({
@@ -59,7 +59,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2166)
 
 L:SetOptionLocalization({
-	ShowHighestFirst3	 =	"Сортировать инфофрейм $spell:265127 по самому высокому стаку дебаффов (вместо самого низкого). Применяется только в том случае, если не установлено значение 'Только для группы'",
+	ShowHighestFirst3	 =	"Сортировать инфофрейм $spell:265127 по самому высокому стаку дебаффов (вместо самого низкого)<br/>Применяется только в том случае, если не установлено значение 'Только для группы'",
 	ShowOnlyParty		 =	"Показывать $spell:265127 только для Вашей группы. Эта опция всегда сортирует фрейм по порядку группы",
 	SetIconsRegardless	 =	"Устанавливать метки независимо от того, есть ли у пользователя BW помощник (улучшенный)"
 })
@@ -79,9 +79,9 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2195)
 
 L:SetTimerLocalization({
-	timerCallofCrawgCD		= "Следующие Кроги (%s)",
-	timerCallofHexerCD 		= "Следующие Ведьмаки (%s)",
-	timerCallofCrusherCD	= "Следующие Крошители (%s)",
+	timerCallofCrawgCD		= "След. Кроги (%s)",
+	timerCallofHexerCD 		= "След. Ведьмаки (%s)",
+	timerCallofCrusherCD	= "След. Крошители (%s)",
 	timerAddIncoming		= DBM_COMMON_L.INCOMING
 })
 
@@ -91,7 +91,7 @@ L:SetOptionLocalization({
 	timerCallofCrusherCD	= "Отсчет времени до начала формирования Крошителей",
 	timerAddIncoming		= "Отсчет времени до того момента, когда прибывающий адд может быть атакован",
 	TauntBehavior			= "Установить режим таунта для смены танков",
-	TwoHardThreeEasy		= "Меняться местами по 2 стака на героическом/эпохальном уровне сложности, по 3 стака на других сложностях",--По умолчанию
+	TwoHardThreeEasy		= "Меняться местами по 2 стака в героическом/эпохальном режимах, по 3 стака - на других сложностях",--По умолчанию
 	TwoAlways				= "Всегда меняться на 2-х стаках независимо от сложности",
 	ThreeAlways				= "Всегда меняться на 3-х стаках независимо от сложности"
 })
@@ -181,7 +181,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2335)
 
 L:SetOptionLocalization({
-	AnnounceAlternatePhase	= "Показывать общие предупреждения для фазы, в которой Вы не находитесь (таймеры всегда будут отображаться независимо от этой опции)"
+	AnnounceAlternatePhase	= "Показывать общие предупреждения для фазы, в которой Вы не находитесь<br/>(таймеры всегда будут отображаться независимо от этой опции)"
 })
 
 ---------------------------
@@ -244,7 +244,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2332)
 
 L:SetOptionLocalization({
-	UnstableBehavior2	= "Установить режим крика при резонансе для рейда (перезапишет настройки у всех, если Вы лидер рейда)",
+	UnstableBehavior2	= "Установить режим крика $spell:293653 для рейда (перезапишет настройки у всех, если Вы лидер рейда)",
 	SetOne				= "Камень Бездны (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:32:48:0:16|t), Трезубец/Океан (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:16:32:16:32|t), Буря/Гроза (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:16:32|t)",--Default
 	SetTwo				= "Камень Бездны (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:32:48:0:16|t), Трезубец/Океан (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:16:32|t), Буря/Гроза (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:16:32:16:32|t)",
 	SetThree			= "Камень Бездны (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:32:48:0:16|t), Трезубец/Океан (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:16:32|t), Буря/Гроза (|TInterface\\TargetingFrame\\UI-RaidTargetingIcons.blp:13:13:0:0:64:64:0:16:0:16|t)",
@@ -418,7 +418,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2364)
 
 L:SetOptionLocalization({
-	OnlyParentBondMoves		= "Показывать спецпредупреждение для $spell:310019 только в том случае, если Вы являетесь родительской точкой"
+	OnlyParentBondMoves		= "Показывать спецпредупреждение для $spell:310019 только в том случае, если Вы являетесь исходной точкой"
 })
 
 L:SetMiscLocalization({
