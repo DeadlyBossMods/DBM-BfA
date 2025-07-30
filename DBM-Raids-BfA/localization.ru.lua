@@ -43,7 +43,7 @@ L:SetTimerLocalization({
 })
 
 L:SetOptionLocalization({
-	timerOrbLands	 =	"Отсчет времени до того момента, когда приземлится $spell:267239",
+	timerOrbLands	 =	"Отсчет времени до приземления $spell:267239",
 	EarlyTankSwap	 =	"Показывать предупреждение о замене танка сразу после $spell:12982, вместо ожидания 2-го $spell:265264"
 })
 
