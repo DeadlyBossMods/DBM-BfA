@@ -2,6 +2,7 @@ local mod	= DBM:NewMod(2194, "DBM-Raids-BfA", 5, 1031)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(134546)--138324 Xalzaix
 mod:SetEncounterID(2135)
 mod:SetBossHPInfoToHighest()

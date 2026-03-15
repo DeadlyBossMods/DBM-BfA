@@ -2,6 +2,7 @@ local mod	= DBM:NewMod(2368, "DBM-Raids-BfA", 1, 1180)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(156818)
 mod:SetEncounterID(2329)
 mod:SetUsedIcons(1, 2, 3)--Unknown number of burning targets, guessed for now

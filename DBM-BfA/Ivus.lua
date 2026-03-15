@@ -11,6 +11,7 @@ local mod	= DBM:NewMod(dungeonID, "DBM-BfA", 4, 1028)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(creatureID)
 mod:EnableWBEngageSync()--Enable syncing engage in outdoors
 --mod:SetEncounterID(2263)

@@ -8,6 +8,7 @@ local mod	= DBM:NewMod(dungeonID, "DBM-Raids-BfA", 4, 1176)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(creatureID)
 mod:SetEncounterID(2265)
 --mod:SetHotfixNoticeRev(17775)

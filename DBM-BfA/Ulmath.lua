@@ -2,6 +2,7 @@ local mod	= DBM:NewMod(2362, "DBM-BfA", 5, 1028)
 local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
+mod:DisableHardcodedOptions()
 mod:SetCreatureID(152697)--152736/guardian-tannin, 152729/moon-priestess-liara
 mod:SetEncounterID(2317)
 mod:SetReCombatTime(20)
