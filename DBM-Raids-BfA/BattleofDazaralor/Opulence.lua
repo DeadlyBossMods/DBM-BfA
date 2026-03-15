@@ -100,7 +100,6 @@ local timerSurgingGoldCD				= mod:NewCDTimer(42.5, 289155, nil, nil, nil, 3)--Re
 --local berserkTimer					= mod:NewBerserkTimer(600)
 
 mod:AddNamePlateOption("NPAuraOnGoldenRadiance", 289776)
---mod:AddRangeFrameOption("8/10")
 mod:AddInfoFrameOption(284664, true)
 
 mod.vb.wailCast = 0

@@ -69,7 +69,6 @@ local timerEntropicBuildupCD				= mod:NewNextCountTimer(10, 308177, nil, nil, ni
 
 local berserkTimer							= mod:NewBerserkTimer(360)
 
---mod:AddRangeFrameOption(6, 264382)
 mod:AddInfoFrameOption(307358, true)
 mod:AddSetIconOption("SetIconOnDebilitating", 306953, true, 0, {1, 2, 3, 4})
 

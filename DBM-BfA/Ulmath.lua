@@ -25,7 +25,6 @@ local timerEndlessDoomCD			= mod:NewCDTimer(72, 301748, nil, nil, nil, 3)--Need 
 local timerMentalCollapseCD			= mod:NewCDTimer(20.4, 301773, nil, nil, nil, 2, nil, DBM_COMMON_L.DEADLY_ICON)
 local timerVoidDanceCD				= mod:NewCDTimer(21.4, 301840, nil, nil, nil, 3)
 
---mod:AddRangeFrameOption(8, 261605)
 --mod:AddReadyCheckOption(37460, false)
 
 --[[

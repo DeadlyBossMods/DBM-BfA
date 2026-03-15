@@ -21,8 +21,6 @@ local specWarnBwonSamdiKnife			= mod:NewSpecialWarningYou(290578, nil, nil, nil,
 --local yellCorruptingGaze				= mod:NewYell(289917)
 --local specWarnBloodShield				= mod:NewSpecialWarningInterrupt(276540, "HasInterrupt", nil, nil, 1, 2)
 
---mod:AddRangeFrameOption(10, 221028)
-
 --[[
 function mod:GazeTarget(targetname, uId)
 	if not targetname then return end
