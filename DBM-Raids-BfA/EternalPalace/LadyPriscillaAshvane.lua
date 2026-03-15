@@ -56,7 +56,6 @@ local timerShieldCD						= mod:NewCDTimer(70.5, 296650, nil, nil, nil, 6, nil, n
 
 local berserkTimer						= mod:NewBerserkTimer(600)
 
-mod:AddRangeFrameOption("4/12")
 mod:AddInfoFrameOption(296650, true)
 mod:AddSetIconOption("SetIconOnArcingAzerite", 296944, false, 0, {1, 2, 3, 4, 6, 7})
 
@@ -114,9 +113,6 @@ end
 function mod:OnCombatEnd()
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
-	end
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
 	end
 end
 
@@ -209,13 +205,6 @@ function mod:SPELL_AURA_APPLIED(args)
 			DBM:Debug("Ashvane timer debuging. New timer started for bash", 2)
 			timerRipplingwaveCD:Start(20.5, 1)
 			--timerCoralGrowthCD:Start(30.5, 1)
-		end
-		if self.Options.RangeFrame then
-			if self:IsRanged() then
-				DBM.RangeCheck:Show(12)
-			else
-				DBM.RangeCheck:Show(4)
-			end
 		end
 		if self.Options.InfoFrame then
 			DBM.InfoFrame:SetHeader(args.spellName)
@@ -345,9 +334,6 @@ function mod:SPELL_AURA_REMOVED(args)
 		timerShieldCD:Start(70.5)
 		if self.Options.InfoFrame then
 			DBM.InfoFrame:Hide()
-		end
-		if self.Options.RangeFrame then
-			DBM.RangeCheck:Show(4)
 		end
 	elseif spellId == 296943 or spellId == 296940 or spellId == 296942 or spellId == 296939 or spellId == 296941 or spellId == 296938 then--Arcing Azerite
 		if args:IsPlayer() then

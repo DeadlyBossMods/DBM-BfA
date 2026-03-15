@@ -71,7 +71,6 @@ local timerAddAttackCD					= mod:NewCDTimer(23.8, addProjectileId, nil, nil, nil
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
 
-mod:AddRangeFrameOption(8, 285994)
 mod:AddInfoFrameOption(energyAOESpellId, true)
 
 mod.vb.EnergyAOECount = 0
@@ -126,9 +125,6 @@ function mod:OnCombatStart(delay)
 		timerFerociousRoarCD:Start(35.5-delay)--First one can be between 35.5-39
 	end
 --	timerEnergyAOECD:Start(100-delay, 1)
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Show(8, nil, nil, 1, true)
-	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:SetHeader(OVERVIEW)
 		DBM.InfoFrame:Show(8, "function", updateInfoFrame, false, false)
@@ -136,9 +132,6 @@ function mod:OnCombatStart(delay)
 end
 
 function mod:OnCombatEnd()
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
-	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
 	end

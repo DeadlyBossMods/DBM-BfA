@@ -145,7 +145,6 @@ mod:AddNamePlateOption("NPAuraOnRefractiveIce", 288219)
 mod:AddNamePlateOption("NPAuraOnHowlingWinds2", 290053, false)
 mod:AddSetIconOption("SetIconAvalanche", 287565, true, 0, {1, 2, 3})
 mod:AddSetIconOption("SetIconBroadside", 288212, true, 0, {1, 2, 3})
-mod:AddRangeFrameOption(10, 289379)
 mod:AddInfoFrameOption(287993, true, 2)
 mod:AddBoolOption("ShowOnlySummary2", true, "misc")
 mod:AddBoolOption("SetWeather", true)
@@ -232,9 +231,6 @@ function mod:OnCombatStart(delay)
 		timerRingofIceCD:Start(60.7-delay, 1)
 		timerHowlingWindsCD:Start(66.9, 1)
 		berserkTimer:Start(720)
-		if self.Options.RangeFrame then
-			DBM.RangeCheck:Show(10, nil, nil, 1, true, nil, self.Options.ShowOnlySummary2)--Reverse checker, threshold 1 at start
-		end
 		self:RegisterShortTermEvents(
 			"UNIT_POWER_UPDATE player"
 		)
@@ -271,9 +267,6 @@ end
 
 function mod:OnCombatEnd()
 	self:UnregisterShortTermEvents()
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
-	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
 	end
@@ -733,20 +726,11 @@ function mod:UNIT_POWER_UPDATE(uId, type)
 		local altPower = UnitPower(uId, 10)
 		if rangeThreshold < 3 and altPower >= 75 then
 			rangeThreshold = 3
-			if self.Options.RangeFrame then
-				DBM.RangeCheck:Show(10, nil, nil, 5, true, nil, self.Options.ShowOnlySummary2)--Reverse checker, threshold 5
-			end
 			self:UnregisterShortTermEvents()
 		elseif rangeThreshold < 2 and altPower >=50 then
 			rangeThreshold = 2
-			if self.Options.RangeFrame then
-				DBM.RangeCheck:Show(10, nil, nil, 3, true, nil, self.Options.ShowOnlySummary2)--Reverse checker, threshold 3
-			end
 		elseif rangeThreshold > 1 and altPower < 50 then
 			rangeThreshold = 1
-			if self.Options.RangeFrame then
-				DBM.RangeCheck:Show(10, nil, nil, 1, true, nil, self.Options.ShowOnlySummary2)--Reverse checker, threshold 1
-			end
 		end
 	end
 end

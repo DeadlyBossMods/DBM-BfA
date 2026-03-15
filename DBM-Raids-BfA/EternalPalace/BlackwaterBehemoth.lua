@@ -48,7 +48,6 @@ local timerCavitation					= mod:NewCastTimer(32, 292083, nil, nil, nil, 4, nil, 
 
 local berserkTimer						= mod:NewBerserkTimer(720)
 
-mod:AddRangeFrameOption(5, 292247)
 mod:AddInfoFrameOption(292133, true)
 
 mod.vb.cloudCount = 0
@@ -109,17 +108,11 @@ function mod:OnCombatStart(delay)
 		DBM.InfoFrame:SetHeader(OVERVIEW)
 		DBM.InfoFrame:Show(8, "function", updateInfoFrame, false, false)
 	end
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Show(5)
-	end
 end
 
 function mod:OnCombatEnd()
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
-	end
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
 	end
 end
 

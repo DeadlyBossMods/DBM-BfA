@@ -95,7 +95,6 @@ local berserkTimer						= mod:NewBerserkTimer(780)
 mod:AddSetIconOption("SetIconCrushingDoubt", 282432, true, 0, {1, 2})
 mod:AddSetIconOption("SetIconDarkherald", 282561, true, 0, {6})
 mod:AddSetIconOption("SetIconOnAdds", 282617, true, 5, {3, 4, 5})
-mod:AddRangeFrameOption(6, 283524)
 mod:AddInfoFrameOption(282741, true)
 mod:AddNamePlateOption("NPAuraOnEcho", 282517)
 
@@ -192,9 +191,6 @@ function mod:OnCombatStart(delay)
 end
 
 function mod:OnCombatEnd()
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
-	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
 	end
@@ -319,9 +315,6 @@ function mod:SPELL_AURA_APPLIED(args)
 				yellAphoticBlast:Cancel()
 				yellAphoticBlast:Countdown(spellId)
 			end
-			if self.Options.RangeFrame then
-				DBM.RangeCheck:Show(6)
-			end
 		end
 	elseif spellId == 282540 then
 		if not args:IsPlayer() then
@@ -403,9 +396,6 @@ function mod:SPELL_AURA_REMOVED(args)
 	elseif spellId == 282386 then
 		if args:IsPlayer() then
 			yellAphoticBlast:Cancel()
-			if self.Options.RangeFrame then
-				DBM.RangeCheck:Hide()
-			end
 		end
 	elseif spellId == 282561 then
 		self.vb.heraldTarget = nil

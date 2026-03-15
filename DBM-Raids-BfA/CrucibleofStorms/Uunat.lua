@@ -17,7 +17,7 @@ mod:RegisterEventsInCombat(
 	"SPELL_CAST_SUCCESS 284851 285652 293653",
 	"SPELL_SUMMON 286165",
 	"SPELL_AURA_APPLIED 286459 286457 286458 284583 293663 293662 293661 284851 285345 287693 285333 285652 286310 284768 284569 284684 284722",
-	"SPELL_AURA_REMOVED 286459 286457 286458 284583 293663 293662 293661 284851 287693 285333 286310 284768 284569 284684 284722",
+	"SPELL_AURA_REMOVED 286459 286457 286458 284583 293663 293662 293661 287693 285333 286310 284768 284569 284684 284722",
 	"UNIT_DIED"
 )
 
@@ -114,7 +114,6 @@ local timerGiftofNzothLunacyCD			= mod:NewCDCountTimer(42.6, 285685, L.Lunacy, n
 local berserkTimer						= mod:NewBerserkTimer(780)
 
 --mod:AddSetIconOption("SetIconGift", 255594, true)
-mod:AddRangeFrameOption(10, 293653)
 mod:AddInfoFrameOption(293653, true)
 mod:AddNamePlateOption("NPAuraOnBond", 287693)
 mod:AddNamePlateOption("NPAuraOnFeed", 285307)
@@ -312,9 +311,6 @@ function mod:OnTimerRecovery()
 end
 
 function mod:OnCombatEnd()
-	if self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
-	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
 	end
@@ -330,9 +326,6 @@ function mod:SPELL_CAST_START(args)
 		specWarnUnstableResonance:Show(self.vb.resonCastCount)
 		specWarnUnstableResonance:Play("scatter")
 		timerUnstableResonanceCD:Start(nil, self.vb.resonCastCount+1)
-		if self.Options.RangeFrame then
-			DBM.RangeCheck:Show(10)
-		end
 		--Update some Timers
 		local tearElapsed, tearTotal = timerOblivionTearCD:GetTime(self.vb.tearCount+1)
 		local tearExtend = 21.2 - (tearTotal-tearElapsed)
@@ -708,9 +701,6 @@ function mod:SPELL_AURA_REMOVED(args)
 		if args:IsPlayer() then
 			timerUnstableResonance:Stop()
 			playerAffected = false
-		end
-		if self.Options.RangeFrame and self.vb.resonCount == 0 then
-			DBM.RangeCheck:Hide()
 		end
 	elseif spellId == 287693 then
 		if self.Options.NPAuraOnBond then
