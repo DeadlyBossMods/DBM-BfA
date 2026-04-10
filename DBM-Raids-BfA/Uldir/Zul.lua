@@ -231,6 +231,7 @@ end
 
 function mod:OnCombatEnd()
 	self:UnregisterShortTermEvents()
+	self:UnregisterOnUpdateHandler()--Kill scanner
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
 	end
