@@ -35,7 +35,7 @@ local warnVoidLash						= mod:NewStackAnnounce(265264, 2, nil, "Tank")
 local warnEyeBeam						= mod:NewTargetCountAnnounce(264382, 2, nil, nil, nil, nil, nil, nil, true)
 --Stage Two: Deception
 local warnRoilingDeceit					= mod:NewTargetCountAnnounce(265360, 4, nil, nil, nil, nil, nil, nil, true)
-local warnCasterAddsRemaining			= mod:NewAddsLeftAnnounce("ej18397", 2, 31700)
+local warnCasterAddsRemaining			= mod:NewAddsLeftAnnounce(-18397, 2, 31700)
 --Stage Three: Corruption
 local warnCorruptorsPact				= mod:NewTargetCountAnnounce(265662, 2, nil, nil, nil, nil, nil, nil, true)--Non Filtered Alert
 local warnWillofCorruptor				= mod:NewTargetAnnounce(265646, 4, nil, false)
@@ -67,10 +67,10 @@ local timerMightofVoidCD				= mod:NewCDTimer(37.6, 267312, nil, "Tank", nil, 5, 
 local timerTitanSparkCD					= mod:NewCDTimer(37.6, 264954, nil, "Healer", nil, 2)
 local timerAddsCD						= mod:NewAddsTimer(120, 31700, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)--Generic Timer only used on Mythic
 mod:AddTimerLine(SCENARIO_STAGE:format(1))
-local timerQirajiWarriorCD				= mod:NewCDTimer(60, "ej18071", nil, nil, nil, 1, 31700)--UNKNOWN, TODO
+local timerQirajiWarriorCD				= mod:NewCDTimer(60, -18071, nil, nil, nil, 1, 31700)--UNKNOWN, TODO
 local timerEyeBeamCD					= mod:NewCDTimer(40, 264382, nil, nil, nil, 3, nil, nil, nil, not mod:IsTank() and 3 or nil, 5)
 mod:AddTimerLine(SCENARIO_STAGE:format(2))
-local timerAnubarCasterCD				= mod:NewCDTimer(80, "ej18397", nil, nil, nil, 1, 31700)--82
+local timerAnubarCasterCD				= mod:NewCDTimer(80, -18397, nil, nil, nil, 1, 31700)--82
 local timerRoilingDeceitCD				= mod:NewCDTimer(45, 265360, nil, nil, nil, 3)--61
 mod:AddTimerLine(SCENARIO_STAGE:format(3))
 local timerOrbofCorruptionCD			= mod:NewCDCountTimer(50, 267239, nil, nil, nil, 5)

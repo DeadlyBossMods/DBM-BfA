@@ -48,14 +48,14 @@ mod:AddNamePlateOption("NPAuraOnDraws", 312750)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20528))
 local warnVitaPhase							= mod:NewSpellAnnounce(306732, 2)
 local warnUnstableVita						= mod:NewTargetNoFilterAnnounce(306257, 4)
-local warnCallCracklingStalker				= mod:NewSpellAnnounce("ej20546", 2)
+local warnCallCracklingStalker				= mod:NewSpellAnnounce(-20546, 2)
 
 local specWarnUnstableVita					= mod:NewSpecialWarningYou(306257, nil, nil, nil, 3, 2)
 local yellUnstableVita						= mod:NewYell(306257)
 local yellUnstableVitaFades					= mod:NewShortFadesYell(306257)
-local specWarnCallCracklingStalker			= mod:NewSpecialWarningSwitch("ej20546", "-Healer", nil, nil, 1, 2)
+local specWarnCallCracklingStalker			= mod:NewSpecialWarningSwitch(-20546, "-Healer", nil, nil, 1, 2)
 
-local timerCallCracklingStalkerCD			= mod:NewNextTimer(30.1, "ej20546", nil, nil, nil, 1, 306865, DBM_COMMON_L.DAMAGE_ICON)
+local timerCallCracklingStalkerCD			= mod:NewNextTimer(30.1, -20546, nil, nil, nil, 1, 306865, DBM_COMMON_L.DAMAGE_ICON)
 local timerUnstableVita						= mod:NewTargetTimer(5, 306257, nil, nil, nil, 5)
 
 ------Vita Add
@@ -72,11 +72,11 @@ mod:AddTimerLine(DBM:EJ_GetSectionInfo(20529))
 local warnVoidPhase							= mod:NewSpellAnnounce(306733, 2)
 local warnUnstableVoid						= mod:NewStackAnnounce(306634, 2)
 local warnNullifyingStrike					= mod:NewStackAnnounce(306819, 2, nil, "Tank")
-local warnCallVoidHunter					= mod:NewSpellAnnounce("ej20549", 2)
+local warnCallVoidHunter					= mod:NewSpellAnnounce(-20549, 2)
 
-local specWarnCallVoidHunter				= mod:NewSpecialWarningSwitch("ej20549", "-Healer", nil, nil, 1, 2)
+local specWarnCallVoidHunter				= mod:NewSpecialWarningSwitch(-20549, "-Healer", nil, nil, 1, 2)
 
-local timerCallVoidHunterCD					= mod:NewNextTimer(30.1, "ej20549", nil, nil, nil, 1, 306866, DBM_COMMON_L.DAMAGE_ICON)
+local timerCallVoidHunterCD					= mod:NewNextTimer(30.1, -20549, nil, nil, nil, 1, 306866, DBM_COMMON_L.DAMAGE_ICON)
 local timerUnstableVoidCD					= mod:NewNextCountTimer(5.9, 306634, nil, nil, nil, 5)
 ------Void Hunter
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20549))
@@ -93,14 +93,14 @@ mod:AddSetIconOption("SetIconOnVoidCollapse", 306881, true, 0, {3})
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21083))
 local warnNightmarePhase					= mod:NewSpellAnnounce(312996, 2)
 local warnUnstableNightmare					= mod:NewTargetNoFilterAnnounce(313077, 4)
-local warnCallNightTerror					= mod:NewSpellAnnounce("ej21176", 2)
+local warnCallNightTerror					= mod:NewSpellAnnounce(-21176, 2)
 
 local specWarnUnstableNightmare				= mod:NewSpecialWarningYou(313077, nil, nil, nil, 3, 2, 4)
 local yellUnstableNightmare					= mod:NewYell(313077)
 local yellUnstableNightmareFades			= mod:NewShortFadesYell(313077)
-local specWarnCallNightTerror				= mod:NewSpecialWarningSwitch("ej21176", false, nil, 2, 1, 2, 4)
+local specWarnCallNightTerror				= mod:NewSpecialWarningSwitch(-21176, false, nil, 2, 1, 2, 4)
 
-local timerCallNightTerrorCD				= mod:NewNextTimer(30.1, "ej21176", nil, nil, nil, 1, 314484, DBM_COMMON_L.DAMAGE_ICON)
+local timerCallNightTerrorCD				= mod:NewNextTimer(30.1, -21176, nil, nil, nil, 1, 314484, DBM_COMMON_L.DAMAGE_ICON)
 
 mod:AddSetIconOption("SetIconOnUnstableNightmare", 313077, true, 0, {4, 5})
 ------Night Terror
@@ -260,14 +260,14 @@ end
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId
 	if spellId == 306865 then
-		if self.Options.SpecWarnej20546switch then
+		if self.Options["SpecWarn-20546switch"] then
 			specWarnCallCracklingStalker:Show()
 			specWarnCallCracklingStalker:Play("bigmob")
 		else
 			warnCallCracklingStalker:Show()
 		end
 	elseif spellId == 306866 then
-		if self.Options.SpecWarnej20549switch then
+		if self.Options["SpecWarn-20549switch"] then
 			specWarnCallVoidHunter:Show()
 			specWarnCallVoidHunter:Play("bigmob")
 		else
@@ -286,7 +286,7 @@ function mod:SPELL_CAST_START(args)
 		self.vb.gorgedCount = self.vb.gorgedCount + 1
 		timerGorgeEssenceCD:Start(19.4, self.vb.gorgedCount+1)
 	elseif spellId == 314484 then
-		if self.Options.SpecWarnej21176switch then
+		if self.Options["SpecWarn-21176switch"] then
 			specWarnCallNightTerror:Show()
 			specWarnCallNightTerror:Play("bigmob")
 		else

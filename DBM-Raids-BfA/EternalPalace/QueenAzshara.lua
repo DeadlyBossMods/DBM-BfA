@@ -56,7 +56,7 @@ local warnPainfulMemoriesOver			= mod:NewMoveToAnnounce(297937, 1, nil, "Tank", 
 local specWarnPainfulMemories			= mod:NewSpecialWarningMoveTo(297937, "Tank", nil, nil, 3, 2)
 local specWarnLonging					= mod:NewSpecialWarningMoveTo(297934, false, nil, 2, 3, 2)
 local specWarnGTFO						= mod:NewSpecialWarningGTFO(297898, nil, nil, nil, 1, 8)
-local specWarnHulk						= mod:NewSpecialWarningSwitchCount("ej20480", "Dps", nil, nil, 1, 2)
+local specWarnHulk						= mod:NewSpecialWarningSwitchCount(-20480, "Dps", nil, nil, 1, 2)
 
 local timerCombatStart					= mod:NewCombatTimer(4)
 local timerPainfulMemoriesCD			= mod:NewNextTimer(60, 297937, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)
@@ -88,7 +88,7 @@ local timerChargedSpearCD				= mod:NewCDTimer(32.3, 301078, nil, nil, nil, 3, ni
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20480))
 local warnGroundPound					= mod:NewCountAnnounce(298531, 2)
 
-local timerHulkSpawnCD					= mod:NewCDCountTimer(30.4, "ej20480", nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
+local timerHulkSpawnCD					= mod:NewCDCountTimer(30.4, -20480, nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
 
 mod:AddNamePlateOption("NPAuraOnInfuriated", 300428)
 ----Azshara
@@ -124,14 +124,14 @@ local specWarnReversalofFortune			= mod:NewSpecialWarningSpell(297371, nil, nil,
 local specWarnArcaneBurst				= mod:NewSpecialWarningYouPos(303657, nil, nil, nil, 1, 2)
 local yellArcaneBurst					= mod:NewPosYell(303657)
 local yellArcaneBurstFades				= mod:NewIconFadesYell(303657)
-local specWarnAzsharasDevoted			= mod:NewSpecialWarningSwitch("ej20353", "Dps", nil, nil, 1, 2)
-local specWarnAzsharasIndomitable		= mod:NewSpecialWarningSwitchCount("ej20410", "Dps", nil, nil, 1, 2)
+local specWarnAzsharasDevoted			= mod:NewSpecialWarningSwitch(-20353, "Dps", nil, nil, 1, 2)
+local specWarnAzsharasIndomitable		= mod:NewSpecialWarningSwitchCount(-20410, "Dps", nil, nil, 1, 2)
 
 local timerArcaneDetonationCD			= mod:NewCDCountTimer(80, 300519, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)
 local timerReversalofFortuneCD			= mod:NewCDCountTimer(80, 297371, nil, nil, nil, 5, nil, DBM_COMMON_L.IMPORTANT_ICON, nil, 2, 5)
 local timerArcaneBurstCD				= mod:NewCDCountTimer(58.2, 303657, nil, nil, nil, 3, nil, DBM_COMMON_L.MAGIC_ICON)
-local timerAzsharasDevotedCD			= mod:NewCDTimer(95, "ej20353", nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
-local timerAzsharasIndomitableCD		= mod:NewCDTimer(100, "ej20410", nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
+local timerAzsharasDevotedCD			= mod:NewCDTimer(95, -20353, nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
+local timerAzsharasIndomitableCD		= mod:NewCDTimer(100, -20410, nil, nil, nil, 1, 298531, DBM_COMMON_L.DAMAGE_ICON)
 
 mod:AddSetIconOption("SetIconOnArcaneBurst", 303657, true, 0, {1, 2, 3, 4})
 --Stage Three: Song of the Tides
@@ -139,11 +139,11 @@ mod:AddTimerLine(DBM:EJ_GetSectionInfo(20340))
 local warnStaticShock					= mod:NewTargetAnnounce(300492, 2)
 local warnCrystallineShield				= mod:NewTargetNoFilterAnnounce(300620, 2)
 
-local specWarnLoyalMyrmidon				= mod:NewSpecialWarningSwitchCount("ej20355", "Tank", nil, nil, 1, 2)
+local specWarnLoyalMyrmidon				= mod:NewSpecialWarningSwitchCount(-20355, "Tank", nil, nil, 1, 2)
 local specWarnStaticShock				= mod:NewSpecialWarningMoveAway(300492, nil, nil, nil, 1, 8)
 local yellStaticShock					= mod:NewYell(300492)
 
-local timerLoyalMyrmidonCD				= mod:NewCDCountTimer(95, "ej20355", nil, nil, nil, 1, 301078, DBM_COMMON_L.DAMAGE_ICON)
+local timerLoyalMyrmidonCD				= mod:NewCDCountTimer(95, -20355, nil, nil, nil, 1, 301078, DBM_COMMON_L.DAMAGE_ICON)
 local timerStageThreeBerserk			= mod:NewTimer(180, "timerStageThreeBerserk", 28131)
 --Stage Four: My Palace Is a Prison
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20361))
