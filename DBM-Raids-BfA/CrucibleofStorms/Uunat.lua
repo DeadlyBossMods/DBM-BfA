@@ -67,7 +67,7 @@ local specWarnUnstableResonanceVoid		= mod:NewSpecialWarningYouPos(293663, nil, 
 local specWarnUnstableResonanceOcean	= mod:NewSpecialWarningYouPos(293662, nil, nil, nil, 1, 6)
 local specWarnUnstableResonanceStorm	= mod:NewSpecialWarningYouPos(293661, nil, nil, nil, 1, 6)
 local yellUnstableResonanceSign			= mod:NewPosYell(293653, DBM_CORE_L.AUTO_YELL_CUSTOM_POSITION)
-local yellUnstableResonanceRelic		= mod:NewShortPosYell("ej18970", nil, nil, nil, "YELL")
+local yellUnstableResonanceRelic		= mod:NewShortPosYell(-18970, nil, nil, nil, "YELL")
 --Stage One: His All-Seeing Eyes
 local specWarnTouchoftheEnd				= mod:NewSpecialWarningYou(284851, nil, nil, nil, 1, 2)
 local specWarnTouchoftheEndTaunt		= mod:NewSpecialWarningTaunt(284851, nil, nil, nil, 1, 6)
@@ -81,7 +81,7 @@ local specWarnCallUndyingGuardian		= mod:NewSpecialWarningSwitchCount(285820, "-
 local specWarnGiftofNzothHysteria		= mod:NewSpecialWarningCount(285638, nil, nil, nil, 2, 2)
 local specWarnConsumeEssence			= mod:NewSpecialWarningInterruptCount(285427, false, nil, nil, 1, 2)
 local specWarnUnknowableTerror			= mod:NewSpecialWarningRun(285562, nil, nil, nil, 4, 2)
-local specWarnPrimordialMindbender		= mod:NewSpecialWarningSwitchCount("ej19118", "Dps", nil, nil, 1, 2)
+local specWarnPrimordialMindbender		= mod:NewSpecialWarningSwitchCount(-19118, "Dps", nil, nil, 1, 2)
 --Stage Three: His Unwavering Gaze
 local specWarnInsatiableTorment			= mod:NewSpecialWarningYou(285652, nil, nil, nil, 1, 2)
 local yellInsatiableTorment				= mod:NewShortYell(285652, 142942)--Short text "Torment"
@@ -105,7 +105,7 @@ local timerGiftofNzothObscurityCD		= mod:NewCDCountTimer(42.1, 285453, 285477, n
 --Stage Two: His Dutiful Servants
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19105))
 local timerUnknowableTerrorCD			= mod:NewCDTimer(40.1, 285562, nil, nil, nil, 3)
-local timerMindBenderCD					= mod:NewCDCountTimer(61.1, "ej19118", 284485, nil, nil, 1, 285427, DBM_COMMON_L.DAMAGE_ICON)--Shorttext "Mindbender"
+local timerMindBenderCD					= mod:NewCDCountTimer(61.1, -19118, 284485, nil, nil, 1, 285427, DBM_COMMON_L.DAMAGE_ICON)--Shorttext "Mindbender"
 local timerGiftofNzothHysteriaCD		= mod:NewCDCountTimer(42.5, 285638, 55975, nil, nil, 2)--Short text "Hysteria"
 --Stage Three: His Unwavering Gaze
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19106))
@@ -119,8 +119,8 @@ mod:AddInfoFrameOption(293653, true)
 mod:AddNamePlateOption("NPAuraOnBond", 287693)
 mod:AddNamePlateOption("NPAuraOnFeed", 285307)
 mod:AddNamePlateOption("NPAuraOnRegen", 285333)
-mod:AddSetIconOption("SetIconOnAdds", "ej19118", true, 5, {1, 2, 4})
-mod:AddSetIconOption("SetIconOnRelics", "ej18970", true, 0, {1, 3, 5, 6, 7})--only up to 3 are used, but it depends on what user sets UnstableBehavior2 to. 1 and 7 are not included in the default used by DBM/BW (SetTwo)
+mod:AddSetIconOption("SetIconOnAdds", -19118, true, 5, {1, 2, 4})
+mod:AddSetIconOption("SetIconOnRelics", -18970, true, 0, {1, 3, 5, 6, 7})--only up to 3 are used, but it depends on what user sets UnstableBehavior2 to. 1 and 7 are not included in the default used by DBM/BW (SetTwo)
 mod:AddDropdownOption("UnstableBehavior2", {"SetOne", "SetTwo", "SetThree", "SetFour", "SetFive", "SetSix"}, "SetTwo", "misc", nil, 293653)--SetTwo is BW default (BW default used to be SetOne)
 
 mod.vb.touchCount = 0

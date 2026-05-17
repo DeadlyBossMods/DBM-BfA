@@ -36,7 +36,7 @@ local warnPhase						= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
 local warnOblivionSphere			= mod:NewCountAnnounce(272407, 4)
 local warnVoidEchoes				= mod:NewCountAnnounce(279157, 4)
 --Stage Two:
-local warnDestroyerRemaining			= mod:NewAddsLeftAnnounce("ej18508", 2, 274693)
+local warnDestroyerRemaining			= mod:NewAddsLeftAnnounce(-18508, 2, 274693)
 
 --Stage One: Oblivion's Call
 local specWarnEssenceShearDodge			= mod:NewSpecialWarningDodge(274693, false, nil, nil, 3, 2)

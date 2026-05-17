@@ -46,15 +46,15 @@ mod:AddInfoFrameOption(292971, true)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19983))
 local warnMindTether					= mod:NewTargetSourceAnnounce(295444, 3)
 local warnSnapped						= mod:NewTargetNoFilterAnnounce(300133, 4, nil, "Tank|Healer")
-local warnUnleashedNightmare			= mod:NewSpellAnnounce("ej20289", 3, 300732)
+local warnUnleashedNightmare			= mod:NewSpellAnnounce(-20289, 3, 300732)
 local warnDread							= mod:NewTargetNoFilterAnnounce(292963, 3, nil, "Healer")
 
-local specWarnHorrificSummoner			= mod:NewSpecialWarningSwitch("ej20172", "-Healer", nil, nil, 1, 2)
+local specWarnHorrificSummoner			= mod:NewSpecialWarningSwitch(-20172, "-Healer", nil, nil, 1, 2)
 local specWarnCrushingGrasp				= mod:NewSpecialWarningDodge(292565, nil, nil, nil, 2, 2)
 local yellDread							= mod:NewPosYell(292963)
 local yellDreadFades					= mod:NewIconFadesYell(292963)
 
-local timerHorrificSummonerCD			= mod:NewCDTimer(80.1, "ej20172", nil, nil, nil, 1, 294515, DBM_COMMON_L.DAMAGE_ICON)
+local timerHorrificSummonerCD			= mod:NewCDTimer(80.1, -20172, nil, nil, nil, 1, 294515, DBM_COMMON_L.DAMAGE_ICON)
 local timerCrushingGraspCD				= mod:NewCDTimer(31.4, 292565, nil, nil, nil, 3)
 local timerDreadCD						= mod:NewCDTimer(75.4, 292963, nil, "Healer", nil, 5, nil, DBM_COMMON_L.MAGIC_ICON)--One dread timer used for all versions (cast by boss)
 local timerMindTetherCD					= mod:NewCDTimer(47.8, 295444, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)--52.3

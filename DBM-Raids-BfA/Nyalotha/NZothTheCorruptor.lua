@@ -108,17 +108,17 @@ local timerEternalTormentCD					= mod:NewNextCountTimer(56.1, 318449, 311383, ni
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21286))
 local warnTumultuousBurst					= mod:NewCastAnnounce(310042, 4, nil, nil, "Tank")
 
-local specWarnBasherTentacle				= mod:NewSpecialWarningSwitchCount("ej21286", "-Healer", nil, 2, 1, 2)
+local specWarnBasherTentacle				= mod:NewSpecialWarningSwitchCount(-21286, "-Healer", nil, 2, 1, 2)
 local specWarnVoidLash						= mod:NewSpecialWarningDefensive(309698, nil, nil, nil, 1, 2)
 
-local timerBasherTentacleCD					= mod:NewNextCountTimer(60, "ej21286", nil, nil, nil, 1, "319441", DBM_COMMON_L.DAMAGE_ICON)
+local timerBasherTentacleCD					= mod:NewNextCountTimer(60, -21286, nil, nil, nil, 1, "319441", DBM_COMMON_L.DAMAGE_ICON)
 local timerVoidLashCD						= mod:NewCDTimer(22.9, 309698, nil, false, 2, 5, nil, DBM_COMMON_L.TANK_ICON)
 ----Corruptor Tentacle
 local specWarnCorruptedMind					= mod:NewSpecialWarningInterruptCount(313400, "HasInterrupt", nil, nil, 1, 2)
 local specWarnCorruptedMindDispel			= mod:NewSpecialWarningDispel(313400, "RemoveMagic", nil, nil, 1, 2)
 local specWarnMindFlay						= mod:NewSpecialWarningInterrupt(308885, false, nil, nil, 1, 2)
 
-mod:AddSetIconOption("SetIconOnCorruptor", "ej21441", true, 5, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconOnCorruptor", -21441, true, 5, {1, 2, 3, 4})
 ----Through the Mindgate
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20971))
 ------Corruption of Deathwing
@@ -148,15 +148,15 @@ local timerStupefyingGlareCD				= mod:NewNextCountTimer(22.9, 317874, 239918, ni
 mod:AddBoolOption("ArrowOnGlare", true)
 ----Thought Harvester
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21491))
-local warnThoughtHarvester					= mod:NewCountAnnounce("ej21308", 3, 231298)
+local warnThoughtHarvester					= mod:NewCountAnnounce(-21308, 3, 231298)
 
-local specWarnThoughtHarvester				= mod:NewSpecialWarningSwitchCount("ej21308", false, nil, nil, 1, 2)
+local specWarnThoughtHarvester				= mod:NewSpecialWarningSwitchCount(-21308, false, nil, nil, 1, 2)
 local specWarnHarvestThoughts				= mod:NewSpecialWarningCount(317066, nil, nil, nil, 2, 2)
 
-local timerThoughtHarvesterCD				= mod:NewCDCountTimer(30.1, "ej21308", nil, nil, nil, 1, 231298)
+local timerThoughtHarvesterCD				= mod:NewCDCountTimer(30.1, -21308, nil, nil, nil, 1, 231298)
 local timerHarvestThoughtsCD				= mod:NewCDTimer(35.2, 317066, nil, nil, nil, 3)
 
-mod:AddSetIconOption("SetIconOnHarvester", "ej21308", true, 5, {1, 2, 3, 4})
+mod:AddSetIconOption("SetIconOnHarvester", -21308, true, 5, {1, 2, 3, 4})
 --Stage 3 Mythic
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21435))
 local warnEventHorizon						= mod:NewTargetNoFilterAnnounce(318196, 3)
@@ -1114,7 +1114,7 @@ function mod:INSTANCE_ENCOUNTER_ENGAGE_UNIT()
 				self.vb.harvestersAlive = self.vb.harvestersAlive + 1
 				if self:IsMythic() and self:AntiSpam(6, 1) or not self:IsMythic() and self:AntiSpam(3, 1) then
 					self.vb.harvesterCount = self.vb.harvesterCount + 1
-					if self.Options.SpecWarnej21308switch then
+					if self.Options["SpecWarn-21308switch"] then
 						specWarnThoughtHarvester:Show(self.vb.harvesterCount)
 						specWarnThoughtHarvester:Play("killmob")
 					else

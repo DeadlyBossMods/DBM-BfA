@@ -49,7 +49,7 @@ local warnBurstingBoil					= mod:NewCountAnnounce(277007, 4)--Mythic
 
 --Arena Floor
 local specWarnBloodHost					= mod:NewSpecialWarningClose(267813, nil, nil, nil, 1, 2, 4)--Mythic
---local specWarnSpawnofGhuun			= mod:NewSpecialWarningSwitch("ej13699", "Dps", nil, nil, 1, 2)
+--local specWarnSpawnofGhuun			= mod:NewSpecialWarningSwitch(-13699, "Dps", nil, nil, 1, 2)
 local yellBloodHost						= mod:NewYell(267813)--Mythic
 local specWarnDarkPurpose				= mod:NewSpecialWarningRun(268074, nil, nil, nil, 4, 2, 4)--Mythic
 local yellDarkPurpose					= mod:NewYell(268074)--Mythic

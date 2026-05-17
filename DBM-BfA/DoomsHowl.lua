@@ -37,8 +37,8 @@ local warnDemoCannon				= mod:NewTargetNoFilterAnnounce(271246, 2, nil, false)--
 --Mobile
 local specWarnShatteringPulse		= mod:NewSpecialWarningSpell(271163, "Tank", nil, 3, 1, 2)
 --Siege
-local specWarnDoomsHowlEngineer		= mod:NewSpecialWarningSwitch("ej18702", "-Healer", nil, nil, 1, 2)
-local specWarnLionsHowlEngineer		= mod:NewSpecialWarningSwitch("ej18682", "-Healer", nil, nil, 1, 2)
+local specWarnDoomsHowlEngineer		= mod:NewSpecialWarningSwitch(-18702, "-Healer", nil, nil, 1, 2)
+local specWarnLionsHowlEngineer		= mod:NewSpecialWarningSwitch(-18682, "-Healer", nil, nil, 1, 2)
 local specWarnFieldRepair			= mod:NewSpecialWarningInterrupt(271797, "HasInterrupt", nil, nil, 1, 2)
 local specWarnSentry				= mod:NewSpecialWarningMove(271783, false, nil, 2, 1, 2)
 --local specWarnGTFO				= mod:NewSpecialWarningGTFO(238028, nil, nil, nil, 1, 8)
