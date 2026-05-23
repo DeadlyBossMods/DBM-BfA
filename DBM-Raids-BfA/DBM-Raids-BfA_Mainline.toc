@@ -19,7 +19,7 @@
 ## X-DBM-Mod-Name-ruRU: Рейды (Битва за Азерот)
 ## X-DBM-Mod-Sort: 401
 ## X-DBM-Mod-MapID: 2217, 2164, 2096, 2070, 1861
-## X-DBM-Mod-MinCoreRevision: 20230617000000
+## X-DBM-Mod-MinCoreRevision: 20260522000000
 ## X-DBM-Mod-MinExpansion: 7
 ## X-Curse-Project-ID: 420275
 ## X-WoWI-ID: 25779
