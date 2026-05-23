@@ -17,9 +17,9 @@ mod:RegisterEventsInCombat(
 )
 
 --TODO, see which instance ID she's in, 2275,870
-local specWarnSongoftheEmpress			= mod:NewSpecialWarningDodge(314304, nil, nil, nil, 2, 2)
-local specWarnForceandVerve				= mod:NewSpecialWarningMoveTo(314333, nil, nil, nil, 3, 2)
-local specWarnSummonSwarmguard			= mod:NewSpecialWarningSwitch(314307, "-Healer", nil, nil, 1, 2)
+local specWarnSongoftheEmpress			= mod:NewSpecialWarningDodge(314304, nil, nil, nil, 2, 2, nil, nil, "watchwave")
+local specWarnForceandVerve				= mod:NewSpecialWarningMoveTo(314333, nil, nil, nil, 3, 2, nil, nil, "findshelter")
+local specWarnSummonSwarmguard			= mod:NewSpecialWarningSwitch(314307, "-Healer", nil, nil, 1, 2, nil, nil, "killmob")
 
 local timerSongoftheEmpressCD			= mod:NewCDTimer(82.0, 314304, nil, nil, nil, 3)
 local timerForceandVerveCD				= mod:NewCDTimer(82.0, 314333, nil, nil, 2, 2, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)

@@ -49,15 +49,15 @@ local warnEntropicBuildup					= mod:NewCountAnnounce(308177, 2)
 local warnEntropicBreath					= mod:NewSpellAnnounce(306930, 2, nil, "Tank")
 local warnTastyMorsel						= mod:NewTargetNoFilterAnnounce(312099, 1)
 
-local specWarnUncontrollablyRavenous		= mod:NewSpecialWarningSpell(312329, nil, nil, nil, 3, 2, 4)--Mythic
-local specWarnCrushTaunt					= mod:NewSpecialWarningTaunt(307471, nil, nil, nil, 3, 2)
-local specWarnDissolveTaunt					= mod:NewSpecialWarningTaunt(307472, nil, nil, nil, 1, 2)
-local specWarnSlurryBreath					= mod:NewSpecialWarningDodge(306736, nil, nil, nil, 2, 2)
-local specWarnDebilitatingSpit				= mod:NewSpecialWarningYou(307358, nil, 58519, nil, 1, 2)
-local specWarnFixate						= mod:NewSpecialWarningRun(307260, nil, nil, nil, 4, 2)
+local specWarnUncontrollablyRavenous		= mod:NewSpecialWarningSpell(312329, nil, nil, nil, 3, 2, 4, nil, "stilldanger")--Mythic
+local specWarnCrushTaunt					= mod:NewSpecialWarningTaunt(307471, nil, nil, nil, 3, 2, nil, nil, "tauntboss")
+local specWarnDissolveTaunt					= mod:NewSpecialWarningTaunt(307472, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnSlurryBreath					= mod:NewSpecialWarningDodge(306736, nil, nil, nil, 2, 2, nil, nil, "breathsoon")
+local specWarnDebilitatingSpit				= mod:NewSpecialWarningYou(307358, nil, 58519, nil, 1, 2, nil, nil, "targetyou")
+local specWarnFixate						= mod:NewSpecialWarningRun(307260, nil, nil, nil, 4, 2, nil, nil, "targetyou")
 local yellFixate							= mod:NewYell(307260, nil, true, 2)
-local specWarnUmbralEruption				= mod:NewSpecialWarningDodge(308157, false, nil, 2, 2, 2)--Because every 8-10 seconds is excessive, let user opt in for this
-local specWarnGTFO							= mod:NewSpecialWarningGTFO(314736, nil, nil, nil, 1, 8)
+local specWarnUmbralEruption				= mod:NewSpecialWarningDodge(308157, false, nil, 2, 2, 2, nil, nil, "watchstep")--Because every 8-10 seconds is excessive, let user opt in for this
+local specWarnGTFO							= mod:NewSpecialWarningGTFO(314736, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
 
 local timerCrushCD							= mod:NewCDTimer(25.1, 307471, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)
 local timerSlurryBreathCD					= mod:NewCDTimer(17, 306736, nil, nil, nil, 3, nil, nil, nil, 1, 3)

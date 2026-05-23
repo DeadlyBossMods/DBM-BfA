@@ -17,8 +17,8 @@ mod:RegisterEvents(
 local warnBwonSamdiPact					= mod:NewTargetNoFilterAnnounce(289917, 3)
 local warnBwonsamdiKnife				= mod:NewTargetSourceAnnounce(290578, 3)
 
-local specWarnBwonSamdiPact				= mod:NewSpecialWarningYou(289917, nil, nil, nil, 1, 2)
-local specWarnBwonSamdiKnife			= mod:NewSpecialWarningYou(290578, nil, nil, nil, 1, 2)
+local specWarnBwonSamdiPact				= mod:NewSpecialWarningYou(289917, nil, nil, nil, 1, 2, nil, nil, "targetyou")
+local specWarnBwonSamdiKnife			= mod:NewSpecialWarningYou(290578, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 --local yellCorruptingGaze				= mod:NewYell(289917)
 --local specWarnBloodShield				= mod:NewSpecialWarningInterrupt(276540, "HasInterrupt", nil, nil, 1, 2)
 

@@ -33,18 +33,18 @@ mod:RegisterEventsInCombat(
 --General
 local warnDarkRecon							= mod:NewCastAnnounce(307569, 4)
 
-local specWarnTekrissHiveControl			= mod:NewSpecialWarningTarget(307213, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.spell:format(307213), nil, 2, 2)--Keep Together
-local specWarnKazirsHiveControl				= mod:NewSpecialWarningTarget(307201, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.spell:format(307201), nil, 2, 2)--Keep Apart
-local specWarnGTFO							= mod:NewSpecialWarningGTFO(313672, nil, nil, nil, 1, 8)
+local specWarnTekrissHiveControl			= mod:NewSpecialWarningTarget(307213, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.spell:format(307213), nil, 2, 2, nil, nil, "phasechange")--Keep Together
+local specWarnKazirsHiveControl				= mod:NewSpecialWarningTarget(307201, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.spell:format(307201), nil, 2, 2, nil, nil, "phasechange")--Keep Apart
+local specWarnGTFO							= mod:NewSpecialWarningGTFO(313672, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
 
 local timerTekrissHiveControlCD				= mod:NewNextTimer(98.7, 307213, nil, nil, nil, 6, nil, nil, nil, 1, 5)
 local timerKazirsHiveControlCD				= mod:NewNextTimer(98.7, 307201, nil, nil, nil, 6, nil, nil, nil, 1, 5)
 local timerDarkReconCast					= mod:NewNextTimer(10, 307569, nil, nil, nil, 5, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 3, 4)
 --Ka'zir
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20710))
-local specWarnVolatileEruption				= mod:NewSpecialWarningTargetChange(307583, nil, 155037, nil, 1, 2)
-local specWarnSpawnAcidicAqir				= mod:NewSpecialWarningDodgeCount(310340, nil, nil, nil, 2, 2)
-local specWarnMindNumbingNova				= mod:NewSpecialWarningInterruptCount(313652, "HasInterrupt", 242396, nil, 1, 2)
+local specWarnVolatileEruption				= mod:NewSpecialWarningTargetChange(307583, nil, 155037, nil, 1, 2, nil, nil, "targetchange")
+local specWarnSpawnAcidicAqir				= mod:NewSpecialWarningDodgeCount(310340, nil, nil, nil, 2, 2, nil, nil, "watchstep")
+local specWarnMindNumbingNova				= mod:NewSpecialWarningInterruptCount(313652, "HasInterrupt", 242396, nil, 1, 2, nil, nil, "kickcast")
 
 local timerVolatileEruptionCD				= mod:NewNextCountTimer(84, 307583, 155037, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)
 local timerSpawnAcidicAqirCD				= mod:NewNextCountTimer(84, 310340, nil, nil, nil, 3)
@@ -57,10 +57,10 @@ mod:AddTimerLine(DBM:EJ_GetSectionInfo(20713))
 local warnNullification						= mod:NewTargetNoFilterAnnounce(313460, 4)--Might feel spammy in a mass fuckup situation, but in most cases on by default should be fine
 
 local specWarnAcceleratedEvolution			= mod:NewSpecialWarningTargetChange(307637, nil, 75610, nil, 1, 2)
-local specWarnNullificationBlast			= mod:NewSpecialWarningDodgeCount(307968, nil, 158259, nil, 2, 2)
-local specWarnEchoingVoid					= mod:NewSpecialWarningMoveAwayCount(307232, nil, nil, nil, 2, 2)
-local specWarnFixate						= mod:NewSpecialWarningYou(308360, false, nil, nil, 1, 2)
-local specWarnEtropicEhco					= mod:NewSpecialWarningDodge(313692, nil, nil, nil, 3, 2)--Mythic
+local specWarnNullificationBlast			= mod:NewSpecialWarningDodgeCount(307968, nil, 158259, nil, 2, 2, nil, nil, "shockwave")
+local specWarnEchoingVoid					= mod:NewSpecialWarningMoveAwayCount(307232, nil, nil, nil, 2, 2, nil, nil, "scatter")
+local specWarnFixate						= mod:NewSpecialWarningYou(308360, false, nil, nil, 1, 2, nil, nil, "targetyou")
+local specWarnEtropicEhco					= mod:NewSpecialWarningDodge(313692, nil, nil, nil, 3, 2, nil, nil, "watchstep")--Mythic
 
 local timerAcceleratedEvolutionCD			= mod:NewNextCountTimer(84, 307637, 75610, nil, nil, 3, nil, DBM_COMMON_L.TANK_ICON)
 local timerNullificationBlastCD				= mod:NewNextCountTimer(84, 307968, 158259, "Tank", 2, 5, nil, DBM_COMMON_L.TANK_ICON)

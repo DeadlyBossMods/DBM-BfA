@@ -41,25 +41,25 @@ local warnCorruptorsPact				= mod:NewTargetCountAnnounce(265662, 2, nil, nil, ni
 local warnWillofCorruptor				= mod:NewTargetAnnounce(265646, 4, nil, false)
 
 --General
-local specWarnSurgingDarkness			= mod:NewSpecialWarningDodge(265451, nil, nil, nil, 3, 2)
-local specWarnMightofVoid				= mod:NewSpecialWarningDefensive(267312, nil, nil, nil, 1, 2)
-local specWarnShatter					= mod:NewSpecialWarningTaunt(265237, nil, nil, nil, 1, 2)
-local specWarnAdds						= mod:NewSpecialWarningAdds(31700, nil, nil, nil, 1, 2, 4)--Generic Warning only used on Mythic
+local specWarnSurgingDarkness			= mod:NewSpecialWarningDodge(265451, nil, nil, nil, 3, 2, nil, nil, "watchstep")
+local specWarnMightofVoid				= mod:NewSpecialWarningDefensive(267312, nil, nil, nil, 1, 2, nil, nil, "defensive")
+local specWarnShatter					= mod:NewSpecialWarningTaunt(265237, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnAdds						= mod:NewSpecialWarningAdds(31700, nil, nil, nil, 1, 2, 4, nil, "killmob")--Generic Warning only used on Mythic
 --Stage One: Chaos
-local specWarnEyeBeamSoon				= mod:NewSpecialWarningSoon(264382, nil, nil, nil, 1, 2)
-local specWarnEyeBeam					= mod:NewSpecialWarningMoveAwayCount(264382, nil, nil, 2, 3, 2)
+local specWarnEyeBeamSoon				= mod:NewSpecialWarningSoon(264382, nil, nil, nil, 1, 2, nil, nil, "scattersoon")
+local specWarnEyeBeam					= mod:NewSpecialWarningMoveAwayCount(264382, nil, nil, 2, 3, 2, nil, nil, "runout")
 local yellEyeBeam						= mod:NewCountYell(264382)
 --Stage Two: Deception
-local specWarnRoilingDeceit				= mod:NewSpecialWarningMoveTo(265360, nil, nil, nil, 3, 7)
+local specWarnRoilingDeceit				= mod:NewSpecialWarningMoveTo(265360, nil, nil, nil, 3, 7, nil, nil, "runtoedge")
 local yellRoilingDeceit					= mod:NewCountYell(265360)
 local yellRoilingDeceitFades			= mod:NewFadesYell(265360)
-local specWarnVoidbolt					= mod:NewSpecialWarningInterrupt(267180, "HasInterrupt", nil, nil, 1, 2)
+local specWarnVoidbolt					= mod:NewSpecialWarningInterrupt(267180, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 --Stage Three: Corruption
-local specWarnOrbOfCorruption			= mod:NewSpecialWarningCount(267239, nil, nil, nil, 2, 12)
+local specWarnOrbOfCorruption			= mod:NewSpecialWarningCount(267239, nil, nil, nil, 2, 12, nil, nil, "catchballs")
 local yellCorruptorsPact				= mod:NewFadesYell(265662)
 local specWarnWillofCorruptorSoon		= mod:NewSpecialWarningSoon(265646, nil, nil, nil, 3, 2)
-local specWarnWillofCorruptor			= mod:NewSpecialWarningSwitch(265646, "Dps", nil, 2, 1, 2)
-local specWarnEntropicBlast				= mod:NewSpecialWarningInterrupt(270620, "HasInterrupt", nil, nil, 1, 2)
+local specWarnWillofCorruptor			= mod:NewSpecialWarningSwitch(265646, "Dps", nil, 2, 1, 2, nil, nil, "findmc")
+local specWarnEntropicBlast				= mod:NewSpecialWarningInterrupt(270620, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 
 mod:AddTimerLine(GENERAL)
 local timerSurgingDarknessCD			= mod:NewCDTimer(82.8, 265451, nil, "Melee", nil, 2, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 3)--60 based on energy math

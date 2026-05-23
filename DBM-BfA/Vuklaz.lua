@@ -19,9 +19,9 @@ mod:RegisterEventsInCombat(
 --TODO, see which instance ID she's in, 2275,870
 local warnRazorSpines					= mod:NewSpellAnnounce(314698, 3)
 
-local specWarnTremorWave				= mod:NewSpecialWarningDodge(314527, nil, nil, nil, 2, 2)
-local specWarnWrithingSands				= mod:NewSpecialWarningSwitch(314659, "Dps", nil, nil, 1, 2)
-local specWarnCrushingClaws				= mod:NewSpecialWarningDefensive(314618, "Tank", nil, nil, 1, 2)
+local specWarnTremorWave				= mod:NewSpecialWarningDodge(314527, nil, nil, nil, 2, 2, nil, nil, "shockwave")
+local specWarnWrithingSands				= mod:NewSpecialWarningSwitch(314659, "Dps", nil, nil, 1, 2, nil, nil, "killmob")
+local specWarnCrushingClaws				= mod:NewSpecialWarningDefensive(314618, "Tank", nil, nil, 1, 2, nil, nil, "defensive")
 
 local timerTremorWaveCD					= mod:NewCDTimer(23.1, 314527, nil, nil, nil, 3)--23.1--30.4
 local timerWrithingSandsCD				= mod:NewCDTimer(41.3, 314659, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)--21.8?

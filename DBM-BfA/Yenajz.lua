@@ -17,7 +17,7 @@ mod:RegisterEventsInCombat(
 
 local warnVoidNova					= mod:NewSpellAnnounce(274842, 3)
 
-local specWarnEndlessAbyss			= mod:NewSpecialWarningRun(274932, nil, nil, nil, 4, 2)
+local specWarnEndlessAbyss			= mod:NewSpecialWarningRun(274932, nil, nil, nil, 4, 2, nil, nil, "justrun")
 
 local timerVoidNovaCD				= mod:NewCDTimer(22.3, 274842, nil, nil, nil, 2)
 local timerEndlessAbyssCD			= mod:NewCDTimer(45.7, 274932, nil, nil, nil, 2, nil, DBM_COMMON_L.DEADLY_ICON)

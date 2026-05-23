@@ -34,10 +34,10 @@ mod:RegisterEventsInCombat(
 --Stage 1: Gathering Power
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20527))
 local specWarnCallEssence					= mod:NewSpecialWarningCount(306091, "-Healer")
-local specWarnNullifyingStrike				= mod:NewSpecialWarningStack(306819, nil, 2, nil, nil, 1, 6)
-local specWarnNullifyingStrikeTaunt			= mod:NewSpecialWarningTaunt(306819, nil, nil, nil, 1, 2)
-local specWarnExposure						= mod:NewSpecialWarningYou(306279, nil, nil, nil, 1, 2)
-local specWarnGTFO							= mod:NewSpecialWarningGTFO(315258, nil, nil, nil, 1, 8)
+local specWarnNullifyingStrike				= mod:NewSpecialWarningStack(306819, nil, 2, nil, nil, 1, 6, nil, nil, "stackhigh")
+local specWarnNullifyingStrikeTaunt			= mod:NewSpecialWarningTaunt(306819, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnExposure						= mod:NewSpecialWarningYou(306279, nil, nil, nil, 1, 2, nil, nil, "targetyou")
+local specWarnGTFO							= mod:NewSpecialWarningGTFO(315258, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
 
 local timerCallEssenceCD					= mod:NewNextCountTimer(55, 306091, DBM_COMMON_L.ORBS, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 1, 5)--44.9-46.3
 local timerNullifyingStrikeCD				= mod:NewCDTimer(15.8, 306819, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--16-19
@@ -50,10 +50,10 @@ local warnVitaPhase							= mod:NewSpellAnnounce(306732, 2)
 local warnUnstableVita						= mod:NewTargetNoFilterAnnounce(306257, 4)
 local warnCallCracklingStalker				= mod:NewSpellAnnounce(-20546, 2)
 
-local specWarnUnstableVita					= mod:NewSpecialWarningYou(306257, nil, nil, nil, 3, 2)
+local specWarnUnstableVita					= mod:NewSpecialWarningYou(306257, nil, nil, nil, 3, 2, nil, nil, "targetyou")
 local yellUnstableVita						= mod:NewYell(306257)
 local yellUnstableVitaFades					= mod:NewShortFadesYell(306257)
-local specWarnCallCracklingStalker			= mod:NewSpecialWarningSwitch(-20546, "-Healer", nil, nil, 1, 2)
+local specWarnCallCracklingStalker			= mod:NewSpecialWarningSwitch(-20546, "-Healer", nil, nil, 1, 2, nil, nil, "bigmob")
 
 local timerCallCracklingStalkerCD			= mod:NewNextTimer(30.1, -20546, nil, nil, nil, 1, 306865, DBM_COMMON_L.DAMAGE_ICON)
 local timerUnstableVita						= mod:NewTargetTimer(5, 306257, nil, nil, nil, 5)
@@ -62,7 +62,7 @@ local timerUnstableVita						= mod:NewTargetTimer(5, 306257, nil, nil, nil, 5)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20546))
 local warnChainLightning					= mod:NewTargetNoFilterAnnounce(306874, 3)
 
-local specWarnChainLightning				= mod:NewSpecialWarningYou(306874, nil, nil, nil, 1, 2)
+local specWarnChainLightning				= mod:NewSpecialWarningYou(306874, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellChainLightning					= mod:NewYell(306874)
 
 local timerChainLightningCD					= mod:NewCDTimer(4.8, 306874, nil, nil, nil, 3)
@@ -74,7 +74,7 @@ local warnUnstableVoid						= mod:NewStackAnnounce(306634, 2)
 local warnNullifyingStrike					= mod:NewStackAnnounce(306819, 2, nil, "Tank")
 local warnCallVoidHunter					= mod:NewSpellAnnounce(-20549, 2)
 
-local specWarnCallVoidHunter				= mod:NewSpecialWarningSwitch(-20549, "-Healer", nil, nil, 1, 2)
+local specWarnCallVoidHunter				= mod:NewSpecialWarningSwitch(-20549, "-Healer", nil, nil, 1, 2, nil, nil, "bigmob")
 
 local timerCallVoidHunterCD					= mod:NewNextTimer(30.1, -20549, nil, nil, nil, 1, 306866, DBM_COMMON_L.DAMAGE_ICON)
 local timerUnstableVoidCD					= mod:NewNextCountTimer(5.9, 306634, nil, nil, nil, 5)
@@ -82,7 +82,7 @@ local timerUnstableVoidCD					= mod:NewNextCountTimer(5.9, 306634, nil, nil, nil
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20549))
 local warnVoidCollapse						= mod:NewTargetNoFilterAnnounce(306881, 4)
 
-local specWarnVoidCollapse					= mod:NewSpecialWarningMoveTo(306881, nil, nil, nil, 3, 2)
+local specWarnVoidCollapse					= mod:NewSpecialWarningMoveTo(306881, nil, nil, nil, 3, 2, nil, nil, "gathershare")
 local yellVoidCollapse						= mod:NewYell(306881, nil, nil, nil, "YELL")
 local yellVoidCollapseFades					= mod:NewShortFadesYell(306881, nil, nil, nil, "YELL")
 
@@ -95,10 +95,10 @@ local warnNightmarePhase					= mod:NewSpellAnnounce(312996, 2)
 local warnUnstableNightmare					= mod:NewTargetNoFilterAnnounce(313077, 4)
 local warnCallNightTerror					= mod:NewSpellAnnounce(-21176, 2)
 
-local specWarnUnstableNightmare				= mod:NewSpecialWarningYou(313077, nil, nil, nil, 3, 2, 4)
+local specWarnUnstableNightmare				= mod:NewSpecialWarningYou(313077, nil, nil, nil, 3, 2, 4, nil, "targetyou")
 local yellUnstableNightmare					= mod:NewYell(313077)
 local yellUnstableNightmareFades			= mod:NewShortFadesYell(313077)
-local specWarnCallNightTerror				= mod:NewSpecialWarningSwitch(-21176, false, nil, 2, 1, 2, 4)
+local specWarnCallNightTerror				= mod:NewSpecialWarningSwitch(-21176, false, nil, 2, 1, 2, 4, nil, "bigmob")
 
 local timerCallNightTerrorCD				= mod:NewNextTimer(30.1, -21176, nil, nil, nil, 1, 314484, DBM_COMMON_L.DAMAGE_ICON)
 
@@ -107,7 +107,7 @@ mod:AddSetIconOption("SetIconOnUnstableNightmare", 313077, true, 0, {4, 5})
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21176))
 local warnDreadInferno						= mod:NewTargetNoFilterAnnounce(315252, 4)
 
-local specWarnDreadInferno					= mod:NewSpecialWarningYou(315252, nil, nil, nil, 1, 2)
+local specWarnDreadInferno					= mod:NewSpecialWarningYou(315252, nil, nil, nil, 1, 2, nil, nil, "runout")
 local yellDreadInferno						= mod:NewYell(315252)
 
 local timerDreadInfernoCD					= mod:NewCDTimer(11.7, 315252, nil, nil, nil, 3)
@@ -119,11 +119,11 @@ local warnVoidEruption						= mod:NewCountAnnounce(310003, 2)
 local warnChargedBonds						= mod:NewTargetAnnounce(310019, 2)
 local warnCorruptedExistence				= mod:NewTargetNoFilterAnnounce(316065, 4)
 
-local specWarnDecayingStrike				= mod:NewSpecialWarningDefensive(313213, nil, nil, nil, 1, 2)
-local specWarnChargedBonds					= mod:NewSpecialWarningMoveAwayTarget(310019, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.moveaway:format(310019), nil, 3, 2)
+local specWarnDecayingStrike				= mod:NewSpecialWarningDefensive(313213, nil, nil, nil, 1, 2, nil, nil, "defensive")
+local specWarnChargedBonds					= mod:NewSpecialWarningMoveAwayTarget(310019, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.moveaway:format(310019), nil, 3, 2, nil, nil, "runaway")
 local yellChargedBonds						= mod:NewYell(310019)
-local specWarnDecayingWoundTaunt			= mod:NewSpecialWarningTaunt(313227, nil, nil, nil, 1, 2)
-local specWarnCorruptedExistence			= mod:NewSpecialWarningYou(316065, nil, nil, nil, 3, 2, 4)--Mythic Only
+local specWarnDecayingWoundTaunt			= mod:NewSpecialWarningTaunt(313227, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnCorruptedExistence			= mod:NewSpecialWarningYou(316065, nil, nil, nil, 3, 2, 4, nil, "targetyou")--Mythic Only
 
 local timerDecayingStrikeCD					= mod:NewCDTimer(16.9, 313213, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)
 local timerVoidEruptionCD					= mod:NewCDCountTimer(19.4, 310003, nil, nil, nil, 2)--20.6-23

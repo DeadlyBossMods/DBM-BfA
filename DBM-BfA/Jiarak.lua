@@ -16,9 +16,9 @@ mod:RegisterEventsInCombat(
 	"SPELL_CAST_SUCCESS 261467 261088"
 )
 
-local specWarnStormWing				= mod:NewSpecialWarningSpell(260908, nil, nil, nil, 2, 2)
-local specWarnHurricaneCrash		= mod:NewSpecialWarningRun(261088, nil, nil, nil, 4, 2)
-local specWarnMatriarchsCall		= mod:NewSpecialWarningSwitch(261467, "-Healer", nil, 2, 1, 2)
+local specWarnStormWing				= mod:NewSpecialWarningSpell(260908, nil, nil, nil, 2, 2, nil, nil, "aesoon")
+local specWarnHurricaneCrash		= mod:NewSpecialWarningRun(261088, nil, nil, nil, 4, 2, nil, nil, "justrun")
+local specWarnMatriarchsCall		= mod:NewSpecialWarningSwitch(261467, "-Healer", nil, 2, 1, 2, nil, nil, "killmob")
 
 local timerStormWingCD				= mod:NewCDTimer(46.2, 260908, nil, nil, nil, 2)
 local timerHurricaneCrashCD			= mod:NewCDTimer(46.2, 261088, nil, nil, nil, 2, nil, DBM_COMMON_L.DEADLY_ICON)

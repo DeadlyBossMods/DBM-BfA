@@ -10,7 +10,7 @@ mod:RegisterEvents(
 	"SPELL_CAST_START 293957"
 )
 
-local specWarnMaddeningGaze				= mod:NewSpecialWarningDodge(293957, nil, nil, nil, 2, 2)
+local specWarnMaddeningGaze				= mod:NewSpecialWarningDodge(293957, nil, nil, nil, 2, 2, nil, nil, "shockwave")
 
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId

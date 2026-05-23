@@ -46,32 +46,32 @@ local warnGigavoltCharge				= mod:NewTargetAnnounce(286646, 3)
 local warnHyperDrive					= mod:NewTargetNoFilterAnnounce(286051, 3)
 
 --Ground Phase
-local specWarnBusterCannon				= mod:NewSpecialWarningDodgeCount(282153, nil, nil, nil, 2, 2)
-local specWarnBlastOff					= mod:NewSpecialWarningDodgeCount(282205, nil, nil, nil, 4, 2)
+local specWarnBusterCannon				= mod:NewSpecialWarningDodgeCount(282153, nil, nil, nil, 2, 2, nil, nil, "shockwave")
+local specWarnBlastOff					= mod:NewSpecialWarningDodgeCount(282205, nil, nil, nil, 4, 2, nil, nil, "justrun")
 --local specWarnCrashDown				= mod:NewSpecialWarningDodge(287797, nil, nil, nil, 2, 2)
-local specWarnElectroshockAmp			= mod:NewSpecialWarningCount(289699, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.stack:format(8, 289699), nil, 1, 2)
-local specWarnElectroshockAmpOther		= mod:NewSpecialWarningTaunt(289699, nil, nil, nil, 1, 2)
-local specWarnGigaVoltCharge			= mod:NewSpecialWarningYouPos(286646, nil, nil, nil, 1, 2)
+local specWarnElectroshockAmp			= mod:NewSpecialWarningCount(289699, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.stack:format(8, 289699), nil, 1, 2, nil, nil, "changemt")
+local specWarnElectroshockAmpOther		= mod:NewSpecialWarningTaunt(289699, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnGigaVoltCharge			= mod:NewSpecialWarningYouPos(286646, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellGigaVoltCharge				= mod:NewPosYell(286646)
 local yellGigaVoltChargeFades			= mod:NewIconFadesYell(286646)
 local specWarnGigaVoltChargeFading		= mod:NewSpecialWarningMoveTo(286646, nil, nil, nil, 3, 2)
-local specWarnGigaVoltChargeTaunt		= mod:NewSpecialWarningTaunt(286646, nil, nil, nil, 1, 2)
-local specWarnWormholeGenerator 		= mod:NewSpecialWarningCount(287952, nil, nil, nil, 2, 5)
+local specWarnGigaVoltChargeTaunt		= mod:NewSpecialWarningTaunt(286646, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnWormholeGenerator 		= mod:NewSpecialWarningCount(287952, nil, nil, nil, 2, 5, nil, nil, "teleyou")
 local specWarnDiscombobulation			= mod:NewSpecialWarningDispel(287167, "Healer", nil, nil, 1, 2, 4)--Mythic
-local specWarnDeploySparkBot			= mod:NewSpecialWarningSwitchCount(288410, false, nil, nil, 1, 2)
-local specWarnShrunk					= mod:NewSpecialWarningYou(284168, nil, nil, nil, 1, 2)
+local specWarnDeploySparkBot			= mod:NewSpecialWarningSwitchCount(288410, false, nil, nil, 1, 2, nil, nil, "targetchange")
+local specWarnShrunk					= mod:NewSpecialWarningYou(284168, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellShrunk						= mod:NewShortYell(284168)--Shrunk will just say with white letters
 local yellShrunkRepeater				= mod:NewPlayerRepeatYell(284168)
 local yellTamperingRepeater				= mod:NewPlayerRepeatYell(286105, nil, nil, nil, "YELL")
-local specWarnShrunkTaunt				= mod:NewSpecialWarningTaunt(284168, nil, nil, nil, 1, 2)
-local specWarnEnormous					= mod:NewSpecialWarningYou(289023, nil, nil, nil, 1, 2, 4)--Mythic
+local specWarnShrunkTaunt				= mod:NewSpecialWarningTaunt(284168, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnEnormous					= mod:NewSpecialWarningYou(289023, nil, nil, nil, 1, 2, 4, nil, "watchstep")--Mythic
 local yellEnormous						= mod:NewYell(289023)--Enormous will shout with red letters
-local specWarnMisCalcTele				= mod:NewSpecialWarningYou(287114, nil, nil, nil, 1, 2, 4)--Mythic
+local specWarnMisCalcTele				= mod:NewSpecialWarningYou(287114, nil, nil, nil, 1, 2, 4, nil, "carefly")--Mythic
 local yellMisCalcTele					= mod:NewYell(287114)
-local specWarnBlingstorm				= mod:NewSpecialWarningRun(289864, "Melee", nil, nil, 4, 2)
-local specWarnGoldChainLightning		= mod:NewSpecialWarningInterrupt(289870, "HasInterrupt", nil, nil, 1, 2)
+local specWarnBlingstorm				= mod:NewSpecialWarningRun(289864, "Melee", nil, nil, 4, 2, nil, nil, "justrun")
+local specWarnGoldChainLightning		= mod:NewSpecialWarningInterrupt(289870, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 --Intermission: Evasive Maneuvers!
-local specWarnExplodingSheep			= mod:NewSpecialWarningDodge(287929, nil, nil, nil, 2, 2)
+local specWarnExplodingSheep			= mod:NewSpecialWarningDodge(287929, nil, nil, nil, 2, 2, nil, nil, "watchstep")
 --local specWarnGTFO					= mod:NewSpecialWarningGTFO(238028, nil, nil, nil, 1, 8)
 
 --mod:AddTimerLine(DBM:EJ_GetSectionInfo(18527))

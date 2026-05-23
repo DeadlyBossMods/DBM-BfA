@@ -48,13 +48,13 @@ local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 
 local warnGiftofNzoth						= mod:NewTargetNoFilterAnnounce(313334, 2)
 local warnSanity							= mod:NewCountAnnounce(307831, 3)
 
-local specWarnGiftofNzoth					= mod:NewSpecialWarningYou(313334, nil, nil, nil, 1, 2)
+local specWarnGiftofNzoth					= mod:NewSpecialWarningYou(313334, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellGiftofNzothFades					= mod:NewFadesYell(313334)
 local specWarnServantofNzoth				= mod:NewSpecialWarningSwitch(308996, false, nil, 3, 1, 2)
 local yellServantofNzoth					= mod:NewYell(308996)
-local specwarnSanity						= mod:NewSpecialWarningCount(307831, nil, nil, nil, 1, 10)
-local specWarnMentalDecay					= mod:NewSpecialWarningInterrupt(313611, "HasInterrupt", nil, nil, 1, 2)
-local specWarnGTFO							= mod:NewSpecialWarningGTFO(309991, nil, nil, nil, 1, 8)
+local specwarnSanity						= mod:NewSpecialWarningCount(307831, nil, nil, nil, 1, 10, nil, nil, "lowsanity")
+local specWarnMentalDecay					= mod:NewSpecialWarningInterrupt(313611, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
+local specWarnGTFO							= mod:NewSpecialWarningGTFO(309991, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
 
 local timerGiftofNzoth						= mod:NewBuffFadesTimer(20, 313334, nil, nil, nil, 5)
 local berserkTimer							= mod:NewBerserkTimer(720)
@@ -70,12 +70,12 @@ local warnSynapticShock						= mod:NewStackAnnounce(313184, 1)
 local warnEternalHatred						= mod:NewCastAnnounce(310130, 4)
 local warnMindwrack							= mod:NewTargetNoFilterAnnounce(316711, 4, nil, "Tank|Healer")
 
-local specWarnCreepingAnguish				= mod:NewSpecialWarningMove(310184, "Tank", nil, nil, 3, 2)
-local specWarnMindwrack						= mod:NewSpecialWarningInterruptCount(316711, "HasInterrupt", nil, nil, 1, 2)
-local specWarnMindwrackTaunt				= mod:NewSpecialWarningTaunt(316711, nil, nil, nil, 1, 2)
+local specWarnCreepingAnguish				= mod:NewSpecialWarningMove(310184, "Tank", nil, nil, 3, 2, nil, nil, "moveboss")
+local specWarnMindwrack						= mod:NewSpecialWarningInterruptCount(316711, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kick2r")
+local specWarnMindwrackTaunt				= mod:NewSpecialWarningTaunt(316711, nil, nil, nil, 1, 2, nil, nil, "changemt")
 local specWarnManifestMadness				= mod:NewSpecialWarningSpell(310134, nil, nil, nil, 3)--Basically an automatic wipe unless Psychus was like sub 1% health, no voice because there isn't really one that says "you're fucked"
-local specWarnEternalHatred					= mod:NewSpecialWarningMoveTo(310130, nil, nil, nil, 3, 10)--No longer in journal, replaced by collapsing Mindscape, but maybe a hidden mythic mechanic now?
-local specWarnCollapsingMindscape			= mod:NewSpecialWarningMoveTo(317292, nil, nil, nil, 2, 10)
+local specWarnEternalHatred					= mod:NewSpecialWarningMoveTo(310130, nil, nil, nil, 3, 10, nil, nil, "leavemind")--No longer in journal, replaced by collapsing Mindscape, but maybe a hidden mythic mechanic now?
+local specWarnCollapsingMindscape			= mod:NewSpecialWarningMoveTo(317292, nil, nil, nil, 2, 10, nil, nil, "leavemind")
 
 local timerMindwrackCD						= mod:NewCDTimer(5.6, 316711, nil, "Tank", 2, 5, nil, DBM_COMMON_L.TANK_ICON)--4.9-8.6
 local timerCreepingAnguishCD				= mod:NewNextTimer(26.6, 310184, nil, nil, 2, 5, nil, DBM_COMMON_L.TANK_ICON)
@@ -93,10 +93,10 @@ local warnShatteredEgo						= mod:NewTargetNoFilterAnnounce(312155, 1)
 local warnParanoia							= mod:NewTargetNoFilterAnnounce(309980, 3)
 local warnMindGate							= mod:NewCastAnnounce(309046, 2)
 
-local specWarnMindgrasp						= mod:NewSpecialWarningSpell(315772, nil, nil, nil, 2, 2)
-local specWarnParanoia						= mod:NewSpecialWarningMoveTo(309980, nil, nil, nil, 1, 2)
+local specWarnMindgrasp						= mod:NewSpecialWarningSpell(315772, nil, nil, nil, 2, 2, nil, nil, "specialsoon")
+local specWarnParanoia						= mod:NewSpecialWarningMoveTo(309980, nil, nil, nil, 1, 2, nil, nil, "gather")
 local yellParanoiaRepeater					= mod:NewIconRepeatYell(309980, DBM_CORE_L.AUTO_YELL_ANNOUNCE_TEXT.shortyell)--using custom yell text "%s" because of custom needs (it has to use not only icons but two asci emoji
-local specWarnEternalTorment				= mod:NewSpecialWarningCount(318449, nil, 311383, nil, 2, 2)
+local specWarnEternalTorment				= mod:NewSpecialWarningCount(318449, nil, 311383, nil, 2, 2, nil, nil, "aesoon")
 
 local timerCollapsingMindscape				= mod:NewCastTimer(20, 317292, nil, nil, nil, 6)
 local timerMindgraspCD						= mod:NewNextTimer(30.1, 315772, nil, nil, nil, 3)
@@ -108,15 +108,15 @@ local timerEternalTormentCD					= mod:NewNextCountTimer(56.1, 318449, 311383, ni
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21286))
 local warnTumultuousBurst					= mod:NewCastAnnounce(310042, 4, nil, nil, "Tank")
 
-local specWarnBasherTentacle				= mod:NewSpecialWarningSwitchCount(-21286, "-Healer", nil, 2, 1, 2)
-local specWarnVoidLash						= mod:NewSpecialWarningDefensive(309698, nil, nil, nil, 1, 2)
+local specWarnBasherTentacle				= mod:NewSpecialWarningSwitchCount(-21286, "-Healer", nil, 2, 1, 2, nil, nil, "bigmob")
+local specWarnVoidLash						= mod:NewSpecialWarningDefensive(309698, nil, nil, nil, 1, 2, nil, nil, "defensive")
 
 local timerBasherTentacleCD					= mod:NewNextCountTimer(60, -21286, nil, nil, nil, 1, "319441", DBM_COMMON_L.DAMAGE_ICON)
 local timerVoidLashCD						= mod:NewCDTimer(22.9, 309698, nil, false, 2, 5, nil, DBM_COMMON_L.TANK_ICON)
 ----Corruptor Tentacle
-local specWarnCorruptedMind					= mod:NewSpecialWarningInterruptCount(313400, "HasInterrupt", nil, nil, 1, 2)
-local specWarnCorruptedMindDispel			= mod:NewSpecialWarningDispel(313400, "RemoveMagic", nil, nil, 1, 2)
-local specWarnMindFlay						= mod:NewSpecialWarningInterrupt(308885, false, nil, nil, 1, 2)
+local specWarnCorruptedMind					= mod:NewSpecialWarningInterruptCount(313400, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kick2r")
+local specWarnCorruptedMindDispel			= mod:NewSpecialWarningDispel(313400, "RemoveMagic", nil, nil, 1, 2, nil, nil, "helpdispel")
+local specWarnMindFlay						= mod:NewSpecialWarningInterrupt(308885, false, nil, nil, 1, 2, nil, nil, "kickcast")
 
 mod:AddSetIconOption("SetIconOnCorruptor", -21441, true, 5, {1, 2, 3, 4})
 ----Through the Mindgate
@@ -129,18 +129,18 @@ local warnFlamesofInsanity					= mod:NewTargetNoFilterAnnounce(313793, 2, nil, "
 local timerCataclysmicFlamesCD				= mod:NewNextCountTimer(22.4, 312866, nil, nil, nil, 3)
 local timerBlackVolleyCD					= mod:NewNextCountTimer(20, 313960, nil, nil, nil, 2)
 ------Trecherous Bargain
-local specWarnTreadLightly					= mod:NewSpecialWarningYou(315709, nil, nil, nil, 1, 2)
-local specWarnContempt						= mod:NewSpecialWarningStopMove(315710, nil, nil, nil, 1, 6)
+local specWarnTreadLightly					= mod:NewSpecialWarningYou(315709, nil, nil, nil, 1, 2, nil, nil, "targetyou")
+local specWarnContempt						= mod:NewSpecialWarningStopMove(315710, nil, nil, nil, 1, 6, nil, nil, "stopmove")
 --Stage 3 Non Mythic
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20767))
 ----N'Zoth
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20917))
 local warnStupefyingGlareSoon				= mod:NewCountdownAnnounce(317874, 4, nil, nil, 239918)--warning will be shortened to "Glare"
 
-local specWarnEvokeAnguish					= mod:NewSpecialWarningYou(317112, nil, nil, nil, 1, 2)
+local specWarnEvokeAnguish					= mod:NewSpecialWarningYou(317112, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellEvokeAnguish						= mod:NewYell(317112, nil, false, 2)
 local yellEvokeAnguishFades					= mod:NewShortFadesYell(317112, nil, true, 3)
-local specWarnStupefyingGlare				= mod:NewSpecialWarningDodgeCount(317874, nil, 239918, nil, 2, 2)--warning will be shortened to "Glare"
+local specWarnStupefyingGlare				= mod:NewSpecialWarningDodgeCount(317874, nil, 239918, nil, 2, 2, nil, nil, "farfromline")--warning will be shortened to "Glare"
 
 local timerEvokeAnguishCD					= mod:NewNextCountTimer(30.5, 317112, nil, nil, nil, 3)--30.5-44.9, delayed by boss doing other stuff?
 local timerStupefyingGlareCD				= mod:NewNextCountTimer(22.9, 317874, 239918, nil, 2, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)
@@ -150,8 +150,8 @@ mod:AddBoolOption("ArrowOnGlare", true)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21491))
 local warnThoughtHarvester					= mod:NewCountAnnounce(-21308, 3, 231298)
 
-local specWarnThoughtHarvester				= mod:NewSpecialWarningSwitchCount(-21308, false, nil, nil, 1, 2)
-local specWarnHarvestThoughts				= mod:NewSpecialWarningCount(317066, nil, nil, nil, 2, 2)
+local specWarnThoughtHarvester				= mod:NewSpecialWarningSwitchCount(-21308, false, nil, nil, 1, 2, nil, nil, "killmob")
+local specWarnHarvestThoughts				= mod:NewSpecialWarningCount(317066, nil, nil, nil, 2, 2, nil, nil, "gathershare")
 
 local timerThoughtHarvesterCD				= mod:NewCDCountTimer(30.1, -21308, nil, nil, nil, 1, 231298)
 local timerHarvestThoughtsCD				= mod:NewCDTimer(35.2, 317066, nil, nil, nil, 3)
@@ -165,11 +165,11 @@ local warnEvokeAnguish						= mod:NewTargetAnnounce(317112, 3)
 local warnCleansingProtocol					= mod:NewCountAnnounce(316970, 2)
 local warnDisarmCountermeasure				= mod:NewTargetNoFilterAnnounce(319257, 1)
 
-local specWarnSummonGateway					= mod:NewSpecialWarningMoveTo(318091, nil, nil, nil, 3, 5)
-local specWarnEventHorizon					= mod:NewSpecialWarningDefensive(318196, nil, nil, nil, 1, 2, 4)
-local specWarnEventHorizonSwap				= mod:NewSpecialWarningTaunt(318196, nil, nil, nil, 1, 2, 4)
-local specWarnDarkMatter					= mod:NewSpecialWarningDodgeCount(318971, nil, nil, nil, 2, 2, 4)
-local specWarnAnnihilate					= mod:NewSpecialWarningYou(318459, nil, nil, nil, 1, 2, 4)
+local specWarnSummonGateway					= mod:NewSpecialWarningMoveTo(318091, nil, nil, nil, 3, 5, nil, nil, "telesoon")
+local specWarnEventHorizon					= mod:NewSpecialWarningDefensive(318196, nil, nil, nil, 1, 2, 4, nil, "defensive")
+local specWarnEventHorizonSwap				= mod:NewSpecialWarningTaunt(318196, nil, nil, nil, 1, 2, 4, nil, "tauntboss")
+local specWarnDarkMatter					= mod:NewSpecialWarningDodgeCount(318971, nil, nil, nil, 2, 2, 4, nil, "watchstep")
+local specWarnAnnihilate					= mod:NewSpecialWarningYou(318459, nil, nil, nil, 1, 2, 4, nil, "watchstep")
 local yellAnnihilate						= mod:NewYell(318459)
 local yellAnnihilateFades					= mod:NewShortFadesYell(318459)
 

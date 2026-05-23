@@ -18,9 +18,9 @@ mod:RegisterEventsInCombat(
 --TODO, see if can detect gale force teleport target
 local warnGaleForce					= mod:NewTargetAnnounce(274829, 3)
 
-local specWarnAzurethosFury			= mod:NewSpecialWarningDodge(274839, nil, nil, nil, 2, 2)
-local specWarnGaleForce				= mod:NewSpecialWarningDodge(274829, nil, nil, nil, 2, 2)
-local specWarnWingBuffet			= mod:NewSpecialWarningDodge(274832, nil, nil, nil, 1, 2)
+local specWarnAzurethosFury			= mod:NewSpecialWarningDodge(274839, nil, nil, nil, 2, 2, nil, nil, "watchstep")
+local specWarnGaleForce				= mod:NewSpecialWarningDodge(274829, nil, nil, nil, 2, 2, nil, nil, "shockwave")
+local specWarnWingBuffet			= mod:NewSpecialWarningDodge(274832, nil, nil, nil, 1, 2, nil, nil, "shockwave")
 
 local timerAzurethosFuryCD			= mod:NewCDTimer(46.8, 274839, nil, nil, nil, 2)
 

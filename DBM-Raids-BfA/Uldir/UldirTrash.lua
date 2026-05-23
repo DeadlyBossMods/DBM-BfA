@@ -15,14 +15,14 @@ mod:RegisterEvents(
 local warnCorruptingGaze				= mod:NewTargetAnnounce(277047, 3)
 local warnMindSlave						= mod:NewTargetNoFilterAnnounce(277498, 3)
 
-local specWarnWildLeap					= mod:NewSpecialWarningDodge(278976, nil, nil, nil, 2, 2)
-local specWarnCorruptingGaze			= mod:NewSpecialWarningMoveAway(277047, nil, nil, nil, 1, 2)
-local specWarnCorruptingGazeNear		= mod:NewSpecialWarningClose(277047, nil, nil, nil, 1, 2)
+local specWarnWildLeap					= mod:NewSpecialWarningDodge(278976, nil, nil, nil, 2, 2, nil, nil, "watchstep")
+local specWarnCorruptingGaze			= mod:NewSpecialWarningMoveAway(277047, nil, nil, nil, 1, 2, nil, nil, "runout")
+local specWarnCorruptingGazeNear		= mod:NewSpecialWarningClose(277047, nil, nil, nil, 1, 2, nil, nil, "watchstep")
 local yellCorruptingGaze				= mod:NewYell(277047)
-local specWarnBloodstorm				= mod:NewSpecialWarningRun(274802, nil, nil, nil, 4, 2)
-local specWarnCrushingDarkness			= mod:NewSpecialWarningRun(277548, "Tank", nil, nil, 4, 2)
-local specWarnBloodShield				= mod:NewSpecialWarningInterrupt(276540, "HasInterrupt", nil, nil, 1, 2)
-local specWarnMindFlay					= mod:NewSpecialWarningInterrupt(277358, "HasInterrupt", nil, nil, 1, 2)
+local specWarnBloodstorm				= mod:NewSpecialWarningRun(274802, nil, nil, nil, 4, 2, nil, nil, "justrun")
+local specWarnCrushingDarkness			= mod:NewSpecialWarningRun(277548, "Tank", nil, nil, 4, 2, nil, nil, "justrun")
+local specWarnBloodShield				= mod:NewSpecialWarningInterrupt(276540, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
+local specWarnMindFlay					= mod:NewSpecialWarningInterrupt(277358, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 
 function mod:GazeTarget(targetname)
 	if not targetname then return end

@@ -39,23 +39,23 @@ local warnVoidEchoes				= mod:NewCountAnnounce(279157, 4)
 local warnDestroyerRemaining			= mod:NewAddsLeftAnnounce(-18508, 2, 274693)
 
 --Stage One: Oblivion's Call
-local specWarnEssenceShearDodge			= mod:NewSpecialWarningDodge(274693, false, nil, nil, 3, 2)
-local specWarnEssenceShear				= mod:NewSpecialWarningDefensive(274693, nil, nil, nil, 1, 2)
-local specWarnEssenceShearOther			= mod:NewSpecialWarningTaunt(274693, nil, nil, nil, 1, 2)
-local specWarnObliterationBlast			= mod:NewSpecialWarningDodge(273538, nil, nil, nil, 2, 2)
+local specWarnEssenceShearDodge			= mod:NewSpecialWarningDodge(274693, false, nil, nil, 3, 2, nil, nil, "shockwave")
+local specWarnEssenceShear				= mod:NewSpecialWarningDefensive(274693, nil, nil, nil, 1, 2, nil, nil, "defensive")
+local specWarnEssenceShearOther			= mod:NewSpecialWarningTaunt(274693, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnObliterationBlast			= mod:NewSpecialWarningDodge(273538, nil, nil, nil, 2, 2, nil, nil, "watchwave")
 local yellOblivionSphere				= mod:NewYell(272407)
-local specWarnImminentRuin				= mod:NewSpecialWarningYouPos(272536, nil, nil, nil, 1, 2)
+local specWarnImminentRuin				= mod:NewSpecialWarningYouPos(272536, nil, nil, nil, 1, 2, nil, nil, "runout")
 local yellImminentRuin					= mod:NewPosYell(272536, 139073)--Short name "Ruin"
 local yellImminentRuinFades				= mod:NewIconFadesYell(272536, 139073)
 local specWarnImminentRuinNear			= mod:NewSpecialWarningClose(272536, false, nil, 2, 1, 2)
-local specWarnLivingWeapon				= mod:NewSpecialWarningSwitch(276922, "RangedDps", nil, nil, 1, 2, 4)--Mythic (include melee dps too? asuming do to spheres, a big no)
-local specWarnVoidEchoes				= mod:NewSpecialWarningCount(279157, false, nil, 2, 2, 2, 4)--Mythic
+local specWarnLivingWeapon				= mod:NewSpecialWarningSwitch(276922, "RangedDps", nil, nil, 1, 2, 4, nil, "bigmob")--Mythic (include melee dps too? asuming do to spheres, a big no, "bigmob")
+local specWarnVoidEchoes				= mod:NewSpecialWarningCount(279157, false, nil, 2, 2, 2, 4, nil, "aesoon")--Mythic
 --Stage Two: Fury of the C'thraxxi
-local specWarnObliterationbeam			= mod:NewSpecialWarningDodgeCount(272115, nil, nil, nil, 2, 2)--Generic for now
+local specWarnObliterationbeam			= mod:NewSpecialWarningDodgeCount(272115, nil, nil, nil, 2, 2, nil, nil, "watchstep")--Generic for now
 --local specWarnObliterationbeamYou		= mod:NewSpecialWarningRun(272115, nil, nil, nil, 4, 2)--Generic for now
-local specWarnVisionsofMadness			= mod:NewSpecialWarningSwitchCount(273949, "-Healer", nil, nil, 1, 2)
-local specWarnVoidVolley				= mod:NewSpecialWarningInterruptCount(273944, "HasInterrupt", nil, nil, 1, 2)
-local specWarnMindFlay					= mod:NewSpecialWarningInterrupt(274019, "HasInterrupt", nil, nil, 1, 2)
+local specWarnVisionsofMadness			= mod:NewSpecialWarningSwitchCount(273949, "-Healer", nil, nil, 1, 2, nil, nil, "killmob")
+local specWarnVoidVolley				= mod:NewSpecialWarningInterruptCount(273944, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kick2r")
+local specWarnMindFlay					= mod:NewSpecialWarningInterrupt(274019, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 
 mod:AddTimerLine(SCENARIO_STAGE:format(1))
 local timerEssenceShearCD				= mod:NewNextSourceTimer(19.5, 274693, 41032, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--Short Text "Shear", All timers generlaly 20 but 19.9 can happen and DBM has to use lost known time

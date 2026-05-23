@@ -48,41 +48,41 @@ local warnBurrow						= mod:NewSpellAnnounce(267579, 2)
 local warnBurstingBoil					= mod:NewCountAnnounce(277007, 4)--Mythic
 
 --Arena Floor
-local specWarnBloodHost					= mod:NewSpecialWarningClose(267813, nil, nil, nil, 1, 2, 4)--Mythic
+local specWarnBloodHost					= mod:NewSpecialWarningClose(267813, nil, nil, nil, 1, 2, 4, nil, "runaway")--Mythic
 --local specWarnSpawnofGhuun			= mod:NewSpecialWarningSwitch(-13699, "Dps", nil, nil, 1, 2)
 local yellBloodHost						= mod:NewYell(267813)--Mythic
-local specWarnDarkPurpose				= mod:NewSpecialWarningRun(268074, nil, nil, nil, 4, 2, 4)--Mythic
+local specWarnDarkPurpose				= mod:NewSpecialWarningRun(268074, nil, nil, nil, 4, 2, 4, nil, "justrun")--Mythic
 local yellDarkPurpose					= mod:NewYell(268074)--Mythic
-local specWarnExplosiveCorruption		= mod:NewSpecialWarningMoveAway(272506, nil, nil, 2, 1, 2)
-local specWarnVirulentCorruption		= mod:NewSpecialWarningDodge(277081, nil, nil, nil, 2, 2)--Orbs spawned by ExplosiveCorruption
+local specWarnExplosiveCorruption		= mod:NewSpecialWarningMoveAway(272506, nil, nil, 2, 1, 2, nil, nil, "runout")
+local specWarnVirulentCorruption		= mod:NewSpecialWarningDodge(277081, nil, nil, nil, 2, 2, nil, nil, "watchorb")--Orbs spawned by ExplosiveCorruption
 local yellExplosiveCorruption			= mod:NewYell(272506)
 local yellExplosiveCorruptionFades		= mod:NewShortFadesYell(272506)
-local specWarnThousandMaws				= mod:NewSpecialWarningSwitch(267509, false, nil, 2, 1, 2)
-local specWarnTorment					= mod:NewSpecialWarningInterrupt(267427, "HasInterrupt", nil, nil, 1, 2)
-local specWarnMassiveSmash				= mod:NewSpecialWarningSpell(267412, "Tank", nil, 2, 1, 2)
-local specWarnDarkBargain				= mod:NewSpecialWarningDodge(267409, nil, nil, 2, 3, 2)
-local specWarnDarkBargainOther			= mod:NewSpecialWarningTaunt(267409, false, nil, 2, 1, 2)
-local specWarnGTFO						= mod:NewSpecialWarningGTFO(270287, nil, nil, nil, 1, 8)
-local specWarnDecayingEruption			= mod:NewSpecialWarningInterruptCount(267462, "HasInterrupt", nil, nil, 1, 2, 4)--Mythic
+local specWarnThousandMaws				= mod:NewSpecialWarningSwitch(267509, false, nil, 2, 1, 2, nil, nil, "killmob")
+local specWarnTorment					= mod:NewSpecialWarningInterrupt(267427, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
+local specWarnMassiveSmash				= mod:NewSpecialWarningSpell(267412, "Tank", nil, 2, 1, 2, nil, nil, "carefly")
+local specWarnDarkBargain				= mod:NewSpecialWarningDodge(267409, nil, nil, 2, 3, 2, nil, nil, "runaway")
+local specWarnDarkBargainOther			= mod:NewSpecialWarningTaunt(267409, false, nil, 2, 1, 2, nil, nil, "changemt")
+local specWarnGTFO						= mod:NewSpecialWarningGTFO(270287, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
+local specWarnDecayingEruption			= mod:NewSpecialWarningInterruptCount(267462, "HasInterrupt", nil, nil, 1, 2, 4, nil, "kick2r")--Mythic
 ----Arena Floor P2+
-local specWarnGrowingCorruption			= mod:NewSpecialWarningCount(270447, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.stack:format(5, 270447), nil, 1, 2)
-local specWarnGrowingCorruptionOther	= mod:NewSpecialWarningTaunt(270447, nil, nil, nil, 1, 2)
-local specWarnExplosiveCorruptionOther	= mod:NewSpecialWarningTaunt(272506, nil, nil, nil, 1, 2)
-local specWarnBloodFeast				= mod:NewSpecialWarningYou(263235, nil, nil, nil, 1, 2)
+local specWarnGrowingCorruption			= mod:NewSpecialWarningCount(270447, nil, DBM_CORE_L.AUTO_SPEC_WARN_OPTIONS.stack:format(5, 270447), nil, 1, 2, nil, nil, "changemt")
+local specWarnGrowingCorruptionOther	= mod:NewSpecialWarningTaunt(270447, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnExplosiveCorruptionOther	= mod:NewSpecialWarningTaunt(272506, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
+local specWarnBloodFeast				= mod:NewSpecialWarningYou(263235, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellBloodFeast					= mod:NewYell(263235, nil, nil, nil, "YELL")
 local yellBloodFeastFades				= mod:NewIconFadesYell(263235, nil, nil, nil, "YELL")
-local specWarnBloodFeastTarget			= mod:NewSpecialWarningTargetCount(263235, nil, nil, nil, 1, 8)
-local specWarnMindNumbingChatter		= mod:NewSpecialWarningCast(263307, "SpellCaster", nil, nil, 1, 2)
-local specWarnBurstingBoilCast			= mod:NewSpecialWarningDodge(277007, nil, nil, nil, 2, 2)
-local specWarnBurstingBoil				= mod:NewSpecialWarningYou(277007, nil, nil, nil, 1, 2, 4)--Mythic
+local specWarnBloodFeastTarget			= mod:NewSpecialWarningTargetCount(263235, nil, nil, nil, 1, 8, nil, nil, "bloodfeast")
+local specWarnMindNumbingChatter		= mod:NewSpecialWarningCast(263307, "SpellCaster", nil, nil, 1, 2, nil, nil, "stopcast")
+local specWarnBurstingBoilCast			= mod:NewSpecialWarningDodge(277007, nil, nil, nil, 2, 2, nil, nil, "watchstep")
+local specWarnBurstingBoil				= mod:NewSpecialWarningYou(277007, nil, nil, nil, 1, 2, 4, nil, "targetyou")--Mythic
 ----Arena Floor P3
-local specWarnCollapse					= mod:NewSpecialWarningDodge(276839, nil, nil, nil, 2, 2)
-local specWarnMalignantGrowth			= mod:NewSpecialWarningDodge(274582, nil, nil, nil, 2, 2)
-local specWarnGazeofGhuun				= mod:NewSpecialWarningLookAway(275160, nil, nil, 2, 3, 2)
+local specWarnCollapse					= mod:NewSpecialWarningDodge(276839, nil, nil, nil, 2, 2, nil, nil, "watchstep")
+local specWarnMalignantGrowth			= mod:NewSpecialWarningDodge(274582, nil, nil, nil, 2, 2, nil, nil, "watchstep")
+local specWarnGazeofGhuun				= mod:NewSpecialWarningLookAway(275160, nil, nil, 2, 3, 2, nil, nil, "turnaway")
 --Upper Platforms
-local specWarnPowerMatrix				= mod:NewSpecialWarningYou(263420, nil, nil, nil, 1, 8)--New voice "Matrix on you"
+local specWarnPowerMatrix				= mod:NewSpecialWarningYou(263420, nil, nil, nil, 1, 8, nil, nil, "newmatrix")--New voice "Matrix on you"
 local yellPowerMatrix					= mod:NewYell(263420)
-local specWarnReorginationBlast			= mod:NewSpecialWarningSpell(263482, nil, nil, nil, 2, 2)
+local specWarnReorginationBlast			= mod:NewSpecialWarningSpell(263482, nil, nil, nil, 2, 2, nil, nil, "aesoon")
 
 mod:AddTimerLine("Arena Floor")--Dungeon journal later
 local timerExplosiveCorruptionCD		= mod:NewCDCountTimer(13, 272506, nil, nil, nil, 3, nil, nil, nil, 1, 3)

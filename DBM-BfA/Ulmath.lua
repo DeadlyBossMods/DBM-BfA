@@ -18,8 +18,8 @@ mod:RegisterEventsInCombat(
 --TODO, upgrade endlessdoom to special warning?
 local warnEndlessDoom				= mod:NewSpellAnnounce(301748, 3)
 
-local specWarnMentalCollapse		= mod:NewSpecialWarningRun(301773, nil, nil, nil, 4, 2)
-local specWarnVoidDance				= mod:NewSpecialWarningDodge(301840, nil, nil, nil, 2, 2)
+local specWarnMentalCollapse		= mod:NewSpecialWarningRun(301773, nil, nil, nil, 4, 2, nil, nil, "justrun")
+local specWarnVoidDance				= mod:NewSpecialWarningDodge(301840, nil, nil, nil, 2, 2, nil, nil, "watchstep")
 --local specWarnGTFO				= mod:NewSpecialWarningGTFO(238028, nil, nil, nil, 1, 8)
 
 local timerEndlessDoomCD			= mod:NewCDTimer(72, 301748, nil, nil, nil, 3)--Need at least one more log, i was dumb and released thinking rez was closeby, it wasn't
