@@ -63,9 +63,9 @@ local warnInsatiableTorment				= mod:NewTargetNoFilterAnnounce(285652, 2)
 local specWarnUnstableResonance			= mod:NewSpecialWarningMoveAwayCount(293653, nil, nil, nil, 3, 2, nil, nil, "scatter")
 --local specWarnGTFO					= mod:NewSpecialWarningGTFO(238028, nil, nil, nil, 1, 8)
 --Multiple specialwarings for same event, because this way users can customize sound for each sign
-local specWarnUnstableResonanceVoid		= mod:NewSpecialWarningYouPos(293663, nil, nil, nil, 1, 6, nil, nil, "mm")
-local specWarnUnstableResonanceOcean	= mod:NewSpecialWarningYouPos(293662, nil, nil, nil, 1, 6, nil, nil, "mm")
-local specWarnUnstableResonanceStorm	= mod:NewSpecialWarningYouPos(293661, nil, nil, nil, 1, 6, nil, nil, "mm")
+local specWarnUnstableResonanceVoid		= mod:NewSpecialWarningYouPos(293663, nil, nil, nil, 1, 6, nil, nil, "mm1")
+local specWarnUnstableResonanceOcean	= mod:NewSpecialWarningYouPos(293662, nil, nil, nil, 1, 6, nil, nil, "mm1")
+local specWarnUnstableResonanceStorm	= mod:NewSpecialWarningYouPos(293661, nil, nil, nil, 1, 6, nil, nil, "mm1")
 local yellUnstableResonanceSign			= mod:NewPosYell(293653, DBM_CORE_L.AUTO_YELL_CUSTOM_POSITION)
 local yellUnstableResonanceRelic		= mod:NewShortPosYell(-18970, nil, nil, nil, "YELL")
 --Stage One: His All-Seeing Eyes

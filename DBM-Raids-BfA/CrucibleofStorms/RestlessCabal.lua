@@ -67,7 +67,7 @@ local specWarnVisagefromBeyond			= mod:NewSpecialWarningSwitch(282515, "-Healer"
 --Fa'thuul the Feared
 local specWarnShearMind					= mod:NewSpecialWarningStack(282384, nil, 3, nil, nil, 1, 6, nil, nil, "stackhigh")
 local specWarnShearMindTaunt			= mod:NewSpecialWarningTaunt(282384, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
-local specWarnCrushingDoubt				= mod:NewSpecialWarningYouPos(282432, nil, nil, nil, 1, 2, nil, nil, "mm")
+local specWarnCrushingDoubt				= mod:NewSpecialWarningYouPos(282432, nil, nil, nil, 1, 2, nil, nil, "mm1")
 local yellCrushingDoubt					= mod:NewPosYell(282432)
 local yellCrushingDoubtFades			= mod:NewIconFadesYell(282432)
 local specWarnEldritchRevelation		= mod:NewSpecialWarningSwitch(282617, false, nil, 2, 1, 2, nil, nil, "bigmob")

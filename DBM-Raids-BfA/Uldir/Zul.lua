@@ -42,7 +42,7 @@ local warnRupturingBlood				= mod:NewStackAnnounce(274358, 2, nil, "Tank")
 local warnDeathwish						= mod:NewCountAnnounce(274271, 3)
 
 --Stage One: The Forces of Blood
-local specWarnDarkRevolation			= mod:NewSpecialWarningYouPos(273365, nil, nil, nil, 1, 2, nil, nil, "mm")
+local specWarnDarkRevolation			= mod:NewSpecialWarningYouPos(273365, nil, nil, nil, 1, 2, nil, nil, "mm1")
 local yellDarkRevolation				= mod:NewPosYell(273365)
 local yellDarkRevolationFades			= mod:NewIconFadesYell(273365)
 local specWarnPitofDespair				= mod:NewSpecialWarningDispel(273434, "RemoveCurse", nil, nil, 1, 2)
