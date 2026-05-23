@@ -141,7 +141,7 @@ mod.vb.tridentOceanicon, mod.vb.tempestStormIcon, mod.vb.voidIcon = 6, 5, 3
 local trackedFeedback1, trackedFeedback2, trackedFeedback3 = false, false, false
 local playerAffected = false
 local playerName = UnitName("player")
-local playerHasRelic = false
+local playerHasRelic = ""
 local unitTracked = {}
 local castsPerGUID = {}
 
@@ -251,7 +251,7 @@ function mod:OnCombatStart(delay)
 	self.vb.umbrelTarget = nil
 	trackedFeedback1, trackedFeedback2, trackedFeedback3 = false, false, false
 	playerAffected = false
-	playerHasRelic = false
+	playerHasRelic = ""
 	table.wipe(unitTracked)
 	table.wipe(castsPerGUID)
 	if self:IsHard() then
@@ -303,7 +303,7 @@ function mod:OnTimerRecovery()
 	elseif self.vb.voidstone == playerName then
 		playerHasRelic = L.Void
 	end
-	if playerHasRelic and self.vb.resonCount > 0 then
+	if playerHasRelic ~= "" and self.vb.resonCount > 0 then
 		local icon = self.vb.tridentOcean == playerName and self.vb.tridentOceanicon or self.vb.tempestCaller == playerName and self.vb.tempestStormIcon or self.vb.voidstone == playerName and self.vb.voidIcon
 		yellUnstableResonanceRelic:Yell(icon, playerHasRelic, icon)
 		self:Unschedule(updateResonanceYell)
@@ -471,7 +471,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 			self:SetIcon(self.vb.tempestCaller, self.vb.tempestStormIcon)
 			self:SetIcon(self.vb.voidstone, self.vb.voidIcon)
 		end
-		if playerHasRelic then
+		if playerHasRelic ~= "" then
 			local icon = self.vb.tridentOcean == playerName and self.vb.tridentOceanicon or self.vb.tempestCaller == playerName and self.vb.tempestStormIcon or self.vb.voidstone == playerName and self.vb.voidIcon
 			yellUnstableResonanceRelic:Yell(icon, playerHasRelic, icon)
 			self:Unschedule(updateResonanceYell)
@@ -749,7 +749,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		self.vb.tridentOcean = "None"
 		self.vb.tridentDrop = GetTime()
 		if args:IsPlayer() then
-			playerHasRelic = false
+			playerHasRelic = ""
 		end
 		if self.Options.SetIconOnRelics then
 			self:SetIcon(args.destName, 0)
@@ -758,7 +758,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		self.vb.tempestCaller = "None"
 		self.vb.tempestDrop = GetTime()
 		if args:IsPlayer() then
-			playerHasRelic = false
+			playerHasRelic = ""
 		end
 		if self.Options.SetIconOnRelics then
 			self:SetIcon(args.destName, 0)
@@ -767,7 +767,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		self.vb.voidstone = "None"
 		self.vb.voidDrop = GetTime()
 		if args:IsPlayer() then
-			playerHasRelic = false
+			playerHasRelic = ""
 		end
 		if self.Options.SetIconOnRelics then
 			self:SetIcon(args.destName, 0)
