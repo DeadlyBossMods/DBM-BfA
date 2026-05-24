@@ -39,6 +39,13 @@ mod:RegisterEventsInCombat(
 --Eyes 2 first, Undying 2 second
 --Heroic https://www.warcraftlogs.com/reports/VNWqBp9v6JXzTYRd#fight=19&view=events&pins=2%24Off%24%23244F4B%24expression%24(ability.id%20%3D%20293653%20or%20ability.id%20%3D%20285185%20or%20ability.id%20%3D%20285416%20or%20ability.id%20%3D%20285376%20or%20ability.id%20%3D%20285345%20or%20ability.id%20%3D%20285453%20or%20ability.id%20%3D%20285820%20or%20ability.id%20%3D%20285638%20or%20ability.id%20%3D%20285427%20or%20ability.id%20%3D%20285562%20or%20ability.id%20%3D%20285685)%20and%20type%20%3D%20%22begincast%22%20%20or%20(ability.id%20%3D%20284851%20or%20ability.id%20%3D%20285652)%20and%20type%20%3D%20%22cast%22%20%20or%20ability.id%20%3D%20286310%20%20or%20(ability.id%20%3D%20284768%20or%20ability.id%20%3D%20284569%20or%20ability.id%20%3D%20284684)
 --Mythic https://www.warcraftlogs.com/reports/Dq1vBHCx6k3KnZJY#fight=47&view=events&pins=2%24Off%24%23244F4B%24expression%24(ability.id%20%3D%20293653%20or%20ability.id%20%3D%20285185%20or%20ability.id%20%3D%20285416%20or%20ability.id%20%3D%20285376%20or%20ability.id%20%3D%20285345%20or%20ability.id%20%3D%20285453%20or%20ability.id%20%3D%20285820%20or%20ability.id%20%3D%20285638%20or%20ability.id%20%3D%20285427%20or%20ability.id%20%3D%20285562%20or%20ability.id%20%3D%20285685)%20and%20type%20%3D%20%22begincast%22%20%20or%20(ability.id%20%3D%20284851%20or%20ability.id%20%3D%20285652)%20and%20type%20%3D%20%22cast%22%20%20or%20ability.id%20%3D%20286310%20%20or%20(ability.id%20%3D%20284768%20or%20ability.id%20%3D%20284569%20or%20ability.id%20%3D%20284684)
+DBM:RegisterAltSpellName(284583, 196871)--Storm of Annihilation -> Storm
+DBM:RegisterAltSpellName(285820, 234890)--Call Undying Guardian -> Guardian
+DBM:RegisterAltSpellName(285453, 285477)--Gift of N'Zoth: Obscurity -> Obscurity
+DBM:RegisterAltSpellName(-19118, 284485)--Primordial Mindbender -> Mindbender
+DBM:RegisterAltSpellName(285638, 55975)--Gift of N'Zoth: Hysteria -> Hysteria
+DBM:RegisterAltSpellName(285652, 142942)--Insatiable Torment -> Torment
+DBM:RegisterAltSpellName(285685, L.Lunacy)--Gift of N'Zoth: Lunacy -> Lunacy
 local warnPhase							= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
 local warnVoidShield					= mod:NewTargetNoFilterAnnounce(286310, 2, nil, nil, nil, nil, nil, 7)
 --Relics of Power
@@ -89,7 +96,7 @@ local specWarnGiftofNzothLunacy			= mod:NewSpecialWarningCount(285685, nil, nil,
 
 --Relics of Power
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19055))
-local timerStormofAnnihilation			= mod:NewTargetTimer(15, 284583, 196871, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON)--Short text "Storm"
+local timerStormofAnnihilation			= mod:NewTargetTimer(15, 284583, nil, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON)--Short text "Storm"
 local timerUnstableResonanceCD			= mod:NewCDCountTimer(40.8, 293653, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)--40.8-45
 local timerUnstableResonance			= mod:NewBuffFadesTimer(15, 293653, nil, nil, nil, 5, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)--inlineIcon, keep, countdown, countdownMax
 --Stage One: His All-Seeing Eyes
@@ -100,17 +107,17 @@ local timerVoidCrashCD					= mod:NewCDCountTimer(31, 285416, nil, nil, nil, 3)
 --local timerEyesofNzothCD				= mod:NewCDCountTimer(32.7, 285376, nil, nil, nil, 3)--32.7-36.4 (probably spell queuing)
 local timerPiercingGazeCD				= mod:NewCDCountTimer(32.7, 285367, nil, nil, nil, 3)
 local timerMaddeningEyesCD				= mod:NewCDCountTimer(32.7, 285345, nil, nil, nil, 3)
-local timerCallUndyingGuardianCD		= mod:NewCDCountTimer(46.1, 285820, 234890, nil, nil, 1)--Short text "Guardian"
-local timerGiftofNzothObscurityCD		= mod:NewCDCountTimer(42.1, 285453, 285477, nil, nil, 2)--Short text "Obscurity"
+local timerCallUndyingGuardianCD		= mod:NewCDCountTimer(46.1, 285820, nil, nil, nil, 1)--Short text "Guardian"
+local timerGiftofNzothObscurityCD		= mod:NewCDCountTimer(42.1, 285453, nil, nil, nil, 2)--Short text "Obscurity"
 --Stage Two: His Dutiful Servants
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19105))
 local timerUnknowableTerrorCD			= mod:NewCDTimer(40.1, 285562, nil, nil, nil, 3)
-local timerMindBenderCD					= mod:NewCDCountTimer(61.1, -19118, 284485, nil, nil, 1, 285427, DBM_COMMON_L.DAMAGE_ICON)--Shorttext "Mindbender"
-local timerGiftofNzothHysteriaCD		= mod:NewCDCountTimer(42.5, 285638, 55975, nil, nil, 2)--Short text "Hysteria"
+local timerMindBenderCD					= mod:NewCDCountTimer(61.1, -19118, nil, nil, nil, 1, 285427, DBM_COMMON_L.DAMAGE_ICON)--Shorttext "Mindbender"
+local timerGiftofNzothHysteriaCD		= mod:NewCDCountTimer(42.5, 285638, nil, nil, nil, 2)--Short text "Hysteria"
 --Stage Three: His Unwavering Gaze
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19106))
-local timerInsatiableTormentCD			= mod:NewCDCountTimer(23.1, 285652, 142942, nil, nil, 3)--Short text "Torment"
-local timerGiftofNzothLunacyCD			= mod:NewCDCountTimer(42.6, 285685, L.Lunacy, nil, nil, 2)--Manually translated because no spell to short text it
+local timerInsatiableTormentCD			= mod:NewCDCountTimer(23.1, 285652, nil, nil, nil, 3)--Short text "Torment"
+local timerGiftofNzothLunacyCD			= mod:NewCDCountTimer(42.6, 285685, nil, nil, nil, 2)--Manually translated because no spell to short text it
 
 local berserkTimer						= mod:NewBerserkTimer(780)
 

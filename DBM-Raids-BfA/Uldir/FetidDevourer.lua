@@ -24,6 +24,9 @@ mod:RegisterEventsInCombat(
 (ability.id = 262292 or ability.id = 262288 or ability.id = 262364) and type = "begincast"
  or (ability.id = 262370 or ability.id = 274470) and type = "cast"
 --]]
+DBM:RegisterAltSpellName(262277, 74979)--Terrible Thrash -> Thrash
+DBM:RegisterAltSpellName(262292, 21131)--Rotting Regurgitation -> Breath
+DBM:RegisterAltSpellName(262288, 116969)--Shockwave Stomp -> Stomp
 local warnFrenzy						= mod:NewSpellAnnounce(262378, 3)
 local warnThrashNotTanking				= mod:NewSpellAnnounce(262277, 3, nil, "Tank|Healer")
 local warnChuteVisual					= mod:NewAnnounce("addsSoon", 3, 262364)
@@ -41,9 +44,9 @@ local yellPutridParoxysm				= mod:NewYell(262314)
 local yellPutridParoxysmFades			= mod:NewFadesYell(262314)
 local specWarnAdds						= mod:NewSpecialWarningAdds(262364, "Dps", nil, nil, 1, 2, nil, nil, "killmob")
 
-local timerThrashCD						= mod:NewCDTimer(6, 262277, 74979, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)--Short Name "Thrash"
-local timerRottingRegurgCD				= mod:NewCDTimer(40.1, 262292, 21131, nil, nil, 3, nil, nil, nil, 1, 4)--Short Name "Breath"
-local timerShockwaveStompCD				= mod:NewCDCountTimer(27.5, 262288, 116969, nil, nil, 2)--Short Name "Stomp"
+local timerThrashCD						= mod:NewCDTimer(6, 262277, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON)--Short Name "Thrash"
+local timerRottingRegurgCD				= mod:NewCDTimer(40.1, 262292, nil, nil, nil, 3, nil, nil, nil, 1, 4)--Short Name "Breath"
+local timerShockwaveStompCD				= mod:NewCDCountTimer(27.5, 262288, nil, nil, nil, 2)--Short Name "Stomp"
 local timerPreAddsCD					= mod:NewTimer(54.8, "chuteTimer", 262364, false, nil, 5)
 local timerAddsCD						= mod:NewAddsTimer(54.8, 262364, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 3, 5)
 

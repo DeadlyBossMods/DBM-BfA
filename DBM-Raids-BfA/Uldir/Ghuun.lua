@@ -36,6 +36,7 @@ mod:RegisterEventsInCombat(
  or ability.id = 270443 and type = "applybuff"
  or (ability.id = 277079 or ability.id = 272506 or ability.id = 274262 or ability.id = 263504) and (type = "applydebuff" or type = "removedebuff")
 --]]
+DBM:RegisterAltSpellName(275160, 195503)--Gaze of G'huun -> Gaze
 --Arena Floor
 local warnMatrixSpawn					= mod:NewCountAnnounce(263420, 1)
 local warnMatrixFail					= mod:NewAnnounce("warnMatrixFail", 4, 263420)
@@ -100,7 +101,7 @@ local timerBurstingBoilCD				= mod:NewCDCountTimer(20.5, 277007, nil, nil, nil, 
 local timerMindNumbingChatterCD			= mod:NewCDTimer(13.4, 263307, nil, "SpellCaster", nil, 2)
 mod:AddTimerLine(SCENARIO_STAGE:format(3))
 local timerMalignantGrowthCD			= mod:NewCDTimer(25.6, 274582, nil, nil, nil, 3, nil, nil, nil, 2, 4)
-local timerGazeofGhuunCD				= mod:NewCDTimer(26.8, 275160, 195503, nil, nil, 2, nil, nil, nil, 3, 3)--26.8-29.1 (shortname "Gaze")
+local timerGazeofGhuunCD				= mod:NewCDTimer(26.8, 275160, nil, nil, nil, 2, nil, nil, nil, 3, 3)--26.8-29.1 (shortname "Gaze")
 mod:AddTimerLine("Upper Platforms")--Dungeon journal later
 local timerMatrixCD						= mod:NewNextCountTimer(12.1, 263420, nil, nil, nil, 5)
 local timerReOrgBlast					= mod:NewBuffActiveTimer(25, 263482, nil, nil, nil, 6)

@@ -34,6 +34,7 @@ mod:RegisterEventsInCombat(
 --]]
 --Stage 01: The Corruptor, Reborn
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20985))
+DBM:RegisterAltSpellName(310319, 202046)--Corruptor's Gaze -> Beam
 local warnEyeofNZoth						= mod:NewStackAnnounce(309961, 2, nil, "Tank")
 local warnTouchoftheCorruptor				= mod:NewTargetNoFilterAnnounce(311367, 4)
 local warnFixate							= mod:NewTargetAnnounce(315094, 2)
@@ -48,7 +49,7 @@ local specWarnFixate						= mod:NewSpecialWarningYou(315094, nil, nil, nil, 1, 2
 
 local timerEyeofNZothCD						= mod:NewCDTimer(17, 309961, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--16.6-17.4 (0ld), new seems more stable 17
 local timerTouchoftheCorruptorCD			= mod:NewCDCountTimer(64.4, 311367, nil, nil, nil, 3, nil, DBM_COMMON_L.HEROIC_ICON, nil, 1, 4)--64.4-68
-local timerCorruptorsGazeCD					= mod:NewCDCountTimer(32.2, 310319, 202046, nil, nil, 3)--32.8-34 Shorttext "Beam"
+local timerCorruptorsGazeCD					= mod:NewCDCountTimer(32.2, 310319, nil, nil, nil, 3)--32.8-34 Shorttext "Beam"
 
 mod:AddInfoFrameOption(315094, true)
 mod:AddSetIconOption("SetIconOnMC", 311367, false, 0, {1, 2, 3, 4, 5, 6, 7})

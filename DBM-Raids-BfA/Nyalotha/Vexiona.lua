@@ -43,6 +43,8 @@ local berserkTimer							= mod:NewBerserkTimer(600)
 mod:AddInfoFrameOption(307019, true)
 ----Stage 1: Cult of the Void
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20661))
+DBM:RegisterAltSpellName(307020, 18620)--Twilight Breath -> Breath
+DBM:RegisterAltSpellName(307218, 125030)--Twilight Decimator -> Deep Breath
 local warnGiftoftheVoid						= mod:NewTargetNoFilterAnnounce(306981, 1)
 local warnFanaticalAscension				= mod:NewCastAnnounce(307729, 4)
 local warnPoweroftheChosen					= mod:NewTargetNoFilterAnnounce(307075, 3)
@@ -60,7 +62,7 @@ local specWarnDarkGateway					= mod:NewSpecialWarningSwitchCount(307057, "-Heale
 local specWarnGTFO							= mod:NewSpecialWarningGTFO(307343, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
 
 local timerEncroachingShadowsCD				= mod:NewCDTimer(14.6, 307314, nil, nil, nil, 3)
-local timerTwilightBreathCD					= mod:NewCDTimer(14.8, 307020, 18620, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--14.8-20.0
+local timerTwilightBreathCD					= mod:NewCDTimer(14.8, 307020, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--14.8-20.0
 local timerDespairCD						= mod:NewCDTimer(35.2, 307359, nil, nil, nil, 5, nil, DBM_COMMON_L.HEALER_ICON)--35.2-36.4
 local timerShatteredResolve					= mod:NewTargetTimer(6, 307371, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)
 local timerDarkGatewayCD					= mod:NewCDCountTimer(33.2, 307057, nil, nil, nil, 1, nil, nil, nil, 1, 4)
@@ -68,7 +70,7 @@ local timerDarkGatewayCD					= mod:NewCDCountTimer(33.2, 307057, nil, nil, nil, 
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20667))
 local specWarnTwilightDecimator				= mod:NewSpecialWarningDodgeCount(307218, nil, 125030, nil, 2, 2, nil, nil, "breathsoon")
 
-local timerTwilightDecimatorCD				= mod:NewNextCountTimer(12.2, 307218, 125030, nil, nil, 3)--Deep Breath shorttext
+local timerTwilightDecimatorCD				= mod:NewNextCountTimer(12.2, 307218, nil, nil, nil, 3)--Deep Breath shorttext
 ----Stage 3: The Void Unleashed
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20669))
 local warnPhase3							= mod:NewPhaseAnnounce(3, 2)

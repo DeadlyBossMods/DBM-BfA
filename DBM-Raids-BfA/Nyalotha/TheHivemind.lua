@@ -30,6 +30,10 @@ mod:RegisterEventsInCombat(
  or (ability.id = 308178 or ability.id = 307635 or ability.id = 307232 or ability.id = 312868 or ability.id = 312710) and type = "cast"
  or (ability.id = 307377 or ability.id = 307227) and type = "applybuff"
 --]]
+DBM:RegisterAltSpellName(307583, 155037)--Volatile Eruption -> Volatile
+DBM:RegisterAltSpellName(313652, 242396)--Mind-Numbing Nova -> Mind-Numbing
+DBM:RegisterAltSpellName(307637, 75610)--Accelerated Evolution -> Evolution
+DBM:RegisterAltSpellName(307968, 158259)--Nullification Blast -> Blast
 --General
 local warnDarkRecon							= mod:NewCastAnnounce(307569, 4)
 
@@ -46,9 +50,9 @@ local specWarnVolatileEruption				= mod:NewSpecialWarningTargetChange(307583, ni
 local specWarnSpawnAcidicAqir				= mod:NewSpecialWarningDodgeCount(310340, nil, nil, nil, 2, 2, nil, nil, "watchstep")
 local specWarnMindNumbingNova				= mod:NewSpecialWarningInterruptCount(313652, "HasInterrupt", 242396, nil, 1, 2, nil, nil, "kickcast")
 
-local timerVolatileEruptionCD				= mod:NewNextCountTimer(84, 307583, 155037, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)
+local timerVolatileEruptionCD				= mod:NewNextCountTimer(84, 307583, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)
 local timerSpawnAcidicAqirCD				= mod:NewNextCountTimer(84, 310340, nil, nil, nil, 3)
-local timerMindNumbingNovaCD				= mod:NewNextCountTimer(7.3, 313652, 242396, "HasInterrupt", nil, 4, nil, DBM_COMMON_L.INTERRUPT_ICON)
+local timerMindNumbingNovaCD				= mod:NewNextCountTimer(7.3, 313652, nil, "HasInterrupt", nil, 4, nil, DBM_COMMON_L.INTERRUPT_ICON)
 local timerFlyerSwarmCD						= mod:NewNextCountTimer(120, 312710, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)
 
 mod:AddNamePlateOption("NPAuraOnVolatileEruption", 307583)
@@ -62,8 +66,8 @@ local specWarnEchoingVoid					= mod:NewSpecialWarningMoveAwayCount(307232, nil, 
 local specWarnFixate						= mod:NewSpecialWarningYou(308360, false, nil, nil, 1, 2, nil, nil, "targetyou")
 local specWarnEtropicEhco					= mod:NewSpecialWarningDodge(313692, nil, nil, nil, 3, 2, nil, nil, "watchstep")--Mythic
 
-local timerAcceleratedEvolutionCD			= mod:NewNextCountTimer(84, 307637, 75610, nil, nil, 3, nil, DBM_COMMON_L.TANK_ICON)
-local timerNullificationBlastCD				= mod:NewNextCountTimer(84, 307968, 158259, "Tank", 2, 5, nil, DBM_COMMON_L.TANK_ICON)
+local timerAcceleratedEvolutionCD			= mod:NewNextCountTimer(84, 307637, nil, nil, nil, 3, nil, DBM_COMMON_L.TANK_ICON)
+local timerNullificationBlastCD				= mod:NewNextCountTimer(84, 307968, nil, "Tank", 2, 5, nil, DBM_COMMON_L.TANK_ICON)
 local timerEchoingVoidCD					= mod:NewNextCountTimer(84, 307232, nil, nil, nil, 2, nil, nil, nil, 3, 4)
 local timerDronesCD							= mod:NewNextCountTimer(120, 312868, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)
 

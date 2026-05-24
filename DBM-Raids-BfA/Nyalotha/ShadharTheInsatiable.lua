@@ -34,6 +34,8 @@ mod:RegisterEventsInCombat(
  or (ability.id = 306447 or ability.id = 306931 or ability.id = 306933) and type = "applybuff"
  or (ability.id = 307476 or ability.id = 307478) and type = "begincast"
 --]]
+DBM:RegisterAltSpellName(307358, 58519)--Debilitating Spit -> Debilitating
+DBM:RegisterAltSpellName(306953, 58519)--Debilitating Spit cast -> Debilitating
 local warnHunger							= mod:NewStackAnnounce(312328, 2, nil, false, 2)--Mythic
 local warnUmbralMantle						= mod:NewCountAnnounce(306448, 2)
 local warnUmbralEruption					= mod:NewSpellAnnounce(308157, 2)
@@ -42,7 +44,7 @@ local warnBubblingOverflow					= mod:NewCountAnnounce(314736, 2)
 local warnEntropicMantle					= mod:NewSpellAnnounce(306933, 2)
 local warnCrush								= mod:NewTargetNoFilterAnnounce(307471, 3, nil, "Tank")
 local warnDissolve							= mod:NewTargetNoFilterAnnounce(307472, 3, nil, "Tank")
-local warnDebilitatingSpit					= mod:NewTargetNoFilterAnnounce(307358, 3, nil, false, 58519)
+local warnDebilitatingSpit					= mod:NewTargetNoFilterAnnounce(307358, 3, nil, false)
 local warnFrenzy							= mod:NewTargetNoFilterAnnounce(306942, 2)
 local warnFixate							= mod:NewTargetCountAnnounce(307260, 2)
 local warnEntropicBuildup					= mod:NewCountAnnounce(308177, 2)
@@ -61,7 +63,7 @@ local specWarnGTFO							= mod:NewSpecialWarningGTFO(314736, nil, nil, nil, 1, 8
 
 local timerCrushCD							= mod:NewCDTimer(25.1, 307471, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)
 local timerSlurryBreathCD					= mod:NewCDTimer(17, 306736, nil, nil, nil, 3, nil, nil, nil, 1, 3)
-local timerDebilitatingSpitCD				= mod:NewCDTimer(30.1, 306953, 58519, nil, nil, 5, nil, DBM_COMMON_L.HEALER_ICON)
+local timerDebilitatingSpitCD				= mod:NewCDTimer(30.1, 306953, nil, nil, nil, 5, nil, DBM_COMMON_L.HEALER_ICON)
 local timerFixateCD							= mod:NewCDCountTimer(30.2, 307260, nil, nil, nil, 3, nil, DBM_COMMON_L.DAMAGE_ICON)
 local timerUmbralMantleCD					= mod:NewNextCountTimer(20, 306448, nil, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON)
 local timerUmbralEruptionCD					= mod:NewNextTimer(10, 308157, nil, nil, nil, 3, nil, DBM_COMMON_L.HEROIC_ICON)

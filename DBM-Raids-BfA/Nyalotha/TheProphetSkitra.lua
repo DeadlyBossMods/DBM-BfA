@@ -27,6 +27,7 @@ mod:RegisterEventsInCombat(
 (ability.id = 309687 or ability.id = 307725) and type = "begincast"
  or (ability.id = 313239 or ability.id = 307937 or ability.id = 313276) and type = "cast"
 --]]
+DBM:RegisterAltSpellName(313239, 127876)--Images of Absolution -> Image
 local warnShadowShock						= mod:NewStackAnnounce(308059, 2, nil, "Tank")
 local warnImagesofAbsolution				= mod:NewCountAnnounce(313239, 3)--Spawn, not when killable
 local warnShredPsyche						= mod:NewTargetNoFilterAnnounce(307937, 2)
@@ -45,7 +46,7 @@ local yellShredPsyche						= mod:NewShortPosYell(307937)
 local yellShredPsycheFades					= mod:NewIconFadesYell(307937)
 local specWarnShredPsycheSwitch				= mod:NewSpecialWarningSwitch(307937, "dps", nil, nil, 1, 2)
 
-local timerImagesofAbsolutionCD				= mod:NewCDTimer(84.9, 313239, 127876, nil, nil, 1, nil, DBM_COMMON_L.HEROIC_ICON)
+local timerImagesofAbsolutionCD				= mod:NewCDTimer(84.9, 313239, nil, nil, nil, 1, nil, DBM_COMMON_L.HEROIC_ICON)
 local timerShredPsycheCD					= mod:NewCDTimer(37.7, 307937, nil, nil, nil, 3, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 1, 4)
 
 local berserkTimer							= mod:NewBerserkTimer(600)--He only gains a 300% damage increase on his berserk, and that's surviable since he doesn't melee and his adds don't gain it

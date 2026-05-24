@@ -31,15 +31,15 @@ mod:RegisterEventsInCombat(
  or (ability.id = 306732 or ability.id = 306733 or ability.id = 312996 or ability.id = 309852) and type = "applybuff"
  or (ability.id = 313077 or ability.id = 306207 or ability.id = 306273) and type = "applydebuff"
 --]]
---Stage 1: Gathering Power
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20527))
+DBM:RegisterAltSpellName(306091, DBM_COMMON_L.ORBS)--Materials of Destruction -> Orbs
 local specWarnCallEssence					= mod:NewSpecialWarningCount(306091, "-Healer")
 local specWarnNullifyingStrike				= mod:NewSpecialWarningStack(306819, nil, 2, nil, nil, 1, 6, nil, nil, "stackhigh")
 local specWarnNullifyingStrikeTaunt			= mod:NewSpecialWarningTaunt(306819, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
 local specWarnExposure						= mod:NewSpecialWarningYou(306279, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local specWarnGTFO							= mod:NewSpecialWarningGTFO(315258, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
 
-local timerCallEssenceCD					= mod:NewNextCountTimer(55, 306091, DBM_COMMON_L.ORBS, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 1, 5)--44.9-46.3
+local timerCallEssenceCD					= mod:NewNextCountTimer(55, 306091, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 1, 5)--44.9-46.3
 local timerNullifyingStrikeCD				= mod:NewCDTimer(15.8, 306819, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--16-19
 
 mod:AddInfoFrameOption(nil, true)

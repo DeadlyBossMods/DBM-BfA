@@ -37,6 +37,7 @@ mod:RegisterEventsInCombat(
  or (ability.id = 282561 or ability.id = 282384 or ability.id = 282407 or ability.id = 285416 or ability.id = 283066 or ability.id = 282742) and type = "cast"
  or (ability.id = 282817 or ability.id = 282432) and type = "applydebuff"
 --]]
+DBM:RegisterAltSpellName(286755, 196871)--Storm of Annihilation -> Storm
 --Relics of Power
 local warnUmbralShell					= mod:NewFadesAnnounce(282741, 1)
 local warnCustodyoftheDeep				= mod:NewCountAnnounce(284772, 3)
@@ -76,7 +77,7 @@ local specWarnGTFO						= mod:NewSpecialWarningGTFO(287876, nil, nil, nil, 1, 8,
 
 --mod:AddTimerLine(DBM:EJ_GetSectionInfo(18527))
 local timerAbyssalCollapse				= mod:NewCastTimer(20, 282886, nil, nil, nil, 2, nil, DBM_COMMON_L.DEADLY_ICON)
-local timerStormofAnnihilation			= mod:NewCastTimer(15, 286755, 196871, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON)--Short text "Storm"
+local timerStormofAnnihilation			= mod:NewCastTimer(15, 286755, nil, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON)--Short text "Storm"
 local timerPact							= mod:NewCastSourceTimer(12, 282675, nil, nil, nil, 2, nil, DBM_COMMON_L.IMPORTANT_ICON)
 local timerVisageActive					= mod:NewBuffActiveTimer(60, 282515, nil, nil, nil, 1)
 --Zaxasj the Speaker

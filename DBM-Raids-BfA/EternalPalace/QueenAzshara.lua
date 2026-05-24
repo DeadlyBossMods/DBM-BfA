@@ -38,6 +38,7 @@ mod:RegisterEventsInCombat(
  or ability.id = 300551 and type = "applybuff"
  or (ability.id = 303657) and type = "applydebuff"
 --]]
+DBM:RegisterAltSpellName(297372, 297371)--Greater Reversal -> Reversal
 --General/Ancient Wards (20)
 local warnPhase							= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
 local warnPressureSurge					= mod:NewSpellAnnounce(302208, 2)
@@ -161,7 +162,7 @@ local specWarnOverload					= mod:NewSpecialWarningCount(301431, false, nil, 2, 2
 local specWarnEssenceofAZeroth			= mod:NewSpecialWarningYou(300866, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local specWarnSystemShock				= mod:NewSpecialWarningDefensive(300877, nil, nil, nil, 1, 2, nil, nil, "defensive")
 
-local timerGreaterReversalCD			= mod:NewCDCountTimer(70, 297372, 297371, nil, nil, 5, nil, DBM_COMMON_L.IMPORTANT_ICON..DBM_COMMON_L.HEROIC_ICON, nil, 2, 5)
+local timerGreaterReversalCD			= mod:NewCDCountTimer(70, 297372, nil, nil, nil, 5, nil, DBM_COMMON_L.IMPORTANT_ICON..DBM_COMMON_L.HEROIC_ICON, nil, 2, 5)
 local timerVoidTouchedCD				= mod:NewCDTimer(6.9, 300743, nil, nil, nil, 5, nil, DBM_COMMON_L.TANK_ICON)
 local timerNetherPortalCD				= mod:NewCDCountTimer(35, 303980, nil, nil, nil, 3)--35 unless delayed by spell queue
 local timerOverloadCD					= mod:NewCDCountTimer(54.9, 301431, nil, nil, nil, 5, nil, DBM_COMMON_L.IMPORTANT_ICON)

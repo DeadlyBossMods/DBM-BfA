@@ -44,6 +44,8 @@ mod:RegisterEventsInCombat(
  or (ability.id = 309296 or ability.id = 309307) and type = "cast"
 --]]
 --General
+DBM:RegisterAltSpellName(318449, 311383)--Eternal Torment -> Torment
+DBM:RegisterAltSpellName(317874, 239918)--Stupefying Glare -> Glare
 local warnPhase								= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
 local warnGiftofNzoth						= mod:NewTargetNoFilterAnnounce(313334, 2)
 local warnSanity							= mod:NewCountAnnounce(307831, 3)
@@ -103,7 +105,7 @@ local timerMindgraspCD						= mod:NewNextTimer(30.1, 315772, nil, nil, nil, 3)
 local timerParanoiaCD						= mod:NewNextCountTimer(30.1, 309980, nil, nil, nil, 3)
 local timerMindgateCD						= mod:NewNextTimer(30.1, 309046, nil, nil, nil, 1, nil, nil, nil, 1, 4)
 local timerShatteredEgo						= mod:NewBuffActiveTimer(30, 319015, nil, nil, nil, 6)
-local timerEternalTormentCD					= mod:NewNextCountTimer(56.1, 318449, 311383, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON)--"Torment" short name
+local timerEternalTormentCD					= mod:NewNextCountTimer(56.1, 318449, nil, nil, nil, 2, nil, DBM_COMMON_L.HEALER_ICON)--"Torment" short name
 ----Basher tentacle
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(21286))
 local warnTumultuousBurst					= mod:NewCastAnnounce(310042, 4, nil, nil, "Tank")
@@ -135,7 +137,7 @@ local specWarnContempt						= mod:NewSpecialWarningStopMove(315710, nil, nil, ni
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20767))
 ----N'Zoth
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20917))
-local warnStupefyingGlareSoon				= mod:NewCountdownAnnounce(317874, 4, nil, nil, 239918)--warning will be shortened to "Glare"
+local warnStupefyingGlareSoon				= mod:NewCountdownAnnounce(317874, 4, nil, nil, nil)--warning will be shortened to "Glare"
 
 local specWarnEvokeAnguish					= mod:NewSpecialWarningYou(317112, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellEvokeAnguish						= mod:NewYell(317112, nil, false, 2)
@@ -143,7 +145,7 @@ local yellEvokeAnguishFades					= mod:NewShortFadesYell(317112, nil, true, 3)
 local specWarnStupefyingGlare				= mod:NewSpecialWarningDodgeCount(317874, nil, 239918, nil, 2, 2, nil, nil, "farfromline")--warning will be shortened to "Glare"
 
 local timerEvokeAnguishCD					= mod:NewNextCountTimer(30.5, 317112, nil, nil, nil, 3)--30.5-44.9, delayed by boss doing other stuff?
-local timerStupefyingGlareCD				= mod:NewNextCountTimer(22.9, 317874, 239918, nil, 2, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)
+local timerStupefyingGlareCD				= mod:NewNextCountTimer(22.9, 317874, nil, nil, 2, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)
 
 mod:AddBoolOption("ArrowOnGlare", true)
 ----Thought Harvester

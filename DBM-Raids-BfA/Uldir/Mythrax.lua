@@ -31,6 +31,10 @@ mod:RegisterEventsInCombat(
  or ability.id = 274019 and type = "begincast"
  or ability.id = 274230 and type = "removebuff"
 --]]
+DBM:RegisterAltSpellName(274693, 41032)--Essence Shear -> Shear
+DBM:RegisterAltSpellName(273538, 158259)--Obliteration Blast -> Blast
+DBM:RegisterAltSpellName(272536, 139074)--Imminent Ruin -> Ruin
+DBM:RegisterAltSpellName(272115, 194463)--Obliteration Beam -> Beam
 --Stage One: Oblivion's Call
 local warnPhase						= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
 local warnOblivionSphere			= mod:NewCountAnnounce(272407, 4)
@@ -58,15 +62,15 @@ local specWarnVoidVolley				= mod:NewSpecialWarningInterruptCount(273944, "HasIn
 local specWarnMindFlay					= mod:NewSpecialWarningInterrupt(274019, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 
 mod:AddTimerLine(SCENARIO_STAGE:format(1))
-local timerEssenceShearCD				= mod:NewNextSourceTimer(19.5, 274693, 41032, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--Short Text "Shear", All timers generlaly 20 but 19.9 can happen and DBM has to use lost known time
-local timerObliterationBlastCD			= mod:NewNextSourceTimer(14.9, 273538, 158259, nil, nil, 3)--Short Text "Blast"
+local timerEssenceShearCD				= mod:NewNextSourceTimer(19.5, 274693, nil, "Tank", nil, 5, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 3)--Short Text "Shear", All timers generlaly 20 but 19.9 can happen and DBM has to use lost known time
+local timerObliterationBlastCD			= mod:NewNextSourceTimer(14.9, 273538, nil, nil, nil, 3)--Short Text "Blast"
 local timerOblivionSphereCD				= mod:NewNextCountTimer(14.9, 272407, nil, nil, nil, 3, nil, nil, nil, 1, 3)
-local timerImminentRuinCD				= mod:NewNextCountTimer(14.9, 272536, 139074, nil, nil, 3, nil, nil, nil, not mod:IsTank() and 3 or nil, 3)--Short Text "Ruin"
+local timerImminentRuinCD				= mod:NewNextCountTimer(14.9, 272536, nil, nil, nil, 3, nil, nil, nil, not mod:IsTank() and 3 or nil, 3)--Short Text "Ruin"
 local timerLivingWeaponCD				= mod:NewNextTimer(60.5, 276922, nil, nil, nil, 1, nil, DBM_COMMON_L.MYTHIC_ICON)--Mythic
 local timerVoidEchoesCD					= mod:NewNextCountTimer(60.5, 279157, nil, nil, nil, 2, nil, DBM_COMMON_L.HEROIC_ICON)
 mod:AddTimerLine(SCENARIO_STAGE:format(2))
 local timerIntermission					= mod:NewStageTimer(60)
-local timerObliterationbeamCD			= mod:NewCDCountTimer(12.1, 272115, 194463, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 3, 3)--Short Text "Beam"
+local timerObliterationbeamCD			= mod:NewCDCountTimer(12.1, 272115, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 3, 3)--Short Text "Beam"
 local timerVisionsoMadnessCD			= mod:NewNextCountTimer(20, 273949, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)
 
 --local berserkTimer					= mod:NewBerserkTimer(600)

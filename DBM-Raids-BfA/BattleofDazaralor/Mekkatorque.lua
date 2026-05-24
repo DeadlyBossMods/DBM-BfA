@@ -34,6 +34,8 @@ mod:RegisterEvents(
 --https://www.warcraftlogs.com/reports/GXfwVbyY4cDRd37K#fight=last&view=events&pins=2%24Off%24%23244F4B%24expression%24(ability.id%20%3D%20282205%20or%20ability.id%20%3D%20287952%20or%20ability.id%20%3D%20287929%20or%20ability.id%20%3D%20282153%20or%20ability.id%20%3D%20288410%20or%20ability.id%20%3D%20287751%20or%20ability.id%20%3D%20287797%20or%20ability.id%20%3D%20286693%20or%20ability.id%20%3D%20288041%20or%20ability.id%20%3D%20288049%20or%20ability.id%20%3D%20289537%20or%20ability.id%20%3D%20287691)%20and%20type%20%3D%20%22begincast%22%20%20or%20(ability.id%20%3D%20287757%20or%20ability.id%20%3D%20286597)%20and%20type%20%3D%20%22cast%22
 --TODO, nameplate aura for tampering protocol, if it has actual debuff diration (wowhead does not)
 --TODO, adjust electroshock stacks?
+DBM:RegisterAltSpellName(282153, 88891)--Buster Cannon -> Cannon
+DBM:RegisterAltSpellName(287952, 67833)--Wormhole Generator -> Wormhole
 local warnPhase							= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
 --Ground Phase
 local warnShrunk						= mod:NewTargetNoFilterAnnounce(284168, 1)
@@ -76,16 +78,16 @@ local specWarnExplodingSheep			= mod:NewSpecialWarningDodge(287929, nil, nil, ni
 
 --mod:AddTimerLine(DBM:EJ_GetSectionInfo(18527))
 --Ground Phase
-local timerBusterCannonCD				= mod:NewNextCountTimer(25, 282153, 88891, nil, nil, 3)--Shorttext "Cannon"
+local timerBusterCannonCD				= mod:NewNextCountTimer(25, 282153, nil, nil, 3)
 local timerBlastOffCD					= mod:NewNextCountTimer(55, 282205, nil, nil, nil, 2)
 local timerCrashDownCD					= mod:NewCastTimer(4.5, 287797, nil, nil, nil, 3)
 local timerGigaVoltChargeCD				= mod:NewNextCountTimer(14.1, 286646, nil, nil, nil, 3, nil, DBM_COMMON_L.TANK_ICON, nil, 2, 4)
-local timerWormholeGeneratorCD			= mod:NewNextCountTimer(55, 287952, 67833, nil, nil, 3, nil, DBM_COMMON_L.HEROIC_ICON, nil, 3, 4)--Shorttext "Wormhole"
+local timerWormholeGeneratorCD			= mod:NewNextCountTimer(55, 287952, nil, nil, nil, 3, nil, DBM_COMMON_L.HEROIC_ICON, nil, 3, 4)--Shorttext "Wormhole"
 local timerDeploySparkBotCD				= mod:NewNextCountTimer(55, 288410, nil, nil, nil, 1)
 local timerWorldEnlargerCD				= mod:NewNextCountTimer(90, 288049, nil, nil, nil, 3, nil, nil, nil, 1, 4)
 --Intermission: Evasive Maneuvers!
 local timerIntermission					= mod:NewStageTimer(64.8)
-local timerExplodingSheepCD				= mod:NewNextCountTimer(55, 287929, 222529, nil, nil, 3)--Shorttext "Exploding Sheep"
+local timerExplodingSheepCD				= mod:NewNextCountTimer(55, 287929, nil, nil, nil, 3)
 local timerRP							= mod:NewRPTimer(15.4)
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
