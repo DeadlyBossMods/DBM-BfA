@@ -39,7 +39,7 @@ local warnGiftofNzoth						= mod:NewTargetNoFilterAnnounce(313334, 2)
 local warnWillPower							= mod:NewCountAnnounce(307831, 3)
 
 local specWarnGiftofNzoth					= mod:NewSpecialWarningYou(313334, nil, nil, nil, 1, 2, nil, nil, "targetyou")
-local specWarnServantofNzoth				= mod:NewSpecialWarningTargetChange(307832, false, nil, 2, 1, 2)
+local specWarnServantofNzoth				= mod:NewSpecialWarningTargetChange(307832, false, nil, 2, 1, 2, nil, nil, "findmc")
 local yellServantofNzoth					= mod:NewYell(307832)
 local specWarnBlackScar						= mod:NewSpecialWarningStack(315954, nil, 2, nil, nil, 1, 6, nil, nil, "stackhigh")
 local specWarnBlackScarTaunt				= mod:NewSpecialWarningTaunt(315954, nil, nil, nil, 1, 2, nil, nil, "tauntboss")

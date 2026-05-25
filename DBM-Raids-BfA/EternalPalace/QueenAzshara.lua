@@ -101,7 +101,7 @@ local warnCrushingDepths				= mod:NewTargetNoFilterAnnounce(303825, 4, nil, fals
 local specWarnArcaneOrbs				= mod:NewSpecialWarningCount(298787, nil, nil, nil, 2, 2, nil, nil, "watchorb")
 local specWarnBeckon					= mod:NewSpecialWarningRun(299094, nil, nil, nil, 4, 8, nil, nil, "justrun")
 local yellBeckon						= mod:NewYell(299094)--Yell goes off when player loses control of self, not pre warning player gets
-local specWarnBeckonNear				= mod:NewSpecialWarningClose(303799, nil, nil, nil, 1, 8)
+local specWarnBeckonNear				= mod:NewSpecialWarningClose(303799, nil, nil, nil, 1, 8, nil, nil, "runaway")
 local specWarnDivideandConquer			= mod:NewSpecialWarningDodge(300478, nil, nil, nil, 3, 2, 4)--Mythic
 
 local timerArcaneOrbsCD					= mod:NewCDCountTimer(65, 298787, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)

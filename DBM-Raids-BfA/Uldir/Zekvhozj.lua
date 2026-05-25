@@ -57,7 +57,7 @@ local specWarnVoidbolt					= mod:NewSpecialWarningInterrupt(267180, "HasInterrup
 --Stage Three: Corruption
 local specWarnOrbOfCorruption			= mod:NewSpecialWarningCount(267239, nil, nil, nil, 2, 12, nil, nil, "catchballs")
 local yellCorruptorsPact				= mod:NewFadesYell(265662)
-local specWarnWillofCorruptorSoon		= mod:NewSpecialWarningSoon(265646, nil, nil, nil, 3, 2)
+local specWarnWillofCorruptorSoon		= mod:NewSpecialWarningSoon(265646, nil, nil, nil, 3, 2, nil, nil, "takedamage")
 local specWarnWillofCorruptor			= mod:NewSpecialWarningSwitch(265646, "Dps", nil, 2, 1, 2, nil, nil, "findmc")
 local specWarnEntropicBlast				= mod:NewSpecialWarningInterrupt(270620, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 

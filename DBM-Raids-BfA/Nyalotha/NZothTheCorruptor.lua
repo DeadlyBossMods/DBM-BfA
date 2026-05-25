@@ -52,7 +52,7 @@ local warnSanity							= mod:NewCountAnnounce(307831, 3)
 
 local specWarnGiftofNzoth					= mod:NewSpecialWarningYou(313334, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellGiftofNzothFades					= mod:NewFadesYell(313334)
-local specWarnServantofNzoth				= mod:NewSpecialWarningSwitch(308996, false, nil, 3, 1, 2)
+local specWarnServantofNzoth				= mod:NewSpecialWarningSwitch(308996, false, nil, 3, 1, 2, nil, nil, "findmc")
 local yellServantofNzoth					= mod:NewYell(308996)
 local specwarnSanity						= mod:NewSpecialWarningCount(307831, nil, nil, nil, 1, 10, nil, nil, "lowsanity")
 local specWarnMentalDecay					= mod:NewSpecialWarningInterrupt(313611, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")

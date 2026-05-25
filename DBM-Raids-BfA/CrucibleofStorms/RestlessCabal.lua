@@ -58,7 +58,7 @@ local specWarnPowerOverwhelming			= mod:NewSpecialWarningTarget(282914, nil, nil
 --Zaxasj the Speaker
 local specWarnAphoticBlast				= mod:NewSpecialWarningYou(282386, false, nil, 2, 1, 2, nil, nil, "targetyou")
 local yellAphoticBlast					= mod:NewFadesYell(282386)
-local specWarnAgentofDemise				= mod:NewSpecialWarningTargetChange(282540, "-Healer", nil, nil, 1, 2)
+local specWarnAgentofDemise				= mod:NewSpecialWarningTargetChange(282540, "-Healer", nil, nil, 1, 2, nil, nil, "targetchange")
 local yellAgentofDemise					= mod:NewYell(282540, nil, nil, nil, "YELL")
 local specWarnCerebralAssault			= mod:NewSpecialWarningDodgeCount(282589, nil, nil, nil, 3, 2, nil, nil, "shockwave")
 local specWarnDarkherald				= mod:NewSpecialWarningYou(282561, nil, nil, nil, 1, 2, nil, nil, "targetyou")

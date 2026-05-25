@@ -51,7 +51,7 @@ local yellOblivionSphere				= mod:NewYell(272407)
 local specWarnImminentRuin				= mod:NewSpecialWarningYouPos(272536, nil, nil, nil, 1, 2, nil, nil, "runout")
 local yellImminentRuin					= mod:NewPosYell(272536, 139073)--Short name "Ruin"
 local yellImminentRuinFades				= mod:NewIconFadesYell(272536, 139073)
-local specWarnImminentRuinNear			= mod:NewSpecialWarningClose(272536, false, nil, 2, 1, 2)
+local specWarnImminentRuinNear			= mod:NewSpecialWarningClose(272536, false, nil, 2, 1, 2, nil, nil, "runaway")
 local specWarnLivingWeapon				= mod:NewSpecialWarningSwitch(276922, "RangedDps", nil, nil, 1, 2, 4, nil, "bigmob")--Mythic (include melee dps too? asuming do to spheres, a big no, "bigmob")
 local specWarnVoidEchoes				= mod:NewSpecialWarningCount(279157, false, nil, 2, 2, 2, 4, nil, "aesoon")--Mythic
 --Stage Two: Fury of the C'thraxxi

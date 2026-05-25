@@ -44,7 +44,7 @@ local specWarnShadowShockTaunt				= mod:NewSpecialWarningTaunt(308059, nil, nil,
 local specWarnShredPsyche					= mod:NewSpecialWarningMoveAway(307937, nil, nil, nil, 1, 2, nil, nil, "runout")
 local yellShredPsyche						= mod:NewShortPosYell(307937)
 local yellShredPsycheFades					= mod:NewIconFadesYell(307937)
-local specWarnShredPsycheSwitch				= mod:NewSpecialWarningSwitch(307937, "dps", nil, nil, 1, 2)
+local specWarnShredPsycheSwitch				= mod:NewSpecialWarningSwitch(307937, "dps", nil, nil, 1, 2, nil, nil, "killmob")
 
 local timerImagesofAbsolutionCD				= mod:NewCDTimer(84.9, 313239, nil, nil, nil, 1, nil, DBM_COMMON_L.HEROIC_ICON)
 local timerShredPsycheCD					= mod:NewCDTimer(37.7, 307937, nil, nil, nil, 3, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 1, 4)

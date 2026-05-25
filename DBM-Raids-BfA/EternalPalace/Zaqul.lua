@@ -77,7 +77,7 @@ local timerPuncturedDarknessActive		= mod:NewBuffActiveTimer(20, 295099, nil, ni
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(19980))
 local warnDeliriumsDescent				= mod:NewCountAnnounce(304733, 3)
 
-local specWarShatteredPsyche			= mod:NewSpecialWarningDispel(295327, "Healer", nil, 3, 1, 2)
+local specWarShatteredPsyche			= mod:NewSpecialWarningDispel(295327, "Healer", nil, 3, 1, 2, nil, nil, "helpdispel")
 
 local timerDeliriumsDescentCD			= mod:NewCDTimer(35, 304733, nil, nil, nil, 5, nil, DBM_COMMON_L.DAMAGE_ICON)
 --Stage Four: All Pathways Open

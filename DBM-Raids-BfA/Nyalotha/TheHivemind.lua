@@ -60,7 +60,7 @@ mod:AddNamePlateOption("NPAuraOnVolatileEruption", 307583)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20713))
 local warnNullification						= mod:NewTargetNoFilterAnnounce(313460, 4)--Might feel spammy in a mass fuckup situation, but in most cases on by default should be fine
 
-local specWarnAcceleratedEvolution			= mod:NewSpecialWarningTargetChange(307637, nil, 75610, nil, 1, 2)
+local specWarnAcceleratedEvolution			= mod:NewSpecialWarningTargetChange(307637, nil, 75610, nil, 1, 2, nil, nil, "targetchange")
 local specWarnNullificationBlast			= mod:NewSpecialWarningDodgeCount(307968, nil, 158259, nil, 2, 2, nil, nil, "shockwave")
 local specWarnEchoingVoid					= mod:NewSpecialWarningMoveAwayCount(307232, nil, nil, nil, 2, 2, nil, nil, "scatter")
 local specWarnFixate						= mod:NewSpecialWarningYou(308360, false, nil, nil, 1, 2, nil, nil, "targetyou")

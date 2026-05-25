@@ -47,7 +47,7 @@ local specWarnVolatileSeed					= mod:NewSpecialWarningYouCount(310277, nil, nil,
 local yellolatileSeed						= mod:NewYell(310277)
 local yellolatileSeedFades					= mod:NewFadesYell(310277)
 local specWarnEntropicCrash					= mod:NewSpecialWarningDodge(310329, nil, nil, nil, 2, 2, nil, nil, "watchstep")
-local specWarnMutteringsofInsanity			= mod:NewSpecialWarningTarget(310358, nil, nil, nil, 1, 2)
+local specWarnMutteringsofInsanity			= mod:NewSpecialWarningTarget(310358, nil, nil, nil, 1, 2, nil, nil, "runaway")
 local yellMutteringsofInsanity				= mod:NewShortFadesYell(310358)
 local specWarnVoidGlare						= mod:NewSpecialWarningDodge(310406, nil, nil, nil, 3, 2, nil, nil, "farfromline")
 
