@@ -43,7 +43,7 @@ local specWarnEyeofNZoth					= mod:NewSpecialWarningStack(309961, nil, 2, nil, n
 local specWarnEyeofNZothTaunt				= mod:NewSpecialWarningTaunt(309961, nil, nil, nil, 1, 2, nil, nil, "tauntboss")
 local specWarnTouchoftheCorruptor			= mod:NewSpecialWarningYou(311367, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellTouchoftheCorruptor				= mod:NewYell(311367)
-local specWarnCorruptorsGaze				= mod:NewSpecialWarningSpell(310319, nil, 202046, nil, 2, 2, nil, nil, "watchstep")
+local specWarnCorruptorsGaze				= mod:NewSpecialWarningSpell(310319, nil, nil, nil, 2, 2, nil, nil, "watchstep")
 local specWarnGTFO							= mod:NewSpecialWarningGTFO(310322, nil, nil, nil, 1, 8, nil, nil, "watchfeet")
 local specWarnFixate						= mod:NewSpecialWarningYou(315094, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 

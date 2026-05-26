@@ -98,7 +98,7 @@ local warnMindGate							= mod:NewCastAnnounce(309046, 2)
 local specWarnMindgrasp						= mod:NewSpecialWarningSpell(315772, nil, nil, nil, 2, 2, nil, nil, "specialsoon")
 local specWarnParanoia						= mod:NewSpecialWarningMoveTo(309980, nil, nil, nil, 1, 2, nil, nil, "gather")
 local yellParanoiaRepeater					= mod:NewIconRepeatYell(309980, DBM_CORE_L.AUTO_YELL_ANNOUNCE_TEXT.shortyell)--using custom yell text "%s" because of custom needs (it has to use not only icons but two asci emoji
-local specWarnEternalTorment				= mod:NewSpecialWarningCount(318449, nil, 311383, nil, 2, 2, nil, nil, "aesoon")
+local specWarnEternalTorment				= mod:NewSpecialWarningCount(318449, nil, nil, nil, 2, 2, nil, nil, "aesoon")
 
 local timerCollapsingMindscape				= mod:NewCastTimer(20, 317292, nil, nil, nil, 6)
 local timerMindgraspCD						= mod:NewNextTimer(30.1, 315772, nil, nil, nil, 3)
@@ -142,7 +142,7 @@ local warnStupefyingGlareSoon				= mod:NewCountdownAnnounce(317874, 4, nil, nil,
 local specWarnEvokeAnguish					= mod:NewSpecialWarningYou(317112, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellEvokeAnguish						= mod:NewYell(317112, nil, false, 2)
 local yellEvokeAnguishFades					= mod:NewShortFadesYell(317112, nil, true, 3)
-local specWarnStupefyingGlare				= mod:NewSpecialWarningDodgeCount(317874, nil, 239918, nil, 2, 2, nil, nil, "farfromline")--warning will be shortened to "Glare"
+local specWarnStupefyingGlare				= mod:NewSpecialWarningDodgeCount(317874, nil, nil, nil, 2, 2, nil, nil, "farfromline")--warning will be shortened to "Glare"
 
 local timerEvokeAnguishCD					= mod:NewNextCountTimer(30.5, 317112, nil, nil, nil, 3)--30.5-44.9, delayed by boss doing other stuff?
 local timerStupefyingGlareCD				= mod:NewNextCountTimer(22.9, 317874, nil, nil, 2, 3, nil, DBM_COMMON_L.DEADLY_ICON, nil, 1, 5)

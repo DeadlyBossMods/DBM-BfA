@@ -46,9 +46,9 @@ local timerKazirsHiveControlCD				= mod:NewNextTimer(98.7, 307201, nil, nil, nil
 local timerDarkReconCast					= mod:NewNextTimer(10, 307569, nil, nil, nil, 5, nil, DBM_COMMON_L.DAMAGE_ICON, nil, 3, 4)
 --Ka'zir
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20710))
-local specWarnVolatileEruption				= mod:NewSpecialWarningTargetChange(307583, nil, 155037, nil, 1, 2, nil, nil, "targetchange")
+local specWarnVolatileEruption				= mod:NewSpecialWarningTargetChange(307583, nil, nil, nil, 1, 2, nil, nil, "targetchange")
 local specWarnSpawnAcidicAqir				= mod:NewSpecialWarningDodgeCount(310340, nil, nil, nil, 2, 2, nil, nil, "watchstep")
-local specWarnMindNumbingNova				= mod:NewSpecialWarningInterruptCount(313652, "HasInterrupt", 242396, nil, 1, 2, nil, nil, "kickcast")
+local specWarnMindNumbingNova				= mod:NewSpecialWarningInterruptCount(313652, "HasInterrupt", nil, nil, 1, 2, nil, nil, "kickcast")
 
 local timerVolatileEruptionCD				= mod:NewNextCountTimer(84, 307583, nil, nil, nil, 3, nil, DBM_COMMON_L.DEADLY_ICON)
 local timerSpawnAcidicAqirCD				= mod:NewNextCountTimer(84, 310340, nil, nil, nil, 3)
@@ -60,8 +60,8 @@ mod:AddNamePlateOption("NPAuraOnVolatileEruption", 307583)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20713))
 local warnNullification						= mod:NewTargetNoFilterAnnounce(313460, 4)--Might feel spammy in a mass fuckup situation, but in most cases on by default should be fine
 
-local specWarnAcceleratedEvolution			= mod:NewSpecialWarningTargetChange(307637, nil, 75610, nil, 1, 2, nil, nil, "targetchange")
-local specWarnNullificationBlast			= mod:NewSpecialWarningDodgeCount(307968, nil, 158259, nil, 2, 2, nil, nil, "shockwave")
+local specWarnAcceleratedEvolution			= mod:NewSpecialWarningTargetChange(307637, nil, nil, nil, 1, 2, nil, nil, "targetchange")
+local specWarnNullificationBlast			= mod:NewSpecialWarningDodgeCount(307968, nil, nil, nil, 2, 2, nil, nil, "shockwave")
 local specWarnEchoingVoid					= mod:NewSpecialWarningMoveAwayCount(307232, nil, nil, nil, 2, 2, nil, nil, "scatter")
 local specWarnFixate						= mod:NewSpecialWarningYou(308360, false, nil, nil, 1, 2, nil, nil, "targetyou")
 local specWarnEtropicEhco					= mod:NewSpecialWarningDodge(313692, nil, nil, nil, 3, 2, nil, nil, "watchstep")--Mythic

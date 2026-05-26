@@ -54,7 +54,7 @@ local warnBrutalSmash						= mod:NewSpellAnnounce(315932, 4)--Fall back warning 
 local specWarnEncroachingShadows			= mod:NewSpecialWarningMoveAway(307314, nil, nil, nil, 1, 2, nil, nil, "runout")
 local yellEncroachingShadows				= mod:NewYell(307314)
 local yellEncroachingShadowsFades			= mod:NewShortFadesYell(307314)
-local specWarnTwilightBreath				= mod:NewSpecialWarningDefensive(307020, nil, 18620, nil, 1, 2, nil, nil, "breathsoon")
+local specWarnTwilightBreath				= mod:NewSpecialWarningDefensive(307020, nil, nil, nil, 1, 2, nil, nil, "breathsoon")
 local specWarnDespair						= mod:NewSpecialWarningYou(307359, nil, nil, nil, 1, 2, nil, nil, "targetyou")
 local yellDespairFades						= mod:NewFadesYell(307359, nil, false)
 local specWarnDespairOther					= mod:NewSpecialWarningTarget(307359, "Healer", nil, nil, 1, 2, nil, nil, "healfull")
@@ -68,7 +68,7 @@ local timerShatteredResolve					= mod:NewTargetTimer(6, 307371, nil, nil, nil, 3
 local timerDarkGatewayCD					= mod:NewCDCountTimer(33.2, 307057, nil, nil, nil, 1, nil, nil, nil, 1, 4)
 ----Stage 2: Death From Above
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(20667))
-local specWarnTwilightDecimator				= mod:NewSpecialWarningDodgeCount(307218, nil, 125030, nil, 2, 2, nil, nil, "breathsoon")
+local specWarnTwilightDecimator				= mod:NewSpecialWarningDodgeCount(307218, nil, nil, nil, 2, 2, nil, nil, "breathsoon")
 
 local timerTwilightDecimatorCD				= mod:NewNextCountTimer(12.2, 307218, nil, nil, nil, 3)--Deep Breath shorttext
 ----Stage 3: The Void Unleashed
