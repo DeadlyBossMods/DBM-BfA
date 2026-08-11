@@ -128,7 +128,7 @@ L:SetMiscLocalization({
 L = DBM:GetModLocalization("UldirTrash")
 
 L:SetGeneralLocalization({
-	name =	"Трэш мобы Ульдир"
+	name =	"Трэш: Ульдир"
 })
 
 ---------------------------
@@ -225,7 +225,7 @@ L:SetMiscLocalization({
 L = DBM:GetModLocalization("ZuldazarRaidTrash")
 
 L:SetGeneralLocalization({
-	name =	"Трэш мобы Битва за Дазар'алор"
+	name =	"Трэш: Битва за Дазар'алор"
 })
 
 ---------------------------
@@ -267,7 +267,7 @@ L:SetMiscLocalization({
 L = DBM:GetModLocalization("CrucibleofStormsTrash")
 
 L:SetGeneralLocalization({
-	name =	"Трэш мобы Горнило Штормов"
+	name =	"Трэш: Горнило Штормов"
 })
 
 ---------------------------
@@ -357,7 +357,7 @@ L:SetMiscLocalization({
 L = DBM:GetModLocalization("EternalPalaceTrash")
 
 L:SetGeneralLocalization({
-	name =	"Трэш мобы Вечный дворец"
+	name =	"Трэш: Вечный дворец"
 })
 
 ---------------------------
@@ -471,5 +471,5 @@ L:SetMiscLocalization({
 L = DBM:GetModLocalization("NyalothaTrash")
 
 L:SetGeneralLocalization({
-	name =	"Трэш мобы Ни'алота"
+	name =	"Трэш: Ни'алота"
 })
