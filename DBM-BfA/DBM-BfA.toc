@@ -33,12 +33,12 @@
 ## X-Wago-ID: RXKqxj6y
 ## Version: @project-version@
 localization.en.lua
-localization.ru.lua
-localization.de.lua
-localization.kr.lua
-localization.cn.lua
-localization.tw.lua
-localization.it.lua
+localization.ru.lua [AllowLoadTextLocale ruRU]
+localization.de.lua [AllowLoadTextLocale deDE]
+localization.kr.lua [AllowLoadTextLocale koKR]
+localization.cn.lua [AllowLoadTextLocale zhCN]
+localization.tw.lua [AllowLoadTextLocale zhTW]
+localization.it.lua [AllowLoadTextLocale itIT]
 Shekzara.lua
 Vuklaz.lua
 Tzane.lua
